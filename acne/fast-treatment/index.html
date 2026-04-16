@@ -36,10 +36,11 @@
             max-width: 1200px; width: 100%; margin: 0 auto;
             display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;
         }
-        .logo-wrapper { height: 60px; display: flex; align-items: center; overflow: visible; }
+        .logo-wrapper { height: 60px; display: flex; align-items: center; overflow: hidden; }
         .logo {
-            height: 160px; width: auto; object-fit: contain; mix-blend-mode: multiply;
-            filter: contrast(1.1) brightness(1.02); transition: transform 0.3s var(--bouncy); margin-top: 5px;
+            height: 40px; /* Reduced height to fit comfortably inside 60px header */
+            width: auto; object-fit: contain; mix-blend-mode: multiply;
+            filter: contrast(1.1) brightness(1.02); transition: transform 0.3s var(--bouncy);
         }
         .logo:hover { transform: scale(1.05); }
         .nav-links { display: flex; gap: 30px; }
@@ -62,7 +63,7 @@
         }
         .fast-hero h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 1rem; line-height: 1.1; }
         .fast-hero p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-        .highlight-text { color: #facc15; }
+        .highlight-text { color: #EC610E; }
 
         /* Bento Grid */
         .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 2rem 0; }
@@ -103,7 +104,7 @@
 <nav class="site-header">
     <div class="header-container">
         <div class="logo-wrapper">
-            <img src="logo-v3.png" alt="MyMirror Logo" class="logo">
+            <img src="mymirror_wordmark_v3.png" alt="MyMirror Logo" class="logo">
         </div>
         <div class="nav-links">
             <a href="#emergency">Overnight Fixes</a>
@@ -116,7 +117,7 @@
 
 <header class="fast-hero reveal">
     <h1>How to Get Rid of Pimples on Forehead <span class="highlight-text">Fast</span></h1>
-    <p>Dealing with small forehead pimples? Discover the fastest ways to reduce redness, clear bumps, and restore your skin’s balance overnight.</p>
+    <p>Dealing with small <a href="https://mymirror.fit/acne/forehead-acne/" style="text-decoration:none; color:inherit;">forehead pimples</a>? Discover the fastest ways to reduce redness, clear bumps, and restore your skin’s balance overnight.</p>
 </header>
 
 <div class="container">
@@ -217,7 +218,7 @@
     <section class="reveal" id="quiz" style="background: var(--primary); padding: 4rem 2rem; border-radius: 45px; margin: 6rem 0; text-align: center; color: white;">
         <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">Diagnostic Check</span>
         <h2 style="color: white; margin-top: 1rem;">How Fast Can You Clear It?</h2>
-        <p id="quiz-intro" style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem;">Answer 3 quick questions to set realistic expectations for your forehead breakouts 👇</p>
+        <p id="quiz-intro" style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem;">Answer 3 quick questions to set realistic expectations for your <a href="https://mymirror.fit/acne/forehead-acne/" style="text-decoration:none; color:inherit;">forehead breakouts</a> 👇</p>
         
         <div id="quiz-content" style="margin: 3rem auto; max-width: 600px; text-align: left; position: relative;">
             <div id="quiz-loader" style="display:none; text-align: center; padding: 2rem;">

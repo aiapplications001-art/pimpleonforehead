@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mymirror.fit/sitemap.xml
