@@ -62,13 +62,16 @@
         h3 { font-size: 1.5rem; color: var(--accent); margin-top: 2rem; }
 
         /* Interactive Checkbox Section */
-        .diagnostic-box { background: #111; color: white; padding: 3rem; border-radius: 40px; margin: 4rem 0; box-shadow: 0 30px 60px rgba(0,0,0,0.15); }
+        .diagnostic-box { background: #f8fafc; padding: 4rem 3rem; border-radius: 40px; margin: 4rem 0; border: 1px solid #e2e8f0; }
         .diagnostic-title { text-align: center; margin-bottom: 3rem; }
-        .diagnostic-option { display: flex; align-items: flex-start; gap: 20px; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 20px; margin-bottom: 1.5rem; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; }
-        .diagnostic-option:hover { background: rgba(255,255,255,0.1); transform: translateX(10px); border-color: var(--brand-orange); }
-        .check-circle { width: 24px; height: 24px; border: 2px solid white; border-radius: 50%; flex-shrink: 0; margin-top: 5px; position: relative; }
-        .diagnostic-option.active .check-circle::after { content: ''; position: absolute; width: 12px; height: 12px; background: var(--brand-orange); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-        .reveal-box { background: var(--brand-orange); color: white; padding: 1.5rem; border-radius: 15px; margin-top: 1rem; display: none; animation: fadeIn 0.4s ease; }
+        .diagnostic-grid { display: grid; gap: 20px; }
+        .diagnostic-option { display: flex; flex-direction: column; background: white; padding: 2rem; border-radius: 25px; cursor: pointer; transition: all 0.3s var(--bouncy); border: 2px solid #edf2f7; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .diagnostic-option:hover { transform: translateY(-5px); border-color: var(--brand-orange); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .diagnostic-option.active { border-color: var(--brand-orange); background: #fffcf9; }
+        .symptom-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #718096; font-weight: 700; margin-bottom: 0.5rem; }
+        .symptom-text { font-size: 1.25rem; font-weight: 800; color: var(--primary); line-height: 1.3; }
+        .reveal-box { background: #111; color: white; padding: 2rem; border-radius: 20px; margin-top: 1.5rem; display: none; animation: fadeIn 0.4s ease; border-left: 5px solid var(--brand-orange); }
+        .reveal-box strong { color: var(--brand-orange); font-size: 1.1rem; }
 
         /* Stats Section */
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 3rem 0; }
@@ -146,39 +149,32 @@
     <section class="diagnostic-box reveal">
         <div class="diagnostic-title">
             <span style="text-transform: uppercase; letter-spacing: 2px; color: var(--brand-orange); font-weight: 800; font-size: 0.8rem;">⚡ The Hook</span>
-            <h2 style="color: white; border: none; margin-top: 0.5rem;">Take the 2-Minute Forehead Diagnostic Check</h2>
-            <p style="opacity: 0.7;">Look closely at your forehead and click the symptom that matches yours to reveal the hidden meaning.</p>
+            <h2 style="border: none; margin-top: 0.5rem;">Take the 2-Minute Forehead Diagnostic Check</h2>
+            <p style="color: #4a5568;">Look closely at your forehead and click the symptom that matches yours to reveal the hidden meaning.</p>
         </div>
 
-        <div class="diagnostic-option" onclick="toggleDiagnostic(1, this)">
-            <div class="check-circle"></div>
-            <div>
-                <strong style="font-size: 1.1rem; display: block; margin-bottom: 5px;">The Symptom:</strong>
-                <p style="margin: 0; opacity: 0.9;">Tiny, skin-colored, slightly itchy bumps clustered near the hairline.</p>
+        <div class="diagnostic-grid">
+            <div class="diagnostic-option" onclick="toggleDiagnostic(1, this)">
+                <span class="symptom-label">The Symptom</span>
+                <span class="symptom-text">Tiny, skin-colored, slightly itchy bumps clustered near the hairline.</span>
                 <div id="reveal-1" class="reveal-box">
-                    <strong>The Meaning:</strong> You likely have <strong>Fungal Acne</strong> triggered by scalp dandruff or trapped sweat. Traditional acne creams won't work here.
+                    <strong>THE MEANING:</strong> You likely have <strong>Fungal Acne</strong> triggered by scalp dandruff or trapped sweat. Traditional acne creams won't work here.
                 </div>
             </div>
-        </div>
 
-        <div class="diagnostic-option" onclick="toggleDiagnostic(2, this)">
-            <div class="check-circle"></div>
-            <div>
-                <strong style="font-size: 1.1rem; display: block; margin-bottom: 5px;">The Symptom:</strong>
-                <p style="margin: 0; opacity: 0.9;">Deep, red, painful bumps in the center of the forehead.</p>
+            <div class="diagnostic-option" onclick="toggleDiagnostic(2, this)">
+                <span class="symptom-label">The Symptom</span>
+                <span class="symptom-text">Deep, red, painful bumps in the center of the forehead.</span>
                 <div id="reveal-2" class="reveal-box">
-                    <strong>The Meaning:</strong> This points to <strong>Digestive Heat</strong> (Pitta imbalance) or excessive consumption of sugary, processed, or fried foods.
+                    <strong>THE MEANING:</strong> This points to <strong>Digestive Heat</strong> (Pitta imbalance) or excessive consumption of sugary, processed, or fried foods.
                 </div>
             </div>
-        </div>
 
-        <div class="diagnostic-option" onclick="toggleDiagnostic(3, this)">
-            <div class="check-circle"></div>
-            <div>
-                <strong style="font-size: 1.1rem; display: block; margin-bottom: 5px;">The Symptom:</strong>
-                <p style="margin: 0; opacity: 0.9;">A sudden, overnight breakout directly between the eyebrows.</p>
+            <div class="diagnostic-option" onclick="toggleDiagnostic(3, this)">
+                <span class="symptom-label">The Symptom</span>
+                <span class="symptom-text">A sudden, overnight breakout directly between the eyebrows.</span>
                 <div id="reveal-3" class="reveal-box">
-                    <strong>The Meaning:</strong> This is a classic sign of an <strong>Overworked Liver</strong>, often linked to high stress, late nights, or alcohol consumption.
+                    <strong>THE MEANING:</strong> This is a classic sign of an <strong>Overworked Liver</strong>, often linked to high stress, late nights, or alcohol consumption.
                 </div>
             </div>
         </div>
