@@ -395,6 +395,15 @@
     function toggleFAQ(index) { const items = document.querySelectorAll('.faq-item'); const isActive = items[index].classList.contains('active-faq'); items.forEach(item => item.classList.remove('active-faq')); if (!isActive) items[index].classList.add('active-faq'); }
     renderQuestion();
 </script>
+    <!-- Related Guides -->
+    <div class="container" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e0e4e0;">
+        <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem;">Related Acne Guides</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+            <a href="/acne/why-men-get-acne" style="display:block; padding: 1.2rem; background: #f8fafc; border-radius: 16px; text-decoration: none; color: #0f172a; border: 1px solid #e2e8f0; font-weight: 600; font-size: 0.95rem;">Why Men Get Acne: 7 Causes &amp; What to Do →</a>
+            <a href="/acne/why-teenagers-get-acne" style="display:block; padding: 1.2rem; background: #f8fafc; border-radius: 16px; text-decoration: none; color: #0f172a; border: 1px solid #e2e8f0; font-weight: 600; font-size: 0.95rem;">Why Teenagers Get Acne: Causes &amp; Treatment →</a>
+        </div>
+    </div>
+
     <!-- FOOTER SECTION -->
     <footer style="background: #f1f3f1; padding: 3rem 2rem; margin-top: 4rem; border-top: 1px solid #e0e4e0; text-align: center;">
         <div class="container">
