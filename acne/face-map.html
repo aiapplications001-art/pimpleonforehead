@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Face Mapping | MyMirror Diagnostics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --accent: #EC610E;
+        }
+
+        body, html {
+            margin: 0; padding: 0; min-height: 100%;
+            background: var(--bg); color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        header { padding: 40px 20px; text-align: center; width: 100%; }
+        h1 { margin: 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; }
+
+        .stage-wrapper {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            margin: 0 auto 60px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 100px rgba(0,0,0,0.8);
+            line-height: 0;
+            cursor: url('/acne/face-map/magnifying_small.png') 16 16, auto;
+        }
+
+        .face-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            display: block;
+            height: auto;
+        }
+
+        .overlay-svg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 10;
+        }
+
+        .organ-zone {
+            fill: rgba(255, 255, 255, 0); /* Invisible by default */
+            stroke: rgba(255, 255, 255, 0);
+            stroke-width: 2;
+            cursor: pointer;
+            transition: fill 0.3s ease, stroke 0.3s ease;
+        }
+
+        .organ-zone:hover {
+            stroke: rgba(255, 255, 255, 0.8);
+            stroke-width: 3;
+        }
+
+        .organ-zone[data-type="intestine"]:hover { fill: rgba(254, 202, 202, 0.3); }
+        .organ-zone[data-type="bladder"]:hover { fill: rgba(196, 181, 253, 0.3); }
+        .organ-zone[data-type="heart"]:hover { fill: rgba(248, 113, 113, 0.3); }
+        .organ-zone[data-type="lung"]:hover { fill: rgba(253, 186, 116, 0.3); }
+        .organ-zone[data-type="stomach"]:hover { fill: rgba(248, 250, 252, 0.2); }
+
+        #tooltip {
+            position: fixed;
+            background: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            pointer-events: none;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translate(-50%, -130%);
+            font-size: 0.85rem;
+            letter-spacing: -0.2px;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FACE MAPPING INTERACTIVE</h1>
+        <p style="color: #666;">Hover regions to explore diagnostics</p>
+    </header>
+
+    <div class="stage-wrapper">
+        <img src="/acne/face-map/face-1.png" class="face-img">
+        
+        <svg viewBox="0 0 2048 1586" class="overlay-svg">
+            <ellipse class="organ-zone" data-type="intestine" data-name="Small Intestine" cx="1018" cy="219" rx="191" ry="117" transform="rotate(0, 1018, 219)" />
+            <ellipse class="organ-zone" data-type="bladder" data-name="Bladder" cx="679" cy="300" rx="140" ry="60" transform="rotate(-30, 679, 300)" />
+            <ellipse class="organ-zone" data-type="bladder" data-name="Bladder" cx="1369" cy="291" rx="140" ry="60" transform="rotate(30, 1369, 291)" />
+            <ellipse class="organ-zone" data-type="heart" data-name="Heart" cx="791" cy="403" rx="100" ry="40" transform="rotate(-10, 791, 403)" />
+            <ellipse class="organ-zone" data-type="heart" data-name="Heart" cx="1273" cy="411" rx="100" ry="40" transform="rotate(10, 1273, 411)" />
+            <ellipse class="organ-zone" data-type="heart" data-name="Liver" cx="1033" cy="457" rx="90" ry="90" transform="rotate(0, 1033, 457)" />
+            <ellipse class="organ-zone" data-type="heart" data-name="Heart & Pancreas" cx="1038" cy="717" rx="93" ry="150" transform="rotate(-2, 1038, 717)" />
+            <ellipse class="organ-zone" data-type="stomach" data-name="Stomach" cx="769" cy="779" rx="142" ry="80" transform="rotate(-20, 769, 779)" />
+            <ellipse class="organ-zone" data-type="stomach" data-name="Stomach" cx="1305" cy="781" rx="150" ry="80" transform="rotate(20, 1305, 781)" />
+            <ellipse class="organ-zone" data-type="lung" data-name="Gallbladder" cx="581" cy="597" rx="36" ry="118" transform="rotate(0, 581, 597)" />
+            <ellipse class="organ-zone" data-type="lung" data-name="Gallbladder" cx="1471" cy="594" rx="36" ry="120" transform="rotate(0, 1471, 594)" />
+            <ellipse class="organ-zone" data-type="lung" data-name="Lungs" cx="703" cy="1036" rx="52" ry="141" transform="rotate(-32, 703, 1036)" />
+            <ellipse class="organ-zone" data-type="lung" data-name="Lungs" cx="1364" cy="1030" rx="49" ry="142" transform="rotate(37, 1364, 1030)" />
+            <ellipse class="organ-zone" data-type="stomach" data-name="Large Intestine" cx="827" cy="1016" rx="40" ry="120" transform="rotate(0, 827, 1016)" />
+            <ellipse class="organ-zone" data-type="stomach" data-name="Large Intestine" cx="1246" cy="1019" rx="40" ry="120" transform="rotate(0, 1246, 1019)" />
+            <ellipse class="organ-zone" data-type="intestine" data-name="Spleen" cx="1044" cy="931" rx="150" ry="40" transform="rotate(0, 1044, 931)" />
+            <ellipse class="organ-zone" data-type="stomach" data-name="Stomach (Lower)" cx="1038" cy="993" rx="120" ry="30" transform="rotate(0, 1038, 993)" />
+            <ellipse class="organ-zone" data-type="intestine" data-name="Intestines" cx="1033" cy="1063" rx="100" ry="25" transform="rotate(0, 1033, 1063)" />
+            <ellipse class="organ-zone" data-type="bladder" data-name="Pelvic Organs & Hormones" cx="1044" cy="1200" rx="180" ry="80" transform="rotate(0, 1044, 1200)" />
+        </svg>
+    </div>
+
+    <div id="tooltip">ZONE</div>
+
+    <script>
+        const tooltip = document.getElementById('tooltip');
+        document.querySelectorAll('.organ-zone').forEach(zone => {
+            zone.addEventListener('mousemove', (e) => {
+                tooltip.style.display = 'block';
+                tooltip.innerText = zone.getAttribute('data-name');
+                tooltip.style.left = e.clientX + 'px';
+                tooltip.style.top = e.clientY + 'px';
+            });
+            zone.addEventListener('mouseleave', () => tooltip.style.display = 'none');
+        });
+    </script>
+</body>
+</html>
