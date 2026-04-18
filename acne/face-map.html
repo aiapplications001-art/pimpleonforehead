@@ -3,134 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Face Mapping | MyMirror Diagnostics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Acne Face Map: What Your Breakouts Say About Your Health</title>
+    <meta name="description" content="Discover what your acne location says about your body. Use our interactive Acne Face Map to understand the causes of forehead, cheek, and chin breakouts.">
+    <link rel="canonical" href="https://mymirror.fit/acne/face-map/">
+    <link rel="icon" type="image/png" href="/acne/forehead-acne/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mymirror.fit/acne/face-map/">
+    <meta property="og:title" content="Acne Face Map: What Your Breakouts Say About Your Health">
+    <meta property="og:description" content="Discover what your acne location says about your body. Use our interactive Acne Face Map to understand the causes of forehead, cheek, and chin breakouts.">
+    <meta property="og:image" content="https://mymirror.fit/acne/face-map/face-1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mymirror.fit/acne/face-map/">
+    <meta property="twitter:title" content="Acne Face Map: What Your Breakouts Say About Your Health">
+    <meta property="twitter:description" content="Discover what your acne location says about your body. Use our interactive Acne Face Map to understand the causes of forehead, cheek, and chin breakouts.">
+    <meta property="twitter:image" content="https://mymirror.fit/acne/face-map/face-1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://mymirror.fit/acne/face-map/",
+          "url": "https://mymirror.fit/acne/face-map/",
+          "name": "Acne Face Map: What Your Breakouts Say About Your Health",
+          "description": "Discover what your acne location says about your body. Use our interactive Acne Face Map to understand the causes of forehead, cheek, and chin breakouts.",
+          "author": {
+            "@type": "Organization",
+            "name": "MyMirror Skin Health Editorial"
+          },
+          "reviewedBy": {
+            "@type": "Person",
+            "name": "Dr. Lipy Mehta",
+            "jobTitle": "Board-Certified Dermatologist"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "MyMirror",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://mymirror.fit/acne/forehead-acne/logo-v4.png"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does acne on the chin mean?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usually hormonal fluctuations or gut health."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can dirty pillowcases cause cheek acne?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, bacteria and friction on the cheeks often lead to breakouts."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
-            --bg: #0a0a0c;
+            --primary: #000000;
+            --secondary: #f8fafc;
             --accent: #EC610E;
+            --text: #0f172a;
+            --white: #ffffff;
+            --bg: #ffffff;
+            --bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --safe-green: #059669;
         }
 
-        body, html {
-            margin: 0; padding: 0; min-height: 100%;
-            background: var(--bg); color: #fff;
+        body {
             font-family: 'Poppins', sans-serif;
-            display: flex; flex-direction: column; align-items: center;
+            margin: 0; padding: 0;
+            line-height: 1.6; color: var(--text);
+            background-color: var(--bg);
+            overflow-x: hidden;
         }
 
-        header { padding: 40px 20px; text-align: center; width: 100%; }
-        h1 { margin: 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; }
+        /* Header & Nav */
+        .site-header {
+            position: sticky; top: 0; width: 100%; height: 60px;
+            background: var(--white); z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex; align-items: center;
+        }
+        .header-container {
+            max-width: 1200px; width: 100%; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;
+        }
+        .logo { height: 40px; width: auto; object-fit: contain; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--accent); }
 
+        /* Trust Architecture */
+        .trust-bar { background: #f1f5f9; padding: 1.2rem 2rem; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; color: #64748b; }
+        .trust-container { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+        .author-badge { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text); }
+        .verify-badge { color: var(--safe-green); font-weight: 700; display: flex; align-items: center; gap: 5px; }
+
+        /* Hero */
+        .hero { padding: 4rem 2rem; text-align: center; background: radial-gradient(circle at 10% 20%, rgba(255, 245, 240, 1) 0%, rgba(255, 255, 255, 1) 90%); }
+        h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; max-width: 950px; margin: 0 auto 1.5rem auto; color: var(--primary); }
+        .disclaimer-box { max-width: 800px; margin: 2rem auto; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.85rem; color: #64748b; text-align: center; font-style: italic; }
+
+        /* Container */
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        h2 { font-size: 2.2rem; color: var(--primary); margin-top: 4rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.5rem; color: var(--accent); margin-top: 2.5rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+
+        /* Interactive Map Component */
+        .map-section { background: #0a0a0c; padding: 4rem 2rem; border-radius: 40px; margin: 4rem 0; box-shadow: 0 30px 60px rgba(0,0,0,0.15); text-align: center; }
+        .map-section h2 { color: white; border: none; margin-top: 0; padding-bottom: 0; }
+        .map-section p { color: #a0aec0; }
         .stage-wrapper {
             position: relative;
             width: fit-content;
             height: fit-content;
-            margin: 0 auto 60px auto;
+            margin: 2rem auto 0 auto;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 0 100px rgba(0,0,0,0.8);
             line-height: 0;
             cursor: url('/acne/face-map/magnifying_small.png') 16 16, auto;
+            border: 4px solid #333;
         }
-
-        .face-img {
-            max-width: 90vw;
-            max-height: 80vh;
-            display: block;
-            height: auto;
-        }
-
-        .overlay-svg {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 10;
-        }
-
-        .organ-zone {
-            fill: rgba(255, 255, 255, 0); /* Invisible by default */
-            stroke: rgba(255, 255, 255, 0);
-            stroke-width: 2;
-            cursor: pointer;
-            transition: fill 0.3s ease, stroke 0.3s ease;
-        }
-
-        .organ-zone:hover {
-            stroke: rgba(255, 255, 255, 0.8);
-            stroke-width: 3;
-        }
-
+        .face-img { max-width: 100%; max-height: 70vh; display: block; height: auto; }
+        .overlay-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; }
+        .organ-zone { fill: rgba(255, 255, 255, 0); stroke: rgba(255, 255, 255, 0); stroke-width: 2; cursor: pointer; transition: fill 0.3s ease, stroke 0.3s ease; }
+        .organ-zone:hover { stroke: rgba(255, 255, 255, 0.8); stroke-width: 3; }
         .organ-zone[data-type="intestine"]:hover { fill: rgba(254, 202, 202, 0.3); }
         .organ-zone[data-type="bladder"]:hover { fill: rgba(196, 181, 253, 0.3); }
         .organ-zone[data-type="heart"]:hover { fill: rgba(248, 113, 113, 0.3); }
         .organ-zone[data-type="lung"]:hover { fill: rgba(253, 186, 116, 0.3); }
         .organ-zone[data-type="stomach"]:hover { fill: rgba(248, 250, 252, 0.2); }
-
+        
         #tooltip {
-            position: fixed;
-            background: #ffffff;
-            color: #000000;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            pointer-events: none;
-            display: none;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transform: translate(-50%, -130%);
-            font-size: 0.85rem;
-            letter-spacing: -0.2px;
-            font-family: 'Poppins', sans-serif;
-            border: 1px solid rgba(0,0,0,0.05);
+            position: fixed; background: #ffffff; color: #000000; padding: 10px 20px; border-radius: 8px; font-weight: 600; pointer-events: none; display: none; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transform: translate(-50%, -130%); font-size: 0.85rem; letter-spacing: -0.2px; border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Lists & Cards */
+        .content-card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; margin-bottom: 2rem; }
+        .mirror-tip { background: #fffcf9; border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 0 15px 15px 0; margin-top: 1rem; font-style: italic; }
+        .pillar-list { list-style: none; padding: 0; }
+        .pillar-list li { position: relative; padding-left: 30px; margin-bottom: 10px; font-weight: 600; }
+        .pillar-list li::before { content: '•'; position: absolute; left: 0; color: var(--accent); font-size: 1.5rem; line-height: 1; top: -2px; }
+
+        /* FAQs */
+        .faq-container { margin-top: 3rem; }
+        .faq-item { margin-bottom: 1.5rem; background: #f8fafc; padding: 1.5rem; border-radius: 15px; }
+        .faq-item h4 { margin: 0 0 0.5rem 0; color: var(--primary); }
+        .faq-item p { margin: 0; font-size: 0.95rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .map-section { padding: 2rem 1rem; border-radius: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>FACE MAPPING INTERACTIVE</h1>
-        <p style="color: #666;">Hover regions to explore diagnostics</p>
-    </header>
+<nav class="site-header">
+    <div class="header-container">
+        <div class="logo-wrapper">
+            <a href="https://mymirror.fit"><img src="/acne/forehead-acne/logo-v4.png" alt="MyMirror Logo" class="logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="/acne/forehead-acne/">Causes</a>
+            <a href="/acne/forehead-acne/meaning/">Meaning</a>
+            <a href="/acne/forehead-acne/home-remedies/">Natural Remedies 🌿</a>
+        </div>
+    </div>
+</nav>
 
-    <div class="stage-wrapper">
-        <img src="/acne/face-map/face-1.png" class="face-img">
+<div class="trust-bar">
+    <div class="trust-container">
+        <div class="author-badge">✍️ By MyMirror Skin Health Editorial, Holistic Skincare Specialist</div>
+        <div class="verify-badge">🩺 Medically & Holistically Reviewed by: Dr. Lipy Mehta, Board-Certified Dermatologist / Ayurvedic Practitioner</div>
+        <div>📅 Last Updated: April 19, 2026</div>
+    </div>
+</div>
+
+<header class="hero">
+    <h1>Acne Face Map: What Your Breakouts Are Telling You</h1>
+    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; opacity: 0.9;">
+        Have you ever noticed that your pimples seem to pop up in the exact same spot every time? The location of your breakouts isn’t always random.
+    </p>
+    <div class="disclaimer-box">
+        Medical Disclaimer: This guide decodes traditional face mapping and dermatological triggers. It is for educational purposes and should not replace clinical advice.
+    </div>
+</header>
+
+<div class="container">
+
+    <p>Whether it’s stubborn chin acne or a sudden cluster on your forehead, <strong>Acne Face Mapping</strong> is an ancient practice—rooted in Traditional Chinese Medicine (TCM) and Ayurveda—that views the face as a "mirror" of your internal health. By understanding which facial zones correspond to specific organs and lifestyle habits, you can stop treating just the symptoms and start addressing the cause.</p>
+
+    <!-- INTERACTIVE MAP COMPONENT -->
+    <section class="map-section">
+        <h2>Interactive Acne Face Map</h2>
+        <p>Hover over the regions of the face below to explore what your breakouts are signaling.</p>
         
-        <svg viewBox="0 0 2048 1586" class="overlay-svg">
-            <ellipse class="organ-zone" data-type="intestine" data-name="Small Intestine" cx="1018" cy="219" rx="191" ry="117" transform="rotate(0, 1018, 219)" />
-            <ellipse class="organ-zone" data-type="bladder" data-name="Bladder" cx="679" cy="300" rx="140" ry="60" transform="rotate(-30, 679, 300)" />
-            <ellipse class="organ-zone" data-type="bladder" data-name="Bladder" cx="1369" cy="291" rx="140" ry="60" transform="rotate(30, 1369, 291)" />
-            <ellipse class="organ-zone" data-type="heart" data-name="Heart" cx="791" cy="403" rx="100" ry="40" transform="rotate(-10, 791, 403)" />
-            <ellipse class="organ-zone" data-type="heart" data-name="Heart" cx="1273" cy="411" rx="100" ry="40" transform="rotate(10, 1273, 411)" />
-            <ellipse class="organ-zone" data-type="heart" data-name="Liver" cx="1033" cy="457" rx="90" ry="90" transform="rotate(0, 1033, 457)" />
-            <ellipse class="organ-zone" data-type="heart" data-name="Heart & Pancreas" cx="1038" cy="717" rx="93" ry="150" transform="rotate(-2, 1038, 717)" />
-            <ellipse class="organ-zone" data-type="stomach" data-name="Stomach" cx="769" cy="779" rx="142" ry="80" transform="rotate(-20, 769, 779)" />
-            <ellipse class="organ-zone" data-type="stomach" data-name="Stomach" cx="1305" cy="781" rx="150" ry="80" transform="rotate(20, 1305, 781)" />
-            <ellipse class="organ-zone" data-type="lung" data-name="Gallbladder" cx="581" cy="597" rx="36" ry="118" transform="rotate(0, 581, 597)" />
-            <ellipse class="organ-zone" data-type="lung" data-name="Gallbladder" cx="1471" cy="594" rx="36" ry="120" transform="rotate(0, 1471, 594)" />
-            <ellipse class="organ-zone" data-type="lung" data-name="Lungs" cx="703" cy="1036" rx="52" ry="141" transform="rotate(-32, 703, 1036)" />
-            <ellipse class="organ-zone" data-type="lung" data-name="Lungs" cx="1364" cy="1030" rx="49" ry="142" transform="rotate(37, 1364, 1030)" />
-            <ellipse class="organ-zone" data-type="stomach" data-name="Large Intestine" cx="827" cy="1016" rx="40" ry="120" transform="rotate(0, 827, 1016)" />
-            <ellipse class="organ-zone" data-type="stomach" data-name="Large Intestine" cx="1246" cy="1019" rx="40" ry="120" transform="rotate(0, 1246, 1019)" />
-            <ellipse class="organ-zone" data-type="intestine" data-name="Spleen" cx="1044" cy="931" rx="150" ry="40" transform="rotate(0, 1044, 931)" />
-            <ellipse class="organ-zone" data-type="stomach" data-name="Stomach (Lower)" cx="1038" cy="993" rx="120" ry="30" transform="rotate(0, 1038, 993)" />
-            <ellipse class="organ-zone" data-type="intestine" data-name="Intestines" cx="1033" cy="1063" rx="100" ry="25" transform="rotate(0, 1033, 1063)" />
-            <ellipse class="organ-zone" data-type="bladder" data-name="Pelvic Organs & Hormones" cx="1044" cy="1200" rx="180" ry="80" transform="rotate(0, 1044, 1200)" />
-        </svg>
+        <div class="stage-wrapper">
+            <img src="/acne/face-map/face-1.png" class="face-img" alt="Detailed Acne Face Map chart showing causes for forehead, cheek, and chin breakouts.">
+            
+            <svg viewBox="0 0 2048 1586" class="overlay-svg">
+                <ellipse class="organ-zone" data-type="intestine" data-name="Small Intestine (Digestion)" cx="1018" cy="219" rx="191" ry="117" transform="rotate(0, 1018, 219)" />
+                <ellipse class="organ-zone" data-type="bladder" data-name="Bladder" cx="679" cy="300" rx="140" ry="60" transform="rotate(-30, 679, 300)" />
+                <ellipse class="organ-zone" data-type="bladder" data-name="Bladder" cx="1369" cy="291" rx="140" ry="60" transform="rotate(30, 1369, 291)" />
+                <ellipse class="organ-zone" data-type="heart" data-name="Heart" cx="791" cy="403" rx="100" ry="40" transform="rotate(-10, 791, 403)" />
+                <ellipse class="organ-zone" data-type="heart" data-name="Heart" cx="1273" cy="411" rx="100" ry="40" transform="rotate(10, 1273, 411)" />
+                <ellipse class="organ-zone" data-type="heart" data-name="Liver (Toxins/Alcohol)" cx="1033" cy="457" rx="90" ry="90" transform="rotate(0, 1033, 457)" />
+                <ellipse class="organ-zone" data-type="heart" data-name="Heart & Pancreas" cx="1038" cy="717" rx="93" ry="150" transform="rotate(-2, 1038, 717)" />
+                <ellipse class="organ-zone" data-type="stomach" data-name="Stomach" cx="769" cy="779" rx="142" ry="80" transform="rotate(-20, 769, 779)" />
+                <ellipse class="organ-zone" data-type="stomach" data-name="Stomach" cx="1305" cy="781" rx="150" ry="80" transform="rotate(20, 1305, 781)" />
+                <ellipse class="organ-zone" data-type="lung" data-name="Gallbladder" cx="581" cy="597" rx="36" ry="118" transform="rotate(0, 581, 597)" />
+                <ellipse class="organ-zone" data-type="lung" data-name="Gallbladder" cx="1471" cy="594" rx="36" ry="120" transform="rotate(0, 1471, 594)" />
+                <ellipse class="organ-zone" data-type="lung" data-name="Lungs (Respiration/Hygiene)" cx="703" cy="1036" rx="52" ry="141" transform="rotate(-32, 703, 1036)" />
+                <ellipse class="organ-zone" data-type="lung" data-name="Lungs (Respiration/Hygiene)" cx="1364" cy="1030" rx="49" ry="142" transform="rotate(37, 1364, 1030)" />
+                <ellipse class="organ-zone" data-type="stomach" data-name="Large Intestine" cx="827" cy="1016" rx="40" ry="120" transform="rotate(0, 827, 1016)" />
+                <ellipse class="organ-zone" data-type="stomach" data-name="Large Intestine" cx="1246" cy="1019" rx="40" ry="120" transform="rotate(0, 1246, 1019)" />
+                <ellipse class="organ-zone" data-type="intestine" data-name="Spleen" cx="1044" cy="931" rx="150" ry="40" transform="rotate(0, 1044, 931)" />
+                <ellipse class="organ-zone" data-type="stomach" data-name="Stomach (Lower)" cx="1038" cy="993" rx="120" ry="30" transform="rotate(0, 1038, 993)" />
+                <ellipse class="organ-zone" data-type="intestine" data-name="Intestines" cx="1033" cy="1063" rx="100" ry="25" transform="rotate(0, 1033, 1063)" />
+                <ellipse class="organ-zone" data-type="bladder" data-name="Pelvic Organs & Hormones (Chin/Jaw)" cx="1044" cy="1200" rx="180" ry="80" transform="rotate(0, 1044, 1200)" />
+            </svg>
+        </div>
+        <div id="tooltip">ZONE</div>
+    </section>
+
+    <h2>How to Read the Acne Face Map</h2>
+    <p>Use this zone-by-zone guide to decode your skin’s signals.</p>
+
+    <div class="content-card">
+        <h3>1. Forehead: Digestion, Stress & Hair Care</h3>
+        <p><strong>Traditional Meaning:</strong> Linked to the digestive system and bladder.</p>
+        <p><strong>Modern Cause:</strong> High stress levels, poor sleep, or a diet high in processed sugars.</p>
+        <div class="mirror-tip">
+            <strong>🪞 The "Mirror" Tip:</strong> Check your hair products! "Pomade acne" occurs when oily hair products clog the pores along your hairline.
+        </div>
     </div>
 
-    <div id="tooltip">ZONE</div>
+    <div class="content-card">
+        <h3>2. Between the Brows (The T-Zone): The Liver</h3>
+        <p><strong>Traditional Meaning:</strong> Connected to the liver.</p>
+        <p><strong>Modern Cause:</strong> Food sensitivities (like dairy or alcohol) or a diet high in rich, greasy foods.</p>
+        <div class="mirror-tip">
+            <strong>🪞 The "Mirror" Tip:</strong> If you're breaking out here after a late night out or a heavy meal, your body is likely signaling a need for hydration and "clean" eating.
+        </div>
+    </div>
 
-    <script>
-        const tooltip = document.getElementById('tooltip');
-        document.querySelectorAll('.organ-zone').forEach(zone => {
-            zone.addEventListener('mousemove', (e) => {
-                tooltip.style.display = 'block';
-                tooltip.innerText = zone.getAttribute('data-name');
-                tooltip.style.left = e.clientX + 'px';
-                tooltip.style.top = e.clientY + 'px';
-            });
-            zone.addEventListener('mouseleave', () => tooltip.style.display = 'none');
+    <div class="content-card">
+        <h3>3. Cheeks: Respiration & Hygiene</h3>
+        <p><strong>Traditional Meaning:</strong> Associated with the lungs.</p>
+        <p><strong>Modern Cause:</strong> Bacterial transfer and environmental triggers.</p>
+        <div class="mirror-tip">
+            <strong>🪞 The "Mirror" Tip:</strong> Your phone screen and pillowcase are the most common culprits. Bacteria from your phone can cause "Acne Mechanica" on your cheeks. Switch to a silk pillowcase and sanitize your phone daily.
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h3>4. Nose: Heart & Circulation</h3>
+        <p><strong>Traditional Meaning:</strong> Linked to the heart and blood pressure.</p>
+        <p><strong>Modern Cause:</strong> The nose has the highest concentration of oil glands. Breakouts here are often due to dilated pores and excess sebum production.</p>
+        <div class="mirror-tip">
+            <strong>🪞 The "Mirror" Tip:</strong> Focus on BHA (Salicylic Acid) treatments to keep the pores clear in the T-Zone.
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h3>5. Chin & Jawline: The Hormonal Zone</h3>
+        <p><strong>Traditional Meaning:</strong> Linked to the reproductive organs and kidneys.</p>
+        <p><strong>Modern Cause:</strong> Hormonal fluctuations. This is the most common area for "<a href="https://mymirror.fit" style="color: var(--accent);">hormonal acne</a>" caused by menstrual cycles, PCOS, or elevated androgen levels.</p>
+        <div class="mirror-tip">
+            <strong>🪞 The "Mirror" Tip:</strong> Hormonal acne is often deep and cystic. Reducing dairy and managing cortisol (stress) can help balance this zone.
+        </div>
+    </div>
+
+    <h2>Modern Science vs. Ancient Mapping</h2>
+    <p>While the "Acne Face Map" provides a great starting point, modern dermatology emphasizes four primary pillars of acne:</p>
+    <ul class="pillar-list">
+        <li>Excess Oil (Sebum) Production</li>
+        <li>Clogged Pores (Dead skin cells)</li>
+        <li>Bacteria (C. acnes)</li>
+        <li>Inflammation</li>
+    </ul>
+    <p>At MyMirror.fit, we combine the wisdom of habit-tracking with clinical <a href="https://mymirror.fit/scan" style="color: var(--accent); font-weight: 600;">skin analysis</a> to help you find a routine that works for your unique "map."</p>
+
+    <h2>3 Steps to Clear Your Skin Based on Your Map</h2>
+    <ol style="font-size: 1.05rem; padding-left: 1.2rem;">
+        <li style="margin-bottom: 10px;"><strong>Sanitize Your Environment:</strong> Wash pillowcases weekly and wipe down your smartphone.</li>
+        <li style="margin-bottom: 10px;"><strong>Audit Your Diet:</strong> Keep a 7-day food diary to see if breakouts on your forehead or "liver zone" correlate with sugar or dairy intake.</li>
+        <li style="margin-bottom: 10px;"><strong>Use Targeted Ingredients:</strong>
+            <ul style="list-style-type: circle; margin-top: 10px;">
+                <li><em>Forehead/Nose:</em> Salicylic Acid.</li>
+                <li><em>Cheeks:</em> Niacinamide (to strengthen the skin barrier).</li>
+                <li><em>Jawline:</em> Retinoids and calming anti-inflammatories.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <!-- FAQ Section for Schema -->
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4>What does acne on the chin mean?</h4>
+            <p>Usually, acne on the chin and jawline is a sign of hormonal fluctuations or gut health issues. It is incredibly common in adults.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Can dirty pillowcases cause cheek acne?</h4>
+            <p>Yes, bacteria and friction on the cheeks often lead to breakouts known as Acne Mechanica. Washing pillowcases and sanitizing your phone can drastically reduce cheek acne.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer style="background: var(--secondary); padding: 4rem 2rem; text-align: center; margin-top: 4rem; border-top: 1px solid #e2e8f0;">
+    <div class="container">
+        <p style="color: var(--accent); font-size: 0.9rem; margin: 0; font-weight: 600;">
+            Reviewed by Dr. Lipy Mehta, Dermatologist/Skincare Expert
+        </p>
+        <p style="color: #64748b; font-size: 0.85rem; margin-top: 10px;">
+            &copy; 2026 MyMirror Skin Health. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+    const tooltip = document.getElementById('tooltip');
+    document.querySelectorAll('.organ-zone').forEach(zone => {
+        zone.addEventListener('mousemove', (e) => {
+            tooltip.style.display = 'block';
+            tooltip.innerText = zone.getAttribute('data-name');
+            tooltip.style.left = e.clientX + 'px';
+            tooltip.style.top = e.clientY + 'px';
         });
-    </script>
+        zone.addEventListener('mouseleave', () => tooltip.style.display = 'none');
+    });
+</script>
+
 </body>
 </html>
