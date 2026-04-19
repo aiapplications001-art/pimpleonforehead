@@ -109,20 +109,50 @@
             letter-spacing: -0.01em;
         }
 
-        /* Cinematic Scroll Reveals */
-        .cinematic-section {
-            min-height: 80vh;
+        /* Apple Full-Screen Scroll Transitions */
+        .apple-transition-container {
+            height: 200vh;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .transition-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            padding: 2rem;
-            margin: 10vh 0;
+            overflow: hidden;
+            background: transparent;
         }
         
+        .transition-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150vmax;
+            height: 150vmax;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 1;
+            will-change: transform;
+        }
+        
+        .bg-health { background: #000; }
+        .bg-waytogo { background: linear-gradient(135deg, #ff6b00, #ff007b); }
+        
+        .transition-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            will-change: opacity, transform;
+        }
+
         .cinematic-text {
             font-size: min(6rem, 15vw);
             font-weight: 800;
@@ -132,9 +162,6 @@
             background: linear-gradient(180deg, #fff 0%, #86868b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            opacity: 0;
-            transform: translateY(50px) scale(0.95);
-            transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         
         .cinematic-subtext {
@@ -142,15 +169,6 @@
             font-weight: 600;
             color: var(--accent);
             margin-top: 1rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s;
-        }
-
-        .cinematic-section.in-view .cinematic-text,
-        .cinematic-section.in-view .cinematic-subtext {
-            opacity: 1;
-            transform: translateY(0) scale(1);
         }
 
         /* Glassmorphism Sections */
@@ -287,10 +305,15 @@
         <p>Expert treatments, clinical solutions, and the science of body acne.</p>
     </header>
 
-    <section class="cinematic-section">
-        <h2 class="cinematic-text">Health.</h2>
-        <div class="cinematic-subtext">Know your body by heart.</div>
-    </section>
+    <div class="apple-transition-container">
+        <div class="transition-sticky">
+            <div class="transition-bg bg-health"></div>
+            <div class="transition-content">
+                <h2 class="cinematic-text">Health.</h2>
+                <div class="cinematic-subtext">Know your body by heart.</div>
+            </div>
+        </div>
+    </div>
 
     <div class="apple-container">
         
@@ -337,10 +360,15 @@
             </div>
         </div>
 
-        <section class="cinematic-section" style="min-height: 50vh; margin: 15vh 0;">
-            <h2 class="cinematic-text" style="font-size: min(5rem, 12vw); background: linear-gradient(180deg, #ff6b00 0%, #ffc107 100%); -webkit-background-clip: text;">Way to go!</h2>
-            <div class="cinematic-subtext" style="color: #fff; font-size: min(2rem, 5vw);">That was your fastest clear ever.</div>
-        </section>
+        <div class="apple-transition-container">
+            <div class="transition-sticky">
+                <div class="transition-bg bg-waytogo"></div>
+                <div class="transition-content">
+                    <h2 class="cinematic-text" style="font-size: min(5rem, 12vw); background: none; -webkit-text-fill-color: #fff; color: #fff;">Way to go!</h2>
+                    <div class="cinematic-subtext" style="color: #fff; font-size: min(2rem, 5vw);">That was your fastest clear ever.</div>
+                </div>
+            </div>
+        </div>
 
         <div class="glass-card">
             <h2>Clinical & Natural Treatments</h2>
@@ -384,15 +412,40 @@
 </footer>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
+    // Apple-style Scroll Transitions
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.apple-transition-container').forEach(container => {
+            const rect = container.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Calculate progress (0 to 1) as the user scrolls through the 200vh container
+            let progress = 0;
+            if (rect.top <= 0) {
+                progress = Math.min(1, -rect.top / windowHeight);
+            }
+            
+            const bg = container.querySelector('.transition-bg');
+            const content = container.querySelector('.transition-content');
+            
+            if (bg) {
+                // Scale from 0 to slightly larger than 1 to fully cover the screen
+                const scaleValue = progress * 1.5;
+                bg.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
+            }
+            
+            if (content) {
+                // Fade in text quickly once background is large enough
+                if (progress > 0.4) {
+                    const textProgress = Math.min(1, (progress - 0.4) * 2.5);
+                    content.style.opacity = textProgress;
+                    content.style.transform = `translateY(${(1 - textProgress) * 30}px)`;
+                } else {
+                    content.style.opacity = 0;
+                    content.style.transform = `translateY(30px)`;
+                }
             }
         });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll('.cinematic-section').forEach(el => observer.observe(el));
+    });
 </script>
 
 </body>
