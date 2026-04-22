@@ -88,9 +88,10 @@
 
     /* TOC TABS */
     .toc-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 60px; z-index: 90; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-    .toc-inner { display: flex; align-items: center; gap: 10px; overflow-x: auto; scrollbar-width: none; padding: 0 2rem; }
+    .toc-inner { display: flex; align-items: center; gap: 10px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
     .toc-inner::-webkit-scrollbar { display: none; }
     .toc-link { 
+      flex-shrink: 0; /* Prevents pills from squishing */
       white-space: nowrap; font-size: 13px; font-weight: 600; color: var(--text-2); 
       text-decoration: none; padding: 10px 18px; border-radius: 99px; 
       background: var(--bg-2); border: 1px solid var(--border); 
