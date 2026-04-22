@@ -86,26 +86,77 @@
     .hero-photo { width: 280px; border-radius: 20px; overflow: hidden; background: transparent; }
     .hero-photo img { width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply; }
 
-    /* TOC TABS */
-    .toc-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 15px 0; position: sticky; top: 60px; z-index: 90; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-    .toc-inner { display: flex; align-items: center; gap: 12px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 0 2rem; }
+    /* ── TOC BAR ── */
+    .toc-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 60px; z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 1.25rem 0;
+    }
+    .toc-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-3);
+      margin-bottom: 12px;
+    }
+    .toc-inner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 8px; /* Extra space for bouncy lift & shadow */
+      margin-bottom: -4px; /* Offset the padding for visual balance */
+    }
     .toc-inner::-webkit-scrollbar { display: none; }
-    .toc-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-3); margin-bottom: 12px; padding: 0 2rem; }
-    .toc-link { 
+    
+    .toc-link {
       flex-shrink: 0;
-      white-space: nowrap; font-size: 13px; font-weight: 600; color: var(--text-2); 
-      text-decoration: none; padding: 10px 18px; border-radius: 99px; 
-      background: var(--bg-2); border: 1px solid var(--border); 
-      transition: all 0.3s var(--bouncy); display: flex; align-items: center; gap: 8px; 
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 99px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      color: var(--text-2);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s var(--bouncy);
     }
     .toc-link:hover { border-color: var(--brand); color: var(--brand); transform: translateY(-2px); background: #fff; }
-    .toc-link.active { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: 0 10px 25px rgba(236,97,14,0.2); }
-    .toc-num { 
-      display: inline-flex; align-items: center; justify-content: center; 
-      width: 20px; height: 20px; border-radius: 50%; 
-      background: rgba(0,0,0,0.05); color: inherit; font-size: 11px; font-weight: 700; 
+    .toc-link.active {
+      background: var(--brand);
+      color: #fff !important;
+      border-color: var(--brand);
+      box-shadow: 0 8px 20px rgba(236, 97, 14, 0.2);
     }
-    .toc-link.active .toc-num { background: rgba(255,255,255,0.2); color: #fff; }
+    .toc-num {
+      width: 20px;
+      height: 20px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 800;
+      color: inherit;
+    }
+    .toc-link.active .toc-num { background: rgba(255,255,255,0.25); color: #fff; }
+
+    /* Section anchors for sticky header */
+    section[id] { scroll-margin-top: 180px; }
+
+    @media (max-width: 768px) {
+      .toc-bar { padding: 1rem 0; }
+      .toc-inner { margin-left: -2rem; margin-right: -2rem; padding: 0 2rem 8px; } /* Full bleed scroll */
+    }
 
     /* 2 Column Layout */
     .page-body { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 0; align-items: start; }
@@ -206,7 +257,7 @@
 
   <!-- TOC BAR -->
   <div class="toc-bar">
-    <div class="toc-container">
+    <div class="container">
       <div class="toc-label">What's in this guide:</div>
       <div class="toc-inner">
         <a class="toc-link" href="#test"><span class="toc-num">1</span> 🔬 Fungal Acne Test</a>
@@ -416,7 +467,7 @@
         current = "faqs";
       } else {
         sections.forEach(s => {
-          const sectionTop = s.offsetTop - 180;
+          const sectionTop = s.offsetTop - 200;
           if (scrollPos >= sectionTop) {
             current = s.getAttribute('id');
           }
@@ -425,7 +476,10 @@
 
       tocLinks.forEach(l => {
         l.classList.remove('active');
-        if (l.getAttribute('href').includes(current)) l.classList.add('active');
+        const linkTarget = l.getAttribute('href').replace('#', '');
+        if (current && linkTarget === current) {
+          l.classList.add('active');
+        }
       });
     }
 
