@@ -206,12 +206,14 @@
 
   <!-- TOC BAR -->
   <div class="toc-bar">
-    <div class="toc-label">What's in this guide:</div>
-    <div class="toc-inner">
-      <a class="toc-link active" href="#test"><span class="toc-num">1</span> 🔬 Fungal Acne Test</a>
-      <a class="toc-link" href="#science"><span class="toc-num">2</span> 🛡️ The Science</a>
-      <a class="toc-link" href="#cure"><span class="toc-num">3</span> 🧪 4-Step Cure</a>
-      <a class="toc-link" href="#faqs"><span class="toc-num">4</span> 📋 FAQs</a>
+    <div class="toc-container">
+      <div class="toc-label">What's in this guide:</div>
+      <div class="toc-inner">
+        <a class="toc-link" href="#test"><span class="toc-num">1</span> 🔬 Fungal Acne Test</a>
+        <a class="toc-link" href="#science"><span class="toc-num">2</span> 🛡️ The Science</a>
+        <a class="toc-link" href="#cure"><span class="toc-num">3</span> 🧪 4-Step Cure</a>
+        <a class="toc-link" href="#faqs"><span class="toc-num">4</span> 📋 FAQs</a>
+      </div>
     </div>
   </div>
 
@@ -402,14 +404,33 @@
     // TOC Active State
     const sections = document.querySelectorAll('section[id]');
     const tocLinks = document.querySelectorAll('.toc-link');
-    window.addEventListener('scroll', () => {
+    
+    function updateTOC() {
       let current = "";
-      sections.forEach(s => { if (pageYOffset >= (s.offsetTop - 150)) current = s.getAttribute('id'); });
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const bodyHeight = document.body.offsetHeight;
+
+      // Handle the case where we are at the bottom of the page (for FAQs)
+      if (scrollPos + windowHeight >= bodyHeight - 100) {
+        current = "faqs";
+      } else {
+        sections.forEach(s => {
+          const sectionTop = s.offsetTop - 180;
+          if (scrollPos >= sectionTop) {
+            current = s.getAttribute('id');
+          }
+        });
+      }
+
       tocLinks.forEach(l => {
         l.classList.remove('active');
         if (l.getAttribute('href').includes(current)) l.classList.add('active');
       });
-    });
+    }
+
+    window.addEventListener('scroll', updateTOC);
+    window.addEventListener('DOMContentLoaded', updateTOC);
   </script>
 </body>
 </html>
