@@ -87,15 +87,13 @@
     .container { max-width: var(--max-content); margin: 0 auto; padding: 0 2rem; }
 
     /* Sticky Header */
-    .site-header { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-bottom: 1px solid var(--color-border); display: flex; align-items: center; height: 60px; }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); height: 60px; display: flex; align-items: center; }
     .nav-inner { max-width: 1200px; width: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
-    .nav-logo { height: 32px; display: block; }
-    .nav-logo img { height: 100%; object-fit: contain; }
-    .nav-links { display: flex; gap: 0.5rem; align-items: center; }
-    .nav-links a { color: var(--color-text-secondary); font-weight: 600; font-size: 13px; transition: color 0.3s ease; padding: 8px 14px; border-radius: 8px; text-decoration: none; }
-    .nav-links a:hover { background: var(--color-bg-secondary); color: var(--color-text-primary); }
-    .nav-cta { background: var(--color-brand); color: #fff !important; padding: 8px 20px !important; border-radius: 9999px !important; font-weight: 700 !important; box-shadow: 0 5px 15px rgba(236,97,14,0.2); transition: transform 0.2s; }
-    .nav-cta:hover { transform: translateY(-1px); background: var(--color-brand-dark) !important; }
+    .logo { height: 32px; object-fit: contain; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--text); font-weight: 600; font-size: 0.9rem; transition: color 0.3s ease; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-cta { background: var(--brand); color: #fff !important; padding: 8px 20px !important; border-radius: 9999px !important; font-weight: 700 !important; box-shadow: 0 5px 15px rgba(236,97,14,0.2); }
 
     /* Trust Bar */
     .trust-bar { background: #f1f5f9; padding: 10px 20px; border-bottom: 1px solid #e2e8f0; font-size: 12px; color: #64748b; display: flex; gap: 16px; align-items: center; justify-content: center; }
@@ -179,13 +177,13 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a href="https://mymirror.fit" class="nav-logo"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" class="logo"></a>
-      <div class="nav-links">
+      <a href="https://mymirror.fit"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" class="logo"></a>
+      <nav class="nav-links">
         <a href="/acne/forehead-acne/">Forehead Acne</a>
         <a href="/acne/face-map/">Face Map 🧠</a>
         <a href="/acne/forehead-acne/home-remedies/">Natural Remedies 🌿</a>
         <a href="https://mymirror.fit/scan" class="nav-cta">Free Skin Analysis</a>
-      </div>
+      </nav>
     </div>
   </header>
 

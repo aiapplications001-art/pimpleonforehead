@@ -6,6 +6,9 @@
     <title>Pimples on Forehead: Causes, Clinical Types & Evidence-Based Cures</title>
     <meta name="description" content="Struggling with pimples on your forehead? Discover the clinical and holistic root causes of forehead breakouts and explore evidence-based natural and medical treatments to clear your skin permanently.">
     <link rel="canonical" href="https://mymirror.fit/acne/forehead-acne/">
+    <link rel="alternate" hreflang="en" href="https://mymirror.fit/acne/forehead-acne/">
+    <link rel="alternate" hreflang="hi" href="https://mymirror.fit/acne/pimple-on-forehead-hindi/">
+    <link rel="alternate" hreflang="x-default" href="https://mymirror.fit/acne/forehead-acne/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
@@ -64,33 +67,35 @@
     }
     </script>
     <link rel="icon" type="image/png" href="/acne/forehead-acne/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #000000;
-            --secondary: #f1f5f9;
-            --accent: #334155;
-            --text: #0f172a;
-            --white: #ffffff;
-            --bg: #ffffff;
-            --bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        @font-face { font-family: 'Kantumruy Pro'; src: url('/fonts/KantumruyPro-VariableFont_wght.ttf') format('truetype'); font-weight: 300 700; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Plus Jakarta Sans'; src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype'); font-weight: 200 800; font-style: normal; font-display: swap; }
 
-            /* Design System Tokens */
-            --color-brand:        #EC610E;
-            --color-brand-dark:   #C14800;
-            --color-brand-light:  #FFE1CE;
-            --color-bg-primary:   #FFFFFF;
+        :root {
+            --color-brand: #EC610E;
+            --color-brand-dark: #C14800;
+            --color-brand-light: #FFE1CE;
+            --color-bg-primary: #FFFFFF;
             --color-bg-secondary: #F9F6F3;
-            --color-bg-tertiary:  #F2EDE8;
-            --color-text-primary:   #1A1410;
+            --color-bg-tertiary: #F2EDE8;
+            --color-text-primary: #1A1410;
             --color-text-secondary: #5C4A3A;
-            --color-text-tertiary:  #9E8575;
-            --color-border:          #E8DDD5;
+            --color-text-tertiary: #9E8575;
+            --color-border: #E8DDD5;
+            --color-success: #2D7A4F;
+            --color-info: #1A5F8A;
+            --primary: var(--color-brand);
+            --secondary: var(--color-bg-secondary);
+            --accent: var(--color-info);
+            --text: var(--color-text-primary);
+            --white: #ffffff;
+            --bg: var(--color-bg-primary);
+            --bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
+        *, *::before, *::after { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0; padding: 0;
@@ -115,59 +120,60 @@
 
         /* Trust Architecture */
         .trust-bar { background: var(--color-bg-secondary); padding: 0.8rem 2rem; border-bottom: 1px solid var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); }
-        .trust-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+        .trust-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: flex-start; }
         .author-badge { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text); }
         .verify-badge { color: #059669; font-weight: 700; display: flex; align-items: center; gap: 5px; }
 
-        /* Sticky Header */
+        /* Sticky Header Stylings */
         .site-header {
             position: sticky;
             top: 0;
             width: 100%;
-            height: 60px;
-            background: #fff;
+            min-height: 64px;
+            background: var(--color-bg-primary);
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-bottom: 1px solid var(--color-border);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
         }
 
-        .nav-inner {
+        .header-container {
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            gap: 1.5rem;
+            padding: 0.6rem 2rem;
         }
 
-        .nav-logo { height: 32px; display: block; }
-        .nav-logo img { height: 100%; object-fit: contain; }
+        .logo-wrapper {
+            height: 48px;
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+            overflow: visible;
+        }
 
-        .nav-links { display: flex; gap: 0.5rem; align-items: center; }
-        .nav-links a { 
-            color: var(--color-text-secondary); 
-            font-weight: 600; 
-            font-size: 13px; 
-            text-decoration: none; 
-            padding: 8px 14px; 
-            border-radius: 8px; 
-            transition: all 0.2s;
-            line-height: 1;
+        .logo {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            filter: contrast(1.1) brightness(1.02);
+            transition: transform 0.3s var(--bouncy);
+            margin-top: 5px;
         }
-        .nav-links a:hover { background: var(--color-bg-secondary); color: var(--color-text-primary); }
-        .nav-cta { 
-            background: var(--color-brand); 
-            color: #fff !important; 
-            padding: 8px 20px !important; 
-            border-radius: 9999px !important; 
-            font-weight: 700 !important; 
-            box-shadow: 0 5px 15px rgba(236,97,14,0.2); 
-            transition: transform 0.2s; 
-        }
-        .nav-cta:hover { transform: translateY(-1px); background: var(--color-brand-dark) !important; }
+
+        .logo:hover { transform: scale(1.05); }
+
+        .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 14px; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--color-text-primary); font-weight: 600; font-size: 0.86rem; line-height: 1; white-space: nowrap; transition: color 0.3s var(--bouncy), transform 0.3s var(--bouncy); }
+        .nav-links a:hover { color: var(--color-brand); transform: translateY(-2px); }
+        .nav-links .nav-topic { background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 9999px; padding: 8px 12px; }
+        .nav-links .nav-topic:hover { background: var(--color-brand-light); border-color: var(--color-brand-light); }
 
         /* Hero Animation */
         .full-hero {
@@ -180,8 +186,8 @@
         .hero-video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('/acne/forehead-acne/forehead.jpg') center 20%/cover no-repeat; z-index: 0; }
         .glider-overlay { position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%); border-right: 2px solid rgba(255, 255, 255, 0.5); z-index: 5; animation: fullGlide 8s infinite; }
         .hero-content { position: relative; z-index: 10; max-width: 800px; margin-top: 15vh; text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 5px rgba(255, 255, 255, 0.8); text-align: center; }
-        .hero-content h1 { font-size: 2.8rem; font-weight: 800; color: #000; letter-spacing: -1px; margin-bottom: 0.5rem; }
-        .hero-content p { font-size: 1.2rem; font-weight: 600; color: #222; }
+        .hero-content h1 { font-size: 2.8rem; font-weight: 600; color: var(--color-text-primary); margin-bottom: 0.5rem; }
+        .hero-content p { font-size: 1.2rem; font-weight: 600; color: var(--color-text-primary); }
 
         /* Hero Acne Clusters - High Density */
         .acne-cluster { position: absolute; background: #e63946; border-radius: 50%; filter: blur(1.5px); opacity: 0; transform: scale(0); z-index: 4; box-shadow: 0 0 10px rgba(230, 57, 70, 0.7); animation: realisticPop 8s infinite; }
@@ -240,7 +246,7 @@
 
         /* Bento Grid */
         .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 2rem 0; }
-        .bento-item { background: white; border-radius: 24px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: transform 0.4s var(--bouncy); border: 1px solid var(--color-border); }
+        .bento-item { background: white; border-radius: 24px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: all 0.4s var(--bouncy); border: 1px solid var(--color-border); }
         .bento-item:hover { transform: translateY(-10px); border-color: var(--color-brand-light); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
         .item-lg { grid-column: span 2; background: var(--color-bg-secondary); }
         .item-sm { grid-column: span 1; }
@@ -277,7 +283,18 @@
         }
         .quiz-choice-btn:hover { transform: translateX(10px); border-color: var(--primary); background: var(--secondary); }
 
-        @media (max-width: 768px) {
+        /* FAQ Accordion Styling */
+        .faq-item { background: white; border-radius: 16px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid var(--color-border); transition: all 0.3s ease; }
+        .faq-question { padding: 1.5rem 2rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); font-size: 1.1rem; }
+        .faq-question:hover { color: var(--primary); background: #f9fbf9; }
+        .faq-answer { max-height: 0; padding: 0 2rem; overflow: hidden; transition: all 0.5s cubic-bezier(0, 1, 0, 1); color: var(--color-text-secondary); font-size: 1rem; line-height: 1.65; }
+        .faq-item.active-faq .faq-answer { max-height: 1000px; padding: 0 2rem 2rem 2rem; transition: all 0.5s cubic-bezier(1, 0, 1, 0); }
+        .faq-icon { font-size: 1.5rem; transition: transform 0.3s ease; }
+        .faq-item.active-faq .faq-icon { transform: rotate(45deg); color: var(--accent); }
+
+        @media (max-width: 900px) {
+            .header-container { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
+            .site-header { position: relative; }
             .nav-links { justify-content: flex-start; gap: 10px; }
             .nav-links a { font-size: 0.82rem; }
             .full-hero { min-height: 430px; }
@@ -288,19 +305,25 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="nav-inner">
-      <a href="https://mymirror.fit" class="nav-logo">
-          <img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" class="logo">
-      </a>
-      <nav class="nav-links">
-        <a href="/acne/forehead-acne/">Forehead Acne</a>
-        <a href="/acne/face-map/">Face Map 🧠</a>
-        <a href="/acne/forehead-acne/home-remedies/">Natural Remedies 🌿</a>
-        <a href="https://mymirror.fit/scan" class="nav-cta">Free Skin Analysis</a>
-      </nav>
+<nav class="site-header">
+    <div class="header-container">
+        <div class="logo-wrapper">
+            <img src="/acne/forehead-acne/logo-v4.png" alt="MyMirror Logo - Science-Based Skin Health" class="logo">
+        </div>
+        <div class="nav-links">
+            <a href="#types">Acne Types</a>
+            <a href="#causes">Why It Happens</a>
+            <a href="#quiz-container">Find Your Cause</a>
+            <a href="#mapping">Acne by Location</a>
+            <a href="/acne/forehead-acne/meaning/" style="color: #6366f1; font-weight: 800;">Acne Meaning 🧠</a>
+            <a href="/acne/forehead-acne/home-remedies/" style="color: #059669; font-weight: 800;">Natural Remedies 🌿</a>
+            <a href="/acne/forehead-acne/fast-treatment/" style="color: #EC610E; font-weight: 800;">Fast Fixes ⚡</a>
+            <a href="/acne/why-men-get-acne/" class="nav-topic">Men's Acne</a>
+            <a href="/acne/why-teenagers-get-acne/" class="nav-topic">Teen Acne</a>
+            <a href="/acne/men-acne-faq/" class="nav-topic">Men's FAQs</a>
+        </div>
     </div>
-  </header>
+</nav>
 
 <div class="trust-bar">
     <div class="trust-container">
@@ -336,116 +359,76 @@
     <div class="acne-cluster acne-persistent"></div>
     <div class="acne-cluster acne-persistent-2"></div>
     <div class="container hero-content">
-        <h1>Forehead Pimples Ke Types Aur Inhe Kaise Pehchanein</h1>
-        <p>Identifying the type of acne is the first step to clear skin.</p>
+        <h1>Pimples on Forehead: What Causes Them & How to Treat Them for Your Skin Type</h1>
+        <p>A complete guide to identifying your acne type and choosing treatments that deliver visible results.</p>
     </div>
 </header>
 
 <div class="container">
     
     <section id="types" class="reveal">
-        <h2>Forehead Pimples Ke Types Aur Inhe Kaise Pehchanein</h2>
+        <h2>Types of Forehead Pimples & How to Identify Them</h2>
         <p>Not all forehead pimples are the same. Identifying the type of acne you have is the first step to choosing the right treatment.</p>
         <table class="acne-table">
             <thead>
                 <tr><th>Type</th><th>Appearance & Identification</th><th>Root Cause</th></tr>
             </thead>
             <tbody>
-                <tr><td><strong>1. Comedones</strong></td><td><strong>Whiteheads:</strong> Small, skin-colored bumps that stay under the surface.<br><strong>Blackheads:</strong> Open pores where trapped oil has oxidized and turned dark.</td><td>Typically caused by excess oil and dead skin clogging the pores in the oily T-zone.</td></tr>
-                <tr><td><strong>2. Inflammatory Acne</strong></td><td><strong>Papules:</strong> Small, red, tender bumps with no visible pus.<br><strong>Pustules:</strong> Red bumps with a white or yellow center containing pus.</td><td>Caused by bacteria, hormonal shifts, or an adverse reaction to skincare/hair products.</td></tr>
-                <tr><td><strong>3. Cystic Acne</strong></td><td>Large, painful, deep-seated lumps under the skin that rarely come to a head and have a high risk of scarring.</td><td>Often hormonal or genetic, requiring clinical intervention from a board-certified dermatologist.</td></tr>
+                <tr><td><strong>1. Comedones</strong></td><td><strong>Whiteheads:</strong> Closed pores clogged with oil and dead skin cells (flesh-colored bumps).<br><strong>Blackheads:</strong> Open pores where the trapped oil oxidizes and turns dark.</td><td>Typically caused by excess oil, sweat, and clogged pores—common in people with oily skin.</td></tr>
+                <tr><td><strong>2. Inflammatory Acne</strong></td><td><strong>Papules:</strong> Red, swollen, and tender bumps without pus.<br><strong>Pustules:</strong> Red bumps with a visible white or yellow pus-filled center.</td><td>Often triggered by bacteria, hormonal changes, or irritation from skincare/hair products.</td></tr>
+                <tr><td><strong>3. Cystic Acne</strong></td><td>Large, deep, painful lumps under the skin. They usually do not come to a head and carry a higher risk of scarring.</td><td>Requires dermatologist-recommended treatments—over-the-counter solutions are usually not enough.</td></tr>
             </tbody>
         </table>
-        <div class="bento-item reveal" style="background: var(--color-bg-secondary); border-left: 5px solid var(--color-brand); margin-top: 1rem;">
-            <strong>💡 Pro Tip:</strong> If your forehead bumps are uniform in size and intensely itchy, you may be dealing with <strong>Fungal Acne</strong> (Malassezia Folliculitis) instead of traditional bacterial acne.
+        <div class="bento-item reveal" style="background: #f8fafc; border-left: 5px solid var(--primary); margin-top: 1rem;">
+            <strong>💡 Pro Tip:</strong> If your forehead acne is sudden, painful, or keeps coming back in the same spot, it’s likely inflammatory or hormonal—not just clogged pores—and needs targeted treatment.
         </div>
     </section>
 
     <section id="causes" class="reveal">
-        <h2>Forehead Par Pimples Kyun Hote Hain? (Sabse Common Karan)</h2>
-        <p>Forehead breakouts are frequently linked to daily habits, haircare routines, and internal health. If you are struggling with recurring bumps, one of these primary triggers is likely responsible:</p>
+        <h2>What Causes Forehead Pimples? (Most Common Triggers Explained)</h2>
+        <p>Forehead pimples are often linked to daily habits, haircare routines, and internal factors. If you’re getting repeated breakouts on your forehead, one (or more) of these could be the reason:</p>
         <div class="bento-grid">
-            <div class="bento-item reveal"><span class="badge">Haircare Link</span><h3>1. Hair Oils & Conditioners (Pomade Acne)</h3><p>Heavy hair oils (like coconut oil) and thick conditioners can clog pores along the hairline. When sweat mixes with these products, it drips onto the forehead, leading to clusters of small bumps.</p></div>
-            <div class="bento-item reveal"><h3>2. Sweat & Friction (Acne Mechanica)</h3><p>Sweat trapped under helmets, caps, or headbands during a daily commute creates a perfect breeding ground for bacteria. Friction from these items further inflames the hair follicles.</p></div>
-            <div class="bento-item reveal"><h3>3. Scalp Issues & Dandruff</h3><p>Dandruff flakes and scalp yeast (Malassezia) can fall onto the forehead, clogging pores and causing fungal acne. Treating the scalp is essential for clearing these forehead breakouts.</p></div>
-            <div class="bento-item reveal"><h3>4. Hormones & Stress</h3><p>Hormonal fluctuations and high stress levels increase cortisol, which signals the sebaceous glands to produce more oil, leading to breakouts in the T-zone.</p></div>
-            <div class="bento-item reveal" style="grid-column: span 2;"><h3>Other Hidden Triggers</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 1rem; font-size: 0.95rem;"><div>• <strong>Dirty Pillowcases:</strong> Harbor bacteria and oils.</div><div>• <strong>Touching Your Forehead:</strong> Transfers dirt and oils from hands.</div><div>• <strong>Comedogenic Skincare:</strong> Products that block pores.</div><div>• <strong>Dietary Links:</strong> High sugar and dairy intake.</div></div></div>
+            <div class="bento-item reveal" style="background: #f8fafc;"><span class="badge">Common in India</span><h3>1. Hair Oils & Haircare (Pomade Acne)</h3><p>Using heavy oils like coconut oil, almond oil, or thick conditioners is very common—but these can clog pores. residue transfers from hair to skin, blocking follicles and trapping bacteria.</p><p><strong>👉 Common sign:</strong> Pimples concentrated near the hairline or upper forehead.</p></div>
+            <div class="bento-item reveal" style="background:#fef9f0"><h3>2. Sweat + Friction (Acne Mechanica)</h3><p>In hot and humid weather, sweat combined with friction can trigger acne. Wearing helmets, caps, or headbands traps sweat and oil, while friction irritates the skin and clogs pores.</p><p><strong>👉 Common sign:</strong> Small, red bumps after sweating or long commutes.</p></div>
+            <div class="bento-item reveal"><h3>3. Dandruff & Scalp Issues</h3><p>Conditions like dandruff (Pityriasis capitis) don’t just affect your scalp—they spread to the forehead. Flakes and fungal overgrowth lead to irritation and acne along the hairline.</p><p><strong>👉 Common sign:</strong> Pimples with itchiness or visible flakes.</p></div>
+            <div class="bento-item reveal" style="background: #fff5f5;"><h3>4. Hormonal Changes & Stress</h3><p>Hormonal fluctuations are a major cause, especially in the T-zone. Increased androgen levels lead to excess oil. Common during puberty, periods, PCOS, or high-stress phases.</p><p><strong>👉 Common sign:</strong> Recurring or stubborn acne that doesn’t respond to basic skincare.</p></div>
+            <div class="bento-item reveal" style="grid-column: span 2; background: #f8f9fa;"><h3>Other Hidden Causes (Often Missed)</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 1rem; font-size: 0.95rem;"><div>• <strong>Dirty Pillowcases:</strong> Buildup of oil, sweat, and bacteria.</div><div>• <strong>Touching Forehead:</strong> Transfers dirt and germs.</div><div>• <strong>Wrong Skincare:</strong> Comedogenic creams clog pores.</div><div>• <strong>Diet Triggers:</strong> High sugar, dairy, or oily food.</div></div></div>
         </div>
         <div class="bento-item reveal" style="background: var(--primary); color: white; margin-top: 2rem; border-radius: 30px;">
-            <h3 style="color: white; margin-top: 0; text-align: center;">Quick Self-Check: Find Your Cause</h3>
+            <h3 style="color: white; margin-top: 0; text-align: center;">Quick Self-Check: Identify Your Trigger</h3>
             <div style="display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; margin-top: 1.5rem; text-align: center;">
-                <div style="flex: 1; min-width: 150px;"><strong>Bumps near hairline?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Check your haircare products</p></div>
-                <div style="flex: 1; min-width: 150px;"><strong>Worse after sweating?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Likely friction or sweat-induced</p></div>
-                <div style="flex: 1; min-width: 150px;"><strong>Itchy or flaky scalp?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Scalp health is the priority</p></div>
-                <div style="flex: 1; min-width: 150px;"><strong>Recurring & painful?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Points to hormones or stress</p></div>
+                <div style="flex: 1; min-width: 150px;"><strong>Near Hairline?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Likely haircare-related.</p></div>
+                <div style="flex: 1; min-width: 150px;"><strong>Worse after Sweating?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Friction/Sweat trigger.</p></div>
+                <div style="flex: 1; min-width: 150px;"><strong>With Dandruff/Itching?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Scalp issue involved.</p></div>
+                <div style="flex: 1; min-width: 150px;"><strong>Recurring Cyclically?</strong><p style="margin: 5px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Likely a hormonal cause.</p></div>
             </div>
         </div>
     </section>
 
-    <section class="reveal" id="quiz-container" style="background: var(--secondary); padding: 4rem 2rem; border-radius: 45px; margin: 6rem 0; text-align: center;">
-        <span class="badge" style="background: var(--primary); color: white;">Diagnostic Quiz</span>
-        <h2 style="margin-top: 1rem;">What is the Root Cause of Your Forehead Acne?</h2>
-        <p id="quiz-intro" style="font-size: 1.1rem; color: var(--text); margin-bottom: 2rem;">Answer 5 quick questions to get a personalized diagnostic breakdown 👇</p>
-        
+    <section class="reveal" id="quiz-container" style="background: var(--secondary); padding: 4rem 2rem; border-radius: 45px; margin: 5rem 0; text-align: center;">
+        <span class="badge" style="background: var(--primary); color: white;">1-Minute Quiz</span>
+        <h2 style="margin-top: 1rem;">What’s Causing Your Forehead Pimples?</h2>
+        <p id="quiz-intro" style="font-size: 1.1rem; color: var(--text); margin-bottom: 2rem;">Answer these quick questions to find the real reason behind your forehead acne 👇</p>
         <div id="quiz-content" style="margin: 3rem auto; max-width: 600px; text-align: left; position: relative;">
-            <div id="quiz-loader" style="display:none; text-align: center; padding: 2rem;">
-                <div style="width: 40px; height: 40px; border: 4px solid var(--secondary); border-top: 4px solid var(--primary); border-radius: 50%; margin: 0 auto 1rem auto; animation: spin 1s linear infinite;"></div>
-                <p style="font-weight: 600; color: var(--primary);">Analyzing your results...</p>
-            </div>
-            <div id="quiz-question-box">
-                <p id="quiz-text" style="font-weight: 800; font-size: 1.5rem; color: var(--primary); line-height: 1.3; margin-bottom: 2rem;"></p>
-                <div id="quiz-options"></div>
-            </div>
+            <div id="quiz-loader" style="display:none; text-align: center; padding: 2rem;"><div style="width: 40px; height: 40px; border: 4px solid var(--secondary); border-top: 4px solid var(--primary); border-radius: 50%; margin: 0 auto 1rem auto; animation: spin 1s linear infinite;"></div><p style="font-weight: 600; color: var(--primary);">Analyzing your skin...</p></div>
+            <div id="quiz-question-box"><p id="quiz-text" style="font-weight: 800; font-size: 1.5rem; color: var(--primary); line-height: 1.3; margin-bottom: 2rem;"></p><div id="quiz-options"></div></div>
         </div>
-
         <div id="quiz-result" style="display:none; text-align: left; max-width: 850px; margin: 0 auto; animation: stagePop 0.6s var(--bouncy);">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Your Skin Analysis</h2>
-            <div id="result-card" class="card" style="border-radius: 35px; padding: 2.5rem; margin-bottom: 2rem; border-top: 10px solid #ccc;">
-                <h3 id="result-title" style="margin-top: 0; font-size: 2rem;"></h3>
-                <div id="result-body" style="font-size: 1.1rem; line-height: 1.6; margin: 1.5rem 0;"></div>
-                <div id="result-actions" style="background: #f9fbf9; padding: 1.5rem; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);">
-                    <strong style="font-size: 1.2rem;">👉 Next Steps for Clear Skin:</strong>
-                    <ul id="action-list" style="margin-top: 1rem; padding-left: 1.5rem;"></ul>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <button class="btn" style="background: white; color: var(--primary); border: 2px solid var(--primary);" onclick="resetQuiz()">Retake Quiz</button>
-            </div>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Your Results</h2>
+            <div id="result-card" class="card" style="border-radius: 35px; padding: 2.5rem; margin-bottom: 2rem; border-top: 10px solid #ccc;"><h3 id="result-title" style="margin-top: 0; font-size: 2rem;"></h3><div id="result-body" style="font-size: 1.1rem; line-height: 1.6; margin: 1.5rem 0;"></div><div id="result-actions" style="background: #f9fbf9; padding: 1.5rem; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);"><strong style="font-size: 1.2rem;">👉 What to do:</strong><ul id="action-list" style="margin-top: 1rem; padding-left: 1.5rem;"></ul></div></div>
+            <div style="text-align: center; margin-top: 3rem;"><button class="btn" style="background: white; color: var(--primary); border: 2px solid var(--primary);" onclick="resetQuiz()">Retake Quiz</button></div>
         </div>
     </section>
 
     <section id="mapping" class="reveal" style="text-align: center; margin-top: 4rem;">
-        <h2>Forehead Acne Map – Identify the Location</h2>
+        <h2>Forehead Acne Map – What Your Breakout Area Means</h2>
         <div style="position: relative; width: 100%; border-radius: 40px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); margin: 2rem 0;">
             <img src="/acne/forehead-acne/forehead-interactive-opt.jpg" alt="Forehead Acne Mapping - Diagnostic Guide for Hairline and T-Zone Breakouts" style="width: 100%; display: block; filter: brightness(1.02);">
-            
-            <div id="tooltip-upper" class="floating-tooltip" style="top: 10%; left: 50%;">
-                <span class="badge" style="background: var(--primary); color: white;">📍 Upper Forehead</span>
-                <h3>Hairline & Temples</h3>
-                <p><strong>Common Triggers:</strong> Hair oil buildup, sweat under helmets/caps, or dandruff flakes.</p>
-                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; font-style: italic; font-size: 0.85rem;">👉 <strong>Sign:</strong> Points to external factors like haircare products and hygiene.</div>
-            </div>
-
-            <div id="tooltip-lower" class="floating-tooltip" style="bottom: 10%; left: 50%;">
-                <span class="badge" style="background: var(--color-brand); color: white;">📍 Mid to Lower Forehead</span>
-                <h3>T-Zone Center</h3>
-                <p><strong>Common Triggers:</strong> Excess sebum (oil), hormonal fluctuations, and stress.</p>
-                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; font-style: italic; font-size: 0.85rem;">👉 <strong>Sign:</strong> Points to internal factors like hormones or diet.</div>
-            </div>
-
-            <svg viewBox="0 0 1000 600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;">
-                <rect x="0" y="0" width="1000" height="250" fill="white" opacity="0" onmouseover="toggleTooltip('upper', true)" onmouseout="toggleTooltip('upper', false)" />
-                <rect x="0" y="250" width="1000" height="350" fill="white" opacity="0" onmouseover="toggleTooltip('lower', true)" onmouseout="toggleTooltip('lower', false)" />
-                <g pointer-events="none">
-                    <circle cx="500" cy="120" r="15" fill="var(--primary)" opacity="0.6"><animate attributeName="r" values="12;20;12" dur="2s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite" /></circle>
-                    <circle cx="500" cy="400" r="15" fill="var(--color-brand)" opacity="0.6"><animate attributeName="r" values="12;20;12" dur="2s" begin="1s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" begin="1s" repeatCount="indefinite" /></circle>
-                </g>
-            </svg>
+            <div id="tooltip-upper" class="floating-tooltip" style="top: 10%; left: 50%;"><span class="badge" style="background: var(--primary); color: white;">📍 Upper Forehead</span><h3>Hairline Area</h3><p><strong>Likely Triggers:</strong> Hair oil/conditioner buildup (classic “champi acne”), sweat under helmets/caps, or dandruff flakes.</p><div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; font-style: italic; font-size: 0.85rem;">👉 <strong>What it usually means:</strong> Your acne is likely external—caused by haircare products, scalp issues, or sweat.</div></div>
+            <div id="tooltip-lower" class="floating-tooltip" style="bottom: 10%; left: 50%;"><span class="badge" style="background: var(--accent); color: white;">📍 Mid to Lower Forehead</span><h3>Between Brows / Center</h3><p><strong>Likely Triggers:</strong> Excess T-zone oil, hormonal fluctuations (periods, stress), or cortisol spikes.</p><div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; font-style: italic; font-size: 0.85rem;">👉 <strong>What it usually means:</strong> Your acne is more likely internal—driven by hormones, stress, or oily skin.</div></div>
+            <svg viewBox="0 0 1000 600" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;"><rect x="0" y="0" width="1000" height="250" fill="white" opacity="0" onmouseover="toggleTooltip('upper', true)" onmouseout="toggleTooltip('upper', false)" /><rect x="0" y="250" width="1000" height="350" fill="white" opacity="0" onmouseover="toggleTooltip('lower', true)" onmouseout="toggleTooltip('lower', false)" /><g pointer-events="none"><circle cx="500" cy="120" r="15" fill="var(--primary)" opacity="0.6"><animate attributeName="r" values="12;20;12" dur="2s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite" /></circle><circle cx="500" cy="400" r="15" fill="var(--accent)" opacity="0.6"><animate attributeName="r" values="12;20;12" dur="2s" begin="1s" repeatCount="indefinite" /><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" begin="1s" repeatCount="indefinite" /></circle></g></svg>
         </div>
-        <div class="card reveal" style="background: var(--color-bg-secondary); border-radius: 25px; padding: 1.5rem; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-            <div style="text-align: center;"><strong>Breakouts near hairline?</strong><p style="margin: 0; font-size: 0.9rem;">Focus on haircare and scalp health</p></div>
-            <div style="text-align: center; border-left: 2px solid #ddd; padding-left: 30px;"><strong>Breakouts in the center?</strong><p style="margin: 0; font-size: 0.9rem;">Focus on oil control, hormones, and stress</p></div>
-        </div>
+        <div class="card reveal" style="background: #f8fafc; border-radius: 25px; padding: 1.5rem; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;"><div style="text-align: center;"><strong>Breakouts near hairline?</strong><p style="margin: 0; font-size: 0.9rem;">Check haircare + scalp health</p></div><div style="text-align: center; border-left: 2px solid #ddd; padding-left: 30px;"><strong>Breakouts in the center?</strong><p style="margin: 0; font-size: 0.9rem;">Focus on oil control, hormones, and stress</p></div></div>
     </section>
 
     <section id="remedies" class="reveal" style="margin-top: 6rem; margin-bottom: 6rem;">
@@ -457,138 +440,52 @@
                 <button id="btn-otc" class="nav-btn" onclick="activateRemedy('otc', '#fee2e2')">💊 Skincare</button>
             </div>
             <div id="remedy-stage" class="remedy-stage" style="background-color: #d8f3dc;">
-                <div id="content-traditional" class="stage-content active">
-                    <div class="stage-grid">
-                        <div class="stage-image"><img id="botanical-img" src="/acne/forehead-acne/multani-mitti.avif" alt="Traditional Botanical Remedies for Forehead Acne - Multani Mitti and Neem"></div>
-                        <div class="stage-info">
-                            <span class="badge">Ayurvedic</span>
-                            <p style="font-size: 0.9rem;">Botanical extracts with centuries of proven skin-balancing results.</p>
-                            <ul class="remedy-list">
-                                <li onmouseover="swapBotanical('multani-mitti.avif')"><strong>Multani Mitti:</strong> Draws out excess oil and deep impurities. <br>👉 <i>Best for: Oily skin congestion.</i></li>
-                                <li onmouseover="swapBotanical('neem-turmeric.webp')"><strong>Neem & Turmeric:</strong> Powerful natural antibacterial and anti-inflammatory. <br>👉 <i>Best for: Inflamed red acne.</i></li>
-                                <li onmouseover="swapBotanical('sandalwood.webp')"><strong>Sandalwood:</strong> Soothes heat-induced irritation. <br>👉 <i>Best for: Sweat-related breakouts.</i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="content-clinical" class="stage-content">
-                    <div class="stage-grid">
-                        <div class="stage-image"><img id="clinical-img" src="/acne/forehead-acne/chemical-peel.jpg" alt="Professional Dermatological Treatments - Chemical Peels and Laser Therapy for Acne"></div>
-                        <div class="stage-info">
-                            <span class="badge">In-Clinic</span>
-                            <p style="font-size: 0.9rem;">Expert medical procedures for stubborn or recurring forehead acne.</p>
-                            <ul class="remedy-list">
-                                <li onmouseover="swapClinical('chemical-peel.jpg')"><strong><a href="https://www.vlccwellness.com/India/promotion-page/chemical-peel.php" target="_blank" style="text-decoration:none; color:inherit;">Chemical Peels:</a></strong> Deep medical exfoliation.</li>
-                                <li onmouseover="swapClinical('laser-therapy-opt.jpg')"><strong><a href="https://www.maxhealthcare.in/procedures/laser-therapy" target="_blank" style="text-decoration:none; color:inherit;">Laser Therapy:</a></strong> Neutralizes deep bacterial growth.</li>
-                                <li onmouseover="swapClinical('extraction.webp')"><strong><a href="https://www.olivaclinic.com/blog/acne-extraction-medical-extraction-dermatologist-suggested/" target="_blank" style="text-decoration:none; color:inherit;">Professional Extractions:</a></strong> Clears comedones safely.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="content-otc" class="stage-content">
-                    <div class="stage-grid">
-                        <div class="stage-image"><img id="otc-img" src="/acne/forehead-acne/salicylic-acid-v2.jpg" alt="Scientifically Proven OTC Acne Actives - Salicylic Acid and Benzoyl Peroxide"></div>
-                        <div class="stage-info">
-                            <span class="badge">Over-The-Counter</span>
-                            <p style="font-size: 0.9rem;">Evidence-based pharmaceutical ingredients for daily acne control.</p>
-                            <ul class="remedy-list">
-                                <li onmouseover="swapOTC('salicylic-acid-v2.jpg')"><strong><a href="https://share.google/j58BY73ZexujUsnQY" target="_blank" style="text-decoration:none; color:inherit;">Salicylic Acid (BHA):</a></strong> Unclogs deep pores.</li>
-                                <li onmouseover="swapOTC('benzoyl-peroxide-opt.jpg')"><strong><a href="https://www.1mg.com/otc/benzoyl-peroxide-acne-treatment-gel-otc707266?srsltid=AfmBOopy-eyxc7NW9tWsdeiKKvcr-ntZS2fE4Ywrd0Yq01HUQ8GxrcLE&wpsrc=Google+Organic+Search" target="_blank" style="text-decoration:none; color:inherit;">Benzoyl Peroxide:</a></strong> Kills C. acnes bacteria.</li>
-                                <li onmouseover="swapOTC('niacinamide.avif')"><strong><a href="https://beminimalist.co/collections/niacinamide?srsltid=AfmBOoqQBy6DeTmTS4SP1Oovx7wAFOVV8AptMiit3c802CRQvRJI9W2w" target="_blank" style="text-decoration:none; color:inherit;">Niacinamide:</a></strong> Mark fading.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <div id="content-traditional" class="stage-content active"><div class="stage-grid"><div class="stage-image"><img id="botanical-img" src="/acne/forehead-acne/multani-mitti.avif" alt="Traditional Botanical Remedies for Forehead Acne - Multani Mitti and Neem"></div><div class="stage-info"><span class="badge">Traditional</span><p style="font-size: 0.9rem;">Best for mild acne and oily skin</p><ul class="remedy-list"><li onmouseover="swapBotanical('multani-mitti.avif')"><strong>Multani Mitti:</strong> Absorbs excess oil. <br>👉 <i>Best for: Oily skin.</i></li><li onmouseover="swapBotanical('neem-turmeric.webp')"><strong>Neem & Turmeric:</strong> Antibacterial. <br>👉 <i>Best for: Inflamed acne.</i></li><li onmouseover="swapBotanical('sandalwood.webp')"><strong>Sandalwood:</strong> Cooling effect. <br>👉 <i>Best for: Heat-induced acne.</i></li></ul></div></div></div>
+                <div id="content-clinical" class="stage-content"><div class="stage-grid"><div class="stage-image"><img id="clinical-img" src="/acne/forehead-acne/chemical-peel.jpg" alt="Professional Dermatological Treatments - Chemical Peels and Laser Therapy for Acne"></div><div class="stage-info"><span class="badge">Dermatological</span><p style="font-size: 0.9rem;">Best for persistent or recurring acne</p><ul class="remedy-list"><li onmouseover="swapClinical('chemical-peel.jpg')"><strong><a href="https://www.vlccwellness.com/India/promotion-page/chemical-peel.php" target="_blank" style="text-decoration:none; color:inherit;">Chemical Peels:</a></strong> Deep exfoliation.</li><li onmouseover="swapClinical('laser-therapy-opt.jpg')"><strong><a href="https://www.maxhealthcare.in/procedures/laser-therapy" target="_blank" style="text-decoration:none; color:inherit;">Laser Therapy:</a></strong> Bacterial elimination.</li><li onmouseover="swapClinical('extraction.webp')"><strong><a href="https://www.olivaclinic.com/blog/acne-extraction-medical-extraction-dermatologist-suggested/" target="_blank" style="text-decoration:none; color:inherit;">Professional Extractions:</a></strong> Expert removal.</li></ul></div></div></div>
+                <div id="content-otc" class="stage-content"><div class="stage-grid"><div class="stage-image"><img id="otc-img" src="/acne/forehead-acne/salicylic-acid-v2.jpg" alt="Scientifically Proven OTC Acne Actives - Salicylic Acid and Benzoyl Peroxide"></div><div class="stage-info"><span class="badge">Scientifically Proven</span><p style="font-size: 0.9rem;">Best for daily acne control</p><ul class="remedy-list"><li onmouseover="swapOTC('salicylic-acid-v2.jpg')"><strong><a href="https://share.google/j58BY73ZexujUsnQY" target="_blank" style="text-decoration:none; color:inherit;">Salicylic Acid (BHA):</a></strong> Pore clearing.</li><li onmouseover="swapOTC('benzoyl-peroxide-opt.jpg')"><strong><a href="https://www.1mg.com/otc/benzoyl-peroxide-acne-treatment-gel-otc707266?srsltid=AfmBOopy-eyxc7NW9tWsdeiKKvcr-ntZS2fE4Ywrd0Yq01HUQ8GxrcLE&wpsrc=Google+Organic+Search" target="_blank" style="text-decoration:none; color:inherit;">Benzoyl Peroxide:</a></strong> Bacteria killing.</li><li onmouseover="swapOTC('niacinamide.avif')"><strong><a href="https://beminimalist.co/collections/niacinamide?srsltid=AfmBOoqQBy6DeTmTS4SP1Oovx7wAFOVV8AptMiit3c802CRQvRJI9W2w" target="_blank" style="text-decoration:none; color:inherit;">Niacinamide:</a></strong> Mark fading.</li></ul></div></div></div>
             </div>
         </div>
-        <div class="card reveal" style="max-width: 800px; margin: 4rem auto; background: white; border-radius: 30px; padding: 2.5rem; box-shadow: 0 15px 40px rgba(0,0,0,0.05);">
-            <h3 style="margin-top: 0;">How to Choose the Right Treatment</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 1.5rem;">
-                <div class="card" style="padding: 1.2rem; border-radius: 15px; background: #f9fbf9;"><strong>Mild:</strong> Botanical packs and gentle daily cleansers</div>
-                <div class="card" style="padding: 1.2rem; border-radius: 15px; background: #f9fbf9;"><strong>Moderate:</strong> 2% Salicylic Acid or Benzoyl Peroxide</div>
-                <div class="card" style="padding: 1.2rem; border-radius: 15px; background: #f9fbf9;"><strong>Severe:</strong> Professional peels and dermatologist consultation</div>
-            </div>
-            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;"><strong>💡 Pro Tip:</strong> Most people don’t see results because they mix too many treatments at once. Stick to 1–2 active ingredients and give them at least 2–4 weeks.</div>
+        <div class="card reveal" style="max-width: 800px; margin: 4rem auto; background: white; border-radius: 30px; padding: 2.5rem; box-shadow: 0 15px 40px rgba(0,0,0,0.05);"><h3 style="margin-top: 0;">How to Choose the Right Treatment</h3><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 1.5rem;"><div class="card" style="padding: 1.2rem; border-radius: 15px; background: #f9fbf9;"><strong>Mild:</strong> Natural + basic skincare</div><div class="card" style="padding: 1.2rem; border-radius: 15px; background: #f9fbf9;"><strong>Regular:</strong> Consistently use OTC actives</div><div class="card" style="padding: 1.2rem; border-radius: 15px; background: #f9fbf9;"><strong>Stubborn:</strong> Dermatologist treatments</div></div><div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;"><strong>💡 Pro Tip:</strong> Most people don’t see results because they mix too many treatments at once. Stick to 1–2 active ingredients and give them at least 2–4 weeks.</div></div>
+    </section>
+
+    <!-- NEW FAQ SECTION -->
+    <section class="reveal" style="margin-top: 6rem; margin-bottom: 8rem;">
+        <h2 style="text-align: center;">Frequently Asked Questions About Pimples on Forehead</h2>
+        <div class="faq-container" style="max-width: 800px; margin: 3rem auto;">
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(0)">1. What causes pimples on forehead? <span class="faq-icon">+</span></div><div class="faq-answer">The most common forehead pimples cause includes excess oil (sebum), clogged pores, sweat, and buildup from hair products like oils or conditioners. Hormonal changes, stress, and scalp issues like dandruff can also trigger breakouts on forehead. In most cases, it’s a combination of internal and external factors.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(1)">2. Why do I keep getting breakouts on my forehead? <span class="faq-icon">+</span></div><div class="faq-answer">Recurring breakouts on forehead usually mean the root cause hasn’t been addressed. This could be due to continuous use of pore-clogging products, frequent sweating (especially in humid weather), or hormonal imbalances. If your pimples on forehead keep coming back in the same area, it’s likely a persistent trigger like haircare products or excess oil production.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(2)">3. How can I get rid of pimples on forehead fast? <span class="faq-icon">+</span></div><div class="faq-answer">To reduce pimples on forehead quickly, wash your face regularly, avoid heavy hair products, and use proven ingredients like salicylic acid or benzoyl peroxide. Keeping your forehead clean after sweating and following a consistent skincare routine helps prevent future breakouts on forehead.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(3)">4. Can dandruff cause forehead pimples? <span class="faq-icon">+</span></div><div class="faq-answer">Yes, dandruff is a common but overlooked forehead pimples cause. Flakes, oil, and fungal buildup from the scalp can spread to the forehead, clog pores, and lead to breakouts on forehead, especially near the hairline.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(4)">5. Are forehead pimples related to stress or hormones? <span class="faq-icon">+</span></div><div class="faq-answer">Yes, hormonal fluctuations and stress are major forehead pimples causes. Increased oil production during stress or hormonal changes (like puberty or menstrual cycles) can result in frequent pimples on forehead and stubborn acne.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(5)">6. Which products should I avoid for forehead acne? <span class="faq-icon">+</span></div><div class="faq-answer">Avoid heavy oils, thick conditioners, and comedogenic skincare products, as they can clog pores and worsen pimples on forehead. Hair products that touch the forehead are a common forehead pimples cause, especially in people with oily skin.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(6)">7. Why do men get more pimples on forehead? <span class="faq-icon">+</span></div><div class="faq-answer">Men often experience more pimples on forehead due to higher oil production driven by testosterone. This leads to frequent breakouts on forehead, especially when combined with sweat, helmets, gym activity, and inconsistent skincare. Shaving irritation and product buildup can also contribute to forehead acne in men.</div></div>
+            <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(7)">8. How do I prevent breakouts on forehead naturally? <span class="faq-icon">+</span></div><div class="faq-answer">To prevent breakouts on forehead, keep your skin clean, avoid touching your face frequently, wash your hair regularly, and limit heavy oil-based products. Managing stress, improving sleep, and maintaining a balanced diet can also help reduce recurring pimples on forehead.</div></div>
         </div>
     </section>
 
 </div>
 
-<footer style="background: var(--color-bg-secondary); padding: 4rem 2rem; text-align: center; margin-top: 2rem;">
-    <div class="container">
-        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin: 0;">
-            &copy; 2026 MyMirror Skin Health. All rights reserved. Disclaimer: Content is for informational purposes and not a substitute for professional medical advice.
-        </p>
-    </div>
-</footer>
-
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    function toggleTooltip(zone, show) {
-        const el = document.getElementById(`tooltip-${zone}`);
-        if (show) el.classList.add('tooltip-active');
-        else el.classList.remove('tooltip-active');
-    }
-
-    function activateRemedy(id, color) {
-        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-        document.getElementById(`btn-${id}`).classList.add('active');
-        document.getElementById('remedy-stage').style.backgroundColor = color;
-        document.querySelectorAll('.stage-content').forEach(c => c.classList.remove('active'));
-        document.getElementById(`content-${id}`).classList.add('active');
-    }
-
+    function toggleTooltip(zone, show) { const el = document.getElementById(`tooltip-${zone}`); if (show) el.classList.add('tooltip-active'); else el.classList.remove('tooltip-active'); }
+    function activateRemedy(id, color) { document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active')); document.getElementById(`btn-${id}`).classList.add('active'); document.getElementById('remedy-stage').style.backgroundColor = color; document.querySelectorAll('.stage-content').forEach(c => c.classList.remove('active')); document.getElementById(`content-${id}`).classList.add('active'); }
     function swapBotanical(imgSrc) { const img = document.getElementById('botanical-img'); if (img.src.includes(imgSrc)) return; img.style.opacity = '0'; img.style.transform = 'scale(0.95) rotate(2deg)'; setTimeout(() => { img.src = '/acne/forehead-acne/' + imgSrc; img.style.opacity = '1'; img.style.transform = 'scale(1) rotate(0deg)'; }, 300); }
     function swapClinical(imgSrc) { const img = document.getElementById('clinical-img'); if (img.src.includes(imgSrc)) return; img.style.opacity = '0'; img.style.transform = 'scale(0.95) rotate(-2deg)'; setTimeout(() => { img.src = '/acne/forehead-acne/' + imgSrc; img.style.opacity = '1'; img.style.transform = 'scale(1) rotate(0deg)'; }, 300); }
     function swapOTC(imgSrc) { const img = document.getElementById('otc-img'); if (img.src.includes(imgSrc)) return; img.style.opacity = '0'; img.style.transform = 'scale(0.95) rotate(2deg)'; setTimeout(() => { img.src = '/acne/forehead-acne/' + imgSrc; img.style.opacity = '1'; img.style.transform = 'scale(1) rotate(0deg)'; }, 300); }
 
     const quizData = [
-        { q: "Q1. Where are your pimples primarily located?", options: ["Strictly along the hairline", "All over the forehead", "Between the eyebrows only"] },
-        { q: "Q2. Do you leave heavy oils or thick conditioners in your hair?", options: ["Yes, frequently", "Sometimes", "Rarely / Never"] },
+        { q: "Q1. Where are most of your pimples located?", options: ["Mostly near the hairline", "Spread across the entire forehead", "Random / different areas"] },
+        { q: "Q2. Do you regularly use hair oil, serums, or heavy conditioners?", options: ["Yes, frequently", "Sometimes", "Rarely / Never"] },
         { q: "Q3. Do your pimples worsen after sweating, travel, or wearing a helmet/cap?", options: ["Yes, clearly", "Sometimes", "Not really"] },
-        { q: "Q4. Is your scalp currently itchy or do you have dandruff?", options: ["Yes", "Sometimes", "No"] },
-        { q: "Q5. Are the pimples deep, painful, and recurring in the same spot?", options: ["Yes, very painful", "Sometimes", "No, they are mostly surface-level"] }
+        { q: "Q4. Do you also have dandruff or an itchy/flaky scalp?", options: ["Yes", "Sometimes", "No"] },
+        { q: "Q5. Do your pimples keep coming back or feel deep/painful?", options: ["Yes, recurring or painful", "Sometimes", "No, mostly mild"] }
     ];
 
-    let currentStep = 0;
-    let selectedAnswers = [];
-
-    function renderQuestion() {
-        const qObj = quizData[currentStep];
-        document.getElementById('quiz-text').innerText = qObj.q;
-        const optionsContainer = document.getElementById('quiz-options');
-        optionsContainer.innerHTML = '';
-        qObj.options.forEach((opt, index) => {
-            const btn = document.createElement('button');
-            btn.className = 'quiz-choice-btn';
-            btn.innerText = opt;
-            btn.onclick = () => handleChoice(index);
-            optionsContainer.appendChild(btn);
-        });
-    }
-
-    function handleChoice(index) {
-        selectedAnswers.push(index);
-        currentStep++;
-        const qBox = document.getElementById('quiz-question-box');
-        const loader = document.getElementById('quiz-loader');
-        
-        if (currentStep < quizData.length) {
-            renderQuestion();
-        } else {
-            qBox.style.display = 'none';
-            loader.style.display = 'block';
-            setTimeout(() => {
-                loader.style.display = 'none';
-                calculateResult();
-            }, 1000);
-        }
-    }
-
+    let currentStep = 0; let selectedAnswers = [];
+    function renderQuestion() { const qObj = quizData[currentStep]; document.getElementById('quiz-text').innerText = qObj.q; const optionsContainer = document.getElementById('quiz-options'); optionsContainer.innerHTML = ''; qObj.options.forEach((opt, index) => { const btn = document.createElement('button'); btn.className = 'quiz-choice-btn'; btn.innerText = opt; btn.onclick = () => handleChoice(index); optionsContainer.appendChild(btn); }); }
+    function handleChoice(index) { selectedAnswers.push(index); currentStep++; const qBox = document.getElementById('quiz-question-box'); const loader = document.getElementById('quiz-loader'); if (currentStep < quizData.length) renderQuestion(); else { qBox.style.display = 'none'; loader.style.display = 'block'; setTimeout(() => { loader.style.display = 'none'; calculateResult(); }, 1000); } }
     function calculateResult() {
         document.getElementById('quiz-content').style.display = 'none';
         document.getElementById('quiz-intro').style.display = 'none';
@@ -597,63 +494,47 @@
         const title = document.getElementById('result-title');
         const body = document.getElementById('result-body');
         const actionList = document.getElementById('action-list');
-
         resultContainer.style.display = 'block';
         actionList.innerHTML = '';
-
-        let scores = { haircare: 0, sweat: 0, scalp: 0, internal: 0 };
-
-        if (selectedAnswers[0] === 0) scores.haircare += 2;
-        if (selectedAnswers[1] === 0) scores.haircare += 3;
-        if (selectedAnswers[2] === 0) scores.sweat += 3;
-        if (selectedAnswers[3] === 0) scores.scalp += 3;
-        if (selectedAnswers[4] === 0) scores.internal += 3;
-
+        let scores = { haircare: 0, sweat: 0, dandruff: 0, hormonal: 0 };
+        if (selectedAnswers[0] === 0) { scores.haircare += 2; scores.dandruff += 1; } else if (selectedAnswers[0] === 1) { scores.sweat += 2; scores.hormonal += 1; } else if (selectedAnswers[0] === 2) { scores.hormonal += 2; }
+        if (selectedAnswers[1] === 0) scores.haircare += 3; else if (selectedAnswers[1] === 1) scores.haircare += 1;
+        if (selectedAnswers[2] === 0) scores.sweat += 3; else if (selectedAnswers[2] === 1) scores.sweat += 1;
+        if (selectedAnswers[3] === 0) scores.dandruff += 3; else if (selectedAnswers[3] === 1) scores.dandruff += 1;
+        if (selectedAnswers[4] === 0) scores.hormonal += 3; else if (selectedAnswers[4] === 1) scores.hormonal += 1;
         const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-        const primary = sorted[0][0];
-
-        if (primary === 'haircare') {
-            title.innerText = "Pomade Acne / Haircare Trigger";
-            card.style.borderColor = "#fbbf24";
-            body.innerHTML = "Your breakouts are likely caused by hair oils or conditioners clogging your hairline pores. This is very common in people who use heavy oils for 'champi'.";
-            ["Stop leaving hair oil overnight", "Wash your forehead after rinsing conditioner", "Use non-comedogenic hair products"].forEach(a => {
-                const li = document.createElement('li'); li.innerText = a; actionList.appendChild(li);
-            });
-        } else if (primary === 'sweat') {
-            title.innerText = "Acne Mechanica / Sweat Trigger";
-            card.style.borderColor = "#3b82f6";
-            body.innerHTML = "Heat and friction from helmets or caps are trapping sweat and bacteria against your skin, leading to congestion.";
-            ["Sanitize your helmet lining weekly", "Wash your face immediately after commuting", "Avoid tight caps during peak heat"].forEach(a => {
-                const li = document.createElement('li'); li.innerText = a; actionList.appendChild(li);
-            });
-        } else if (primary === 'scalp') {
-            title.innerText = "Dandruff-Induced Fungal Acne";
-            card.style.borderColor = "#10b981";
-            body.innerHTML = "Scalp health is the root cause. Yeast from dandruff is falling onto your forehead and infecting the hair follicles.";
-            ["Use a Ketoconazole anti-dandruff shampoo", "Don't let your hair fall on your forehead", "Keep your scalp clean and oil-free"].forEach(a => {
-                const li = document.createElement('li'); li.innerText = a; actionList.appendChild(li);
-            });
-        } else {
-            title.innerText = "Hormonal or Stress-Related Acne";
-            card.style.borderColor = "#ef4444";
-            body.innerHTML = "Your sebaceous glands are overactive due to internal triggers like cortisol or androgen shifts. This leads to deeper, recurring cysts.";
-            ["Follow a consistent Salicylic Acid routine", "Manage stress through better sleep/exercise", "Consult a dermatologist if cysts persist"].forEach(a => {
-                const li = document.createElement('li'); li.innerText = a; actionList.appendChild(li);
-            });
-        }
+        const s1 = sorted[0]; const s2 = sorted[1]; const s3 = sorted[2];
+        const contentMap = {
+            haircare: { title: "Haircare-Linked Acne", color: "#fbbf24", desc: "Likely caused by oil and product buildup clogging pores (“pomade acne”). Common with coconut oiling + leave-in products.", actions: ["Avoid applying oil near the hairline", "Wash off residue from forehead after haircare", "Switch to lightweight, non-comedogenic products"] },
+            sweat: { title: "Sweat & Friction Acne", color: "#3b82f6", desc: "Caused by sweat, humidity, and friction trapping oil and bacteria. Common with daily commuting, gym, or hot weather.", actions: ["Cleanse your face after sweating", "Avoid tight helmets/caps when possible", "Use light, sweat-friendly skincare"] },
+            dandruff: { title: "Dandruff-Linked Acne", color: "#10b981", desc: "Linked to scalp issues like dandruff. Flakes and fungal growth can irritate the forehead.", actions: ["Treat your scalp (anti-dandruff routine)", "Keep hair off your forehead", "Avoid oil buildup on scalp"] },
+            hormonal: { title: "Hormonal / Internal Acne", color: "#ef4444", desc: "Caused by excess oil production due to hormones or stress. Common during periods, poor sleep, or high stress.", actions: ["Focus on consistent skincare (not random fixes)", "Manage sleep and stress", "Consider dermatologist advice if persistent"] },
+            mixed: { title: "Multiple Triggers (Most Common Case)", color: "#64748b", desc: "Your acne is likely caused by multiple factors together (e.g., oil + sweat + stress).", actions: ["Fix 1 trigger at a time (don’t change everything at once)", "Start with the most obvious cause (haircare or sweat)"] }
+        };
+        let finalResult = (s1[1] - s3[1] <= 1 && s1[1] >= 3) || s1[1] < 3 ? contentMap.mixed : (s1[1] - s2[1] <= 1 ? { title: `Mainly ${contentMap[s1[0]].title.split('-')[0]}, with some ${contentMap[s2[0]].title.split(' ')[0]} triggers`, color: contentMap[s1[0]].color, desc: `${contentMap[s1[0]].desc} ${contentMap[s2[0]].desc}`, actions: [...contentMap[s1[0]].actions, ...contentMap[s2[0]].actions.slice(0, 1)] } : contentMap[s1[0]]);
+        title.innerText = finalResult.title; card.style.borderColor = finalResult.color; body.innerHTML = finalResult.desc; finalResult.actions.forEach(a => { const li = document.createElement('li'); li.innerText = a; actionList.appendChild(li); });
     }
-
-    function resetQuiz() {
-        currentStep = 0;
-        selectedAnswers = [];
-        document.getElementById('quiz-content').style.display = 'block';
-        document.getElementById('quiz-intro').style.display = 'block';
-        document.getElementById('quiz-result').style.display = 'none';
-        document.getElementById('quiz-question-box').style.display = 'block';
-        renderQuestion();
-    }
-
+    function resetQuiz() { currentStep = 0; selectedAnswers = []; document.getElementById('quiz-content').style.display = 'block'; document.getElementById('quiz-intro').style.display = 'block'; document.getElementById('quiz-result').style.display = 'none'; document.getElementById('quiz-question-box').style.display = 'block'; renderQuestion(); }
+    function toggleFAQ(index) { const items = document.querySelectorAll('.faq-item'); const isActive = items[index].classList.contains('active-faq'); items.forEach(item => item.classList.remove('active-faq')); if (!isActive) items[index].classList.add('active-faq'); }
     renderQuestion();
 </script>
+    <!-- Related Guides -->
+    <div class="container" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+        <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem;">Related Acne Guides</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+            <a href="/acne/why-men-get-acne/" style="display:block; padding: 1.2rem; background: var(--color-bg-secondary); border-radius: 16px; text-decoration: none; color: var(--color-text-primary); border: 1px solid var(--color-border); font-weight: 600; font-size: 0.95rem;">Why Men Get Acne: 7 Causes &amp; What to Do →</a>
+            <a href="/acne/why-teenagers-get-acne/" style="display:block; padding: 1.2rem; background: var(--color-bg-secondary); border-radius: 16px; text-decoration: none; color: var(--color-text-primary); border: 1px solid var(--color-border); font-weight: 600; font-size: 0.95rem;">Why Teenagers Get Acne: Causes &amp; Treatment →</a>
+            <a href="/acne/men-acne-faq/" style="display:block; padding: 1.2rem; background: var(--color-bg-secondary); border-radius: 16px; text-decoration: none; color: var(--color-text-primary); border: 1px solid var(--color-border); font-weight: 600; font-size: 0.95rem;">Acne in Men: 30 Frequently Asked Questions →</a>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer style="background: var(--color-bg-secondary); padding: 3rem 2rem; margin-top: 4rem; border-top: 1px solid var(--color-border); text-align: center;">
+        <div class="container">
+            <p style="color: var(--color-text-tertiary); font-size: 0.85rem; margin: 0;">
+                &copy; 2026 MyMirror Skin Health. All rights reserved. Disclaimer: Content is for informational purposes and not a substitute for professional medical advice.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
