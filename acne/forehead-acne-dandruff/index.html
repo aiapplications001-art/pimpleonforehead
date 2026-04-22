@@ -100,7 +100,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--text-3);
-      margin-bottom: 12px;
+      margin-bottom: 16px; /* Increased from 12px for better spacing */
     }
     .toc-inner {
       display: flex;
@@ -109,8 +109,9 @@
       overflow-x: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      padding-bottom: 8px; /* Extra space for bouncy lift & shadow */
-      margin-bottom: -4px; /* Offset the padding for visual balance */
+      padding-top: 8px; /* Safe buffer for hover lift */
+      padding-bottom: 12px; /* Space for bouncy lift & shadow */
+      margin-top: -8px; /* Maintain vertical alignment while adding padding */
     }
     .toc-inner::-webkit-scrollbar { display: none; }
     
