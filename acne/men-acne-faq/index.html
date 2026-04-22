@@ -149,28 +149,28 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 60px;
     }
-    .nav-logo img { height: 28px; display: block; }
+    .nav-logo img { height: 32px; display: block; }
     .nav-links {
-      display: flex; gap: 0.25rem;
-      list-style: none;
+      display: flex; gap: 0.5rem;
+      align-items: center;
     }
     .nav-links a {
-      font-size: 13px; font-weight: 500;
+      font-size: 13px; font-weight: 600;
       color: var(--color-text-secondary);
       text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
       transition: all 0.2s;
     }
     .nav-links a:hover { background: var(--color-bg-secondary); color: var(--color-text-primary); }
-    .nav-links a.active { background: var(--color-brand-light); color: var(--color-brand); font-weight: 600; }
+    .nav-links a.active { background: var(--color-brand-light); color: var(--color-brand); }
     .nav-cta {
       background: var(--color-brand);
       color: #fff !important;
-      padding: 8px 18px !important;
-      border-radius: 8px !important;
-      font-weight: 600 !important;
-      font-size: 13px !important;
+      padding: 8px 20px !important;
+      border-radius: 9999px !important;
+      font-weight: 700 !important;
+      box-shadow: 0 5px 15px rgba(236,97,14,0.2);
     }
     .nav-cta:hover { background: var(--color-brand-dark) !important; transform: translateY(-1px); }
 
@@ -250,7 +250,7 @@
       align-items: flex-end;
     }
     .hero-photo {
-      width: 200px; height: 240px;
+      width: 200px; height: 160px;
       border-radius: 16px; overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
@@ -274,37 +274,42 @@
       margin-top: 3px; line-height: 1.4;
     }
 
-    /* ── TOC ── */
+    /* ── TOC TABS ── */
     .toc-bar {
-      background: var(--color-bg-primary);
+      background: #fff;
       border-bottom: 1px solid var(--color-border);
-      padding: 0 2rem;
+      padding: 12px 2rem;
       position: sticky; top: 60px; z-index: 90;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
     }
     .toc-inner {
       max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; gap: 0;
+      display: flex; align-items: center; gap: 12px;
       overflow-x: auto;
+      scrollbar-width: none;
     }
     .toc-inner::-webkit-scrollbar { display: none; }
     .toc-link {
       white-space: nowrap;
-      font-size: 12px; font-weight: 600;
-      color: var(--color-text-tertiary);
+      font-size: 13px; font-weight: 600;
+      color: var(--color-text-secondary);
       text-decoration: none;
-      padding: 14px 18px;
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s;
-      display: flex; align-items: center; gap: 6px;
+      padding: 10px 20px;
+      border-radius: 99px;
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      transition: all 0.3s var(--ease-bouncy);
+      display: flex; align-items: center; gap: 8px;
     }
-    .toc-link:hover { color: var(--color-text-primary); border-bottom-color: var(--color-brand); }
-    .toc-link.active { color: var(--color-brand); border-bottom-color: var(--color-brand); }
+    .toc-link:hover { border-color: var(--color-brand); color: var(--color-brand); transform: translateY(-2px); }
+    .toc-link.active { background: var(--color-brand); color: #fff; border-color: var(--color-brand); box-shadow: 0 5px 15px rgba(236,97,14,0.2); }
     .toc-num {
       display: inline-flex; align-items: center; justify-content: center;
-      width: 18px; height: 18px; border-radius: 50%;
-      background: var(--color-brand); color: #fff;
-      font-size: 10px; font-weight: 700;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(0,0,0,0.1); color: inherit;
+      font-size: 11px; font-weight: 700;
     }
+    .toc-link.active .toc-num { background: rgba(255,255,255,0.2); color: #fff; }
 
     /* ── MAIN LAYOUT ── */
     .page-body {
@@ -557,17 +562,16 @@
     <span class="hide-mobile">Updated April 2026</span>
   </div>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="../../assets/logo-v4.png" alt="mymirror" /></a>
-      <ul class="nav-links">
-        <li><a href="/acne/why-men-get-acne/">Causes</a></li>
-        <li><a href="/acne/forehead-acne/fast-treatment/">Treatments</a></li>
-        <li><a href="/acne/men-acne-faq/" class="active">FAQs</a></li>
-        <li><a href="/acne/face-map/">Face Map</a></li>
-        <li><a href="/acne/forehead-acne/" class="nav-cta">Free Skin Analysis</a></li>
-      </ul>
+      <a class="nav-logo" href="/"><img src="/assets/logo-v4.png" alt="mymirror" /></a>
+      <div class="nav-links">
+        <a href="/acne/why-men-get-acne/">Causes</a>
+        <a href="/acne/forehead-acne/fast-treatment/">Treatments</a>
+        <a href="/acne/men-acne-faq/" class="active">FAQs</a>
+        <a href="/acne/face-map/">Face Map</a>
+        <a href="/acne/forehead-acne/" class="nav-cta">Free Skin Analysis</a>
+      </div>
     </div>
   </nav>
 
@@ -618,11 +622,12 @@
 
   <!-- TOC BAR -->
   <div class="toc-bar">
+    <div style="max-width:1100px; margin: 0 auto 10px auto; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-tertiary);">What's in this guide:</div>
     <div class="toc-inner">
       <a class="toc-link active" href="#causes"><span class="toc-num">1</span> Causes</a>
       <a class="toc-link" href="#types"><span class="toc-num">2</span> Types & Situations</a>
       <a class="toc-link" href="#treatment"><span class="toc-num">3</span> Treatment & Prevention</a>
-      <a class="toc-link" href="#myths"><span class="toc-num">4</span> Myths & Common Questions</a>
+      <a class="toc-link" href="#myths"><span class="toc-num">4</span> Myths & Questions</a>
     </div>
   </div>
 
