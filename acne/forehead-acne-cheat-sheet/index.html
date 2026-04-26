@@ -101,6 +101,10 @@
     .tips-grid { max-width: 1100px; margin: 2rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
     .tip-card { background: #fff; border: 1px solid var(--color-border); padding: 20px; border-radius: 16px; }
 
+    /* ── LINKS ── */
+    .source-link { font-size: 0.75rem; color: var(--color-info); text-decoration: none; font-weight: 700; margin-left: 5px; }
+    .source-link:hover { text-decoration: underline; }
+
     /* ── ANIMATIONS ── */
     .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s var(--bouncy); }
     .reveal.active { opacity: 1; transform: none; }
@@ -143,7 +147,7 @@
   <div class="toc-inner">
     <a class="toc-link active" href="#triggers"><span class="toc-num">1</span> Triggers</a>
     <a class="toc-link" href="#rules"><span class="toc-num">2</span> 3 Rules</a>
-    <a class="toc-link" href="#read-bumps"><span class="toc-num">3</span> Read Bumps</a>
+    <a class="toc-link" href="#what-is"><span class="toc-num">3</span> What is Bacne?</a>
     <a class="toc-link" href="#treatments"><span class="toc-num">4</span> Treatments</a>
   </div>
 </div>
@@ -165,15 +169,22 @@
       <div class="bento-grid">
         <div class="bento-card">
           <h3 style="color:var(--color-brand);">The "Champi" Runoff</h3>
-          <p style="font-size:0.9rem; margin-top:10px;">Thick hair oils (coconut, amla) sit overnight and travel to the hairline. This is medically known as <strong>pomade acne</strong>.</p>
+          <p style="font-size:0.9rem; margin-top:10px;">Thick hair oils (coconut, amla) sit overnight and travel to the hairline. This is medically known as <strong>pomade acne</strong>.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/4245751/" class="source-link" target="_blank">[Source 1]</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34818170/" class="source-link" target="_blank">[Source 2]</a>
+          </p>
         </div>
         <div class="bento-card">
           <h3 style="color:var(--color-success);">Monsoon Bumps</h3>
-          <p style="font-size:0.9rem; margin-top:10px;">Tiny, uniform, itchy bumps in humid weather are often <strong>Malassezia folliculitis</strong> (fungal acne), not regular acne.</p>
+          <p style="font-size:0.9rem; margin-top:10px;">Tiny, uniform, itchy bumps in humid weather are often <strong>Malassezia folliculitis</strong> (fungal acne), not regular acne.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29138059/" class="source-link" target="_blank">[Source]</a>
+          </p>
         </div>
         <div class="bento-card">
           <h3 style="color:var(--color-danger);">Helmet Friction</h3>
-          <p style="font-size:0.9rem; margin-top:10px;">Trapped sweat and friction from helmet padding during daily commutes create the perfect environment for clogged pores.</p>
+          <p style="font-size:0.9rem; margin-top:10px;">Trapped sweat and friction from helmet padding during daily commutes create the perfect environment for clogged pores.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38076662/" class="source-link" target="_blank">[Source]</a>
+          </p>
         </div>
         <div class="bento-card">
           <h3 style="color:var(--color-info);">Bindi & Product</h3>
@@ -206,21 +217,23 @@
       </div>
     </section>
 
-    <!-- SECTION 3: READ BUMPS -->
-    <section class="section reveal" id="read-bumps">
+    <!-- SECTION 3: WHAT IS BACNE -->
+    <section class="section reveal" id="what-is">
       <div class="section-header">
         <div class="section-num">3</div>
-        <div class="section-title">How to Read Your Forehead Bumps</div>
+        <div class="section-title">What Forehead Acne Actually Is</div>
       </div>
-      <div class="bento-grid">
-        <div class="bento-card" style="grid-column: span 2;">
-          <p><strong>If bumps are tiny, itchy, and all look the same...</strong><br>Think Malassezia (Fungal). Standard acne creams won't work; you need ketoconazole.</p>
-        </div>
-        <div class="bento-card">
-          <p><strong>Rough texture near hairline?</strong><br>Think Oil buildup or Pomade acne from hair products.</p>
-        </div>
-        <div class="bento-card">
-          <p><strong>Deep, painful, red pimples?</strong><br>Think Inflammatory Acne triggered by heat or hormones.</p>
+      <div style="background: #fff; padding: 2rem; border-radius: 20px; border: 1px solid var(--color-border);">
+        <p style="line-height: 1.7;">Forehead acne refers to clogged or inflamed pores in the <strong>pilosebaceous unit</strong>. It can be triggered by friction, occlusion, and urban pollution.
+          <a href="https://pubmed.ncbi.nlm.nih.gov/38076662/" class="source-link" target="_blank">[Source]</a>
+        </p>
+        <div class="bento-grid" style="margin-top: 2rem;">
+          <div class="bento-card">
+            <p><strong>Rough texture near hairline?</strong><br>Think Oil buildup or Pomade acne from hair products.</p>
+          </div>
+          <div class="bento-card">
+            <p><strong>Deep, painful, red pimples?</strong><br>Think Inflammatory Acne triggered by heat or hormones.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -234,15 +247,23 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q">1. Salicylic Acid (BHA) for Clogged Pores <span>+</span></button>
-          <div class="faq-a">Oil-soluble BHA travels deep into the pore to dissolve the "glue" holding clogs together. Best for oily, greasy texture. <strong>Clinical Proof:</strong> SA significantly reduces comedones (blackheads).</div>
+          <div class="faq-a">Oil-soluble BHA travels deep into the pore to dissolve the "glue" holding clogs together. Best for oily, greasy texture. 
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37941097/" class="source-link" target="_blank">[Source]</a>
+          </div>
         </div>
         <div class="faq-item">
           <button class="faq-q">2. Ketoconazole for Monsoon Bumps <span>+</span></button>
-          <div class="faq-a">If bumps are itchy and uniform, Ketoconazole targets <em>Malassezia</em> yeast. Research shows antifungal therapy often clears these hairline bumps where standard creams fail.</div>
+          <div class="faq-a">If bumps are itchy and uniform, Ketoconazole targets <em>Malassezia</em> yeast. Research shows antifungal therapy often clears these hairline bumps where standard creams fail.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/29138059/" class="source-link" target="_blank">[Source 1]</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27581777/" class="source-link" target="_blank">[Source 2]</a>
+          </div>
         </div>
         <div class="faq-item">
           <button class="faq-q">3. Niacinamide for Summer Shine <span>+</span></button>
-          <div class="faq-a">Topical 2% niacinamide reduces facial sebum production. It's the perfect "supporting actor" to keep your forehead matte during Indian summers.</div>
+          <div class="faq-a">Topical niacinamide reduces facial sebum production and supports the skin barrier. It's the perfect "supporting actor" to keep your forehead matte.
+            <a href="https://pubmed.ncbi.nlm.nih.gov/16766489/" class="source-link" target="_blank">[Source 1]</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28220628/" class="source-link" target="_blank">[Source 2]</a>
+          </div>
         </div>
       </div>
     </section>
@@ -260,7 +281,7 @@
         <li><strong>Salicylic Acid:</strong> Unclogs hairline</li>
         <li><strong>Ketoconazole:</strong> Fights fungal bumps</li>
         <li><strong>Niacinamide:</strong> Controls summer oil</li>
-        <li><strong>Adaplane:</strong> Speeds up turnover</li>
+        <li><strong>Adapalene:</strong> Speeds up turnover</li>
       </ul>
       <a href="/acne/face-map/" class="btn-sidebar">Start Skin Analysis →</a>
     </div>
