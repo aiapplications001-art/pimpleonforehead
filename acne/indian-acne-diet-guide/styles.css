@@ -62,6 +62,29 @@ h1, h2, h3 {
     color: var(--text-2);
 }
 
+/* EEAT BANNER */
+.eeat-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.9rem;
+    color: var(--text-2);
+}
+
+.eeat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.eeat-icon {
+    font-size: 1.1rem;
+}
+
 /* CARDS */
 .card {
     background: #fff;
