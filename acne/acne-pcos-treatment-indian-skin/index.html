@@ -27,6 +27,7 @@
       
       --font-brand:  'Kantumruy Pro', Georgia, serif;
       --font-ui:     'Plus Jakarta Sans', system-ui, sans-serif;
+      --ease-bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     html { scroll-behavior: smooth; }
@@ -35,7 +36,7 @@
       font-family: var(--font-ui);
       background: var(--color-bg-primary);
       color: var(--color-text-primary);
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
@@ -92,37 +93,6 @@
     .breadcrumb a:hover { color: var(--color-brand); }
     .breadcrumb span { margin: 0 6px; }
 
-    /* FAQ STYLES */
-    .faq-section {
-      margin-top: 4rem;
-      border-top: 1px solid var(--color-border);
-      padding-top: 2rem;
-    }
-    .faq-item {
-      background: var(--color-bg-primary);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
-    .faq-q {
-      width: 100%; text-align: left;
-      background: none; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 18px;
-      font-family: var(--font-ui); font-size: 15px; font-weight: 600;
-      color: var(--color-text-primary);
-    }
-    .faq-a {
-      display: none;
-      padding: 0 18px 18px;
-      font-size: 14px; color: var(--color-text-secondary);
-    }
-    .faq-item.active .faq-a {
-      display: block;
-    }
-    .faq-item.active .faq-q { color: var(--color-brand); background: var(--color-bg-secondary); }
-
     /* HERO */
     .hero {
       background: var(--color-bg-secondary);
@@ -167,10 +137,16 @@
       color: var(--color-success); font-weight: 600;
     }
 
-    /* MAIN CONTENT */
+    /* MAIN CONTENT & SIDEBAR */
     .page-body {
-      max-width: 800px; margin: 0 auto;
+      max-width: 1100px; margin: 0 auto;
       padding: 3rem 2rem 5rem;
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 3rem; align-items: start;
+    }
+
+    main {
+      min-width: 0;
     }
 
     h2 {
@@ -356,6 +332,187 @@
     }
     .hard-water-note.active { display: block; }
 
+    /* SIDEBAR STYLES */
+    .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+    .sidebar-card {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 16px; padding: 1.5rem;
+    }
+    .sidebar-card h4 {
+      font-family: var(--font-brand);
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 10px; color: var(--color-text-primary);
+      border: none;
+      padding-bottom: 0;
+    }
+    .sidebar-card p {
+      font-size: 13px; line-height: 1.65;
+      color: var(--color-text-secondary);
+      margin-bottom: 0;
+    }
+    .sidebar-card.highlight {
+      background: var(--color-brand-light);
+      border-color: rgba(236,97,14,0.2);
+    }
+    .sidebar-card.highlight h4 { color: var(--color-brand-dark); }
+    .sidebar-card.info {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+    .sidebar-card.info h4 { color: var(--color-info); }
+    .sidebar-card.success {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    .sidebar-card.success h4 { color: var(--color-success); }
+
+    .sidebar-cta {
+      display: block; margin-top: 12px;
+      background: var(--color-brand); color: #fff;
+      text-align: center; text-decoration: none;
+      padding: 11px 18px; border-radius: 8px;
+      font-size: 13px; font-weight: 700;
+      transition: all 0.2s var(--ease-bouncy);
+    }
+    .sidebar-cta:hover { background: var(--color-brand-dark); transform: translateY(-2px); }
+
+    .sidebar-list { list-style: none; margin-top: 10px; padding-left: 0; }
+    .sidebar-list li {
+      font-size: 13px; color: var(--color-text-secondary);
+      padding: 6px 0; border-bottom: 1px solid var(--color-border);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 0;
+    }
+    .sidebar-list li:last-child { border-bottom: none; }
+    .sidebar-list li::before {
+      content: '→'; color: var(--color-brand); font-size: 12px; flex-shrink: 0;
+    }
+    .sidebar-list a { color: inherit; text-decoration: none; }
+    .sidebar-list a:hover { color: var(--color-brand); }
+
+    .tip-chips {
+      display: flex; flex-direction: column; gap: 8px; margin-top: 10px;
+    }
+    .tip-chip {
+      display: flex; align-items: flex-start; gap: 10px;
+      background: var(--color-bg-primary); border: 1px solid var(--color-border);
+      border-radius: 10px; padding: 10px 12px;
+    }
+    .tip-chip-icon {
+      font-size: 16px; flex-shrink: 0; margin-top: 1px;
+    }
+    .tip-chip-text {
+      font-size: 12px; line-height: 1.5;
+      color: var(--color-text-secondary);
+    }
+    .tip-chip-text strong {
+      display: block; font-size: 12px; font-weight: 700;
+      color: var(--color-text-primary); margin-bottom: 1px;
+    }
+
+    /* FAQ ACCORDION STYLES */
+    .faq-section {
+      margin-top: 4rem;
+      border-top: 1px solid var(--color-border);
+      padding-top: 2rem;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 6px; }
+
+    .faq-item {
+      background: var(--color-bg-primary);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .faq-item:hover { border-color: #c4b0a3; }
+    .faq-item.open {
+      border-color: var(--color-brand);
+      box-shadow: 0 4px 20px rgba(236,97,14,0.08);
+    }
+
+    .faq-q {
+      width: 100%; text-align: left;
+      background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 18px;
+      font-family: var(--font-ui); font-size: 14px; font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 1.4;
+      transition: background 0.15s;
+    }
+    .faq-q:hover { background: var(--color-bg-secondary); }
+    .faq-item.open .faq-q { background: var(--color-bg-secondary); color: var(--color-brand); }
+
+    .faq-q-text { flex: 1; text-align: left; }
+
+    .faq-toggle {
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 1.5px solid var(--color-border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: all 0.25s var(--ease-bouncy);
+      color: var(--color-text-tertiary);
+    }
+    .faq-item.open .faq-toggle {
+      background: var(--color-brand); border-color: var(--color-brand);
+      color: #fff; transform: rotate(45deg);
+    }
+    .faq-toggle svg { width: 10px; height: 10px; }
+
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s;
+    }
+    .faq-a.open { max-height: 400px; }
+    .faq-a-inner {
+      padding: 0 18px 18px 18px;
+      font-size: 14px; line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+
+    /* QUICK TIPS BOTTOM STRIP */
+    .quick-tips {
+      background: var(--color-bg-secondary);
+      border-top: 1px solid var(--color-border);
+      padding: 3rem 2rem;
+    }
+    .quick-tips-inner { max-width: 1100px; margin: 0 auto; }
+    .quick-tips h3 {
+      font-family: var(--font-brand); font-size: 1.3rem; font-weight: 700;
+      color: var(--color-text-primary); margin-bottom: 1.5rem;
+      text-align: center; border: none; padding-bottom: 0; margin-top: 0;
+    }
+    .tips-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px;
+    }
+    .tip-card {
+      background: var(--color-bg-primary);
+      border: 1px solid var(--color-border);
+      border-radius: 14px; padding: 16px 14px;
+      text-align: center;
+      transition: transform 0.25s var(--ease-bouncy), box-shadow 0.25s;
+    }
+    .tip-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.07); }
+    .tip-icon { font-size: 24px; margin-bottom: 8px; }
+    .tip-title { font-size: 12px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 3px; }
+    .tip-note { font-size: 11px; color: var(--color-text-tertiary); line-height: 1.4; }
+
+    /* FOOTER */
+    footer {
+      background: var(--color-bg-tertiary);
+      border-top: 1px solid var(--color-border);
+      padding: 2rem;
+      text-align: center;
+      font-size: 12px; color: var(--color-text-tertiary);
+    }
+    footer a { color: var(--color-brand); text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .page-body { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .tips-grid { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 600px) {
       .weather-body {
         flex-direction: column;
@@ -365,6 +522,7 @@
       .weather-icon { margin: 0 auto; }
       .stats-grid { justify-content: center; }
       .page-body { padding: 2rem 1rem; }
+      .tips-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -406,138 +564,258 @@
 
   <div class="page-body">
     
-    <!-- WEATHER WIDGET EMBED -->
-    <section id="weather-widget" class="weather-alert-card">
-        <div class="weather-header">
-            <div class="header-top">
-                <div class="live-indicator">
-                    <span class="pulse"></span>
-                    LIVE SKIN-WEATHER ALERT
-                </div>
-                <div id="location-display" class="location-badge" onclick="requestLocation()" title="Click to refresh location">
-                  📍 <span>Detecting Location...</span>
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                </div>
+    <main>
+      <!-- WEATHER WIDGET EMBED -->
+      <section id="weather-widget" class="weather-alert-card">
+          <div class="weather-header">
+              <div class="header-top">
+                  <div class="live-indicator">
+                      <span class="pulse"></span>
+                      LIVE SKIN-WEATHER ALERT
+                  </div>
+                  <div id="location-display" class="location-badge" onclick="requestLocation()" title="Click to refresh location">
+                    📍 <span>Detecting Location...</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                  </div>
+              </div>
+              <div id="weather-stats" class="stats-grid">
+                  <div class="stat-pill">Waiting for permission...</div>
+              </div>
+          </div>
+          <div class="weather-body">
+              <div id="weather-icon" class="weather-icon">✨</div>
+              <div class="advice-box">
+                  <h4 id="advice-title">Personalizing your advice...</h4>
+                  <p id="advice-text">We use your local climate data (Pollution, UV, Humidity) to provide hyper-tailored skincare tips for your PCOS-prone skin. Please allow location access when prompted.</p>
+                  <div id="fallback-note" class="fallback-note">Location access denied. Displaying default climate data for Delhi.</div>
+                  <div id="hard-water-note" class="hard-water-note">
+                      <strong>🚰 Hard Water Alert:</strong> Your city is known for hard water. Minerals can leave a pore-clogging film. Consider a clarifying toner or washing with filtered water.
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <h2>Understanding the Link Between PCOS and Hormonal Breakouts</h2>
+      <p>PCOS causes hormonal imbalances, specifically an overproduction of androgens (male hormones like testosterone). In the skin, excess androgens send your sebaceous (oil) glands into overdrive. When this excess oil mixes with dead skin cells and the daily dust and pollution of Indian cities, it creates the perfect breeding ground for acne-causing bacteria.</p>
+
+      <img src="/acne/acne-pcos-treatment-indian-skin/pcos-acne.png" alt="Pictures of Typical Acne vs PCOS Acne" style="width:100%; height:auto; border-radius:12px; margin:2rem 0 1rem 0; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+      <p>You might be wondering if your breakouts are just regular pimples or hormone-driven. If you search for pictures of PCOS acne, you will notice a distinct pattern. Unlike the superficial whiteheads of teenage acne, PCOS acne typically presents as:</p>
+      <ul>
+          <li>Deep, tender, and painful cysts.</li>
+          <li>Breakouts heavily concentrated on the lower third of the face (jawline, chin, upper neck).</li>
+          <li>Flare-ups that sync with your menstrual cycle.</li>
+      </ul>
+
+      <h2>Why Indian Skin Needs a Highly Tailored Approach</h2>
+      <p>Treating PCOS acne in India is not as simple as buying an over-the-counter drying lotion. An effective treatment for acne with pcos must account for three uniquely Indian factors:</p>
+      <ol>
+          <li><strong>The Climate and Urban Pollution:</strong> High humidity and monsoon seasons keep the skin in a constant state of dampness, leading to excess sebum production. When combined with the high particulate matter (PM 2.5) in Indian cities, your pores get clogged much faster.</li>
+          <li><strong>Melanin-Rich Skin and Hyperpigmentation (PIH):</strong> Indian skin types (Fitzpatrick types III to V) are rich in melanin. This means every inflammatory acne lesion leaves behind a stubborn dark mark, known as Post-Inflammatory Hyperpigmentation (PIH). Aggressive acne treatments can actually worsen these dark spots. Your routine must treat the acne while gently fading pigmentation.</li>
+          <li><strong>The Traditional Indian Diet:</strong> Our diets are rich and diverse, but certain staples can trigger insulin spikes—a major catalyst for PCOS symptoms. High-glycemic foods, refined carbohydrates (like white rice and maida), and heavy dairy consumption can stimulate androgen production, leading to more breakouts.</li>
+      </ol>
+
+      <h2>Proven Treatments for Acne with PCOS</h2>
+      <p>Managing this condition requires a 360-degree approach, combining dermatological science with lifestyle shifts.</p>
+
+      <h3>Dermatological & Medical Solutions</h3>
+      <p>For severe cases, topical creams aren't enough because the root cause is internal. A dermatologist may recommend:</p>
+      <ul>
+          <li><strong>Topical Retinoids:</strong> (Like Adapalene or Tretinoin) to speed up cell turnover and unclog pores, while also fading dark spots.</li>
+          <li><strong>Salicylic Acid (BHA):</strong> An oil-soluble acid that penetrates deep into the pores to clear out trapped sweat, oil, and city pollution.</li>
+          <li><strong>Anti-Androgen Medications:</strong> Prescription treatments like Spironolactone can block the effects of androgens on the skin.</li>
+          <li><strong>Oral Contraceptives:</strong> Certain birth control pills can regulate hormone levels and significantly reduce acne. (Always consult a gynecologist).</li>
+      </ul>
+
+      <h3>Natural Treatment for PCOS Acne & Dietary Shifts</h3>
+      <p>Many women prefer to support their medical treatments with holistic, science-backed lifestyle changes. An effective natural treatment for pcos acne focuses on lowering inflammation and improving insulin resistance:</p>
+      <ul>
+          <li><strong>Spearmint Tea:</strong> Clinical studies suggest that drinking two cups of organic spearmint tea daily has mild anti-androgen properties, helping to reduce hormonal breakouts.</li>
+          <li><strong>Zinc Supplements:</strong> Zinc is a powerful anti-inflammatory mineral that helps regulate sebum production and immune function.</li>
+          <li><strong>Dietary Adjustments:</strong> Swap high-GI foods for complex carbs. Consider limiting dairy (particularly A1 cow's milk), as it contains hormones that can trigger acne in PCOS-prone individuals.</li>
+          <li><strong>Ayurvedic Support:</strong> Ingredients like Neem and Tulsi have powerful antibacterial properties. While they won't balance hormones internally, mild, natural cleansers containing these can help keep the skin surface clean during humid Indian summers.</li>
+      </ul>
+
+      <h2>Your Step-by-Step Daily Skincare Routine</h2>
+      <p>To keep your skin clear without triggering PIH, follow this dermatologist-approved daily framework:</p>
+      <ol>
+          <li><strong>Cleanse:</strong> Use a gentle, foaming Salicylic Acid cleanser twice a day to cut through urban pollution and humidity-induced oil.</li>
+          <li><strong>Treat (Morning):</strong> Apply a Vitamin C or Niacinamide serum. Niacinamide is fantastic for Indian skin as it controls oil, reduces redness, and fades dark spots safely.</li>
+          <li><strong>Protect:</strong> Use a broad-spectrum, non-comedogenic gel sunscreen (SPF 50). Sun protection is non-negotiable to prevent acne marks from getting darker.</li>
+          <li><strong>Repair (Night):</strong> Apply a pea-sized amount of a topical retinoid (as prescribed by your dermatologist) followed by a lightweight, oil-free moisturizer with ceramides to protect your skin barrier.</li>
+      </ol>
+
+      <h2>Take Control of Your Skin Today</h2>
+      <p>Acne caused by PCOS is stubborn, but with the right blend of hormonal management, climate-appropriate skincare, and targeted hyperpigmentation treatment, clear skin is absolutely achievable.</p>
+      <p>Consult with our board-certified dermatologists today to get a customized treatment plan designed specifically for your skin profile.</p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">Does PCOS acne ever go away?</span>
+              <span class="faq-toggle"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"><line x1="1" y1="5" x2="9" y2="5"></svg></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Yes, but it requires a long-term strategy. Since the root cause is hormonal, topical treatments alone are not a cure. You need a combination of a tailored skincare routine, dietary adjustments to control insulin, and often medical treatments prescribed by a dermatologist or endocrinologist.</p>
+              </div>
             </div>
-            <div id="weather-stats" class="stats-grid">
-                <div class="stat-pill">Waiting for permission...</div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">Is Indian diet bad for PCOS acne?</span>
+              <span class="faq-toggle"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"><line x1="1" y1="5" x2="9" y2="5"></svg></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Not entirely, but certain staples like white rice, maida (refined flour), and heavy dairy (like standard milk and paneer) can spike insulin levels. High insulin triggers androgen production, which in turn causes acne. Swapping to complex carbohydrates (like millets and brown rice) and limiting dairy can make a significant difference.</p>
+              </div>
             </div>
-        </div>
-        <div class="weather-body">
-            <div id="weather-icon" class="weather-icon">✨</div>
-            <div class="advice-box">
-                <h4 id="advice-title">Personalizing your advice...</h4>
-                <p id="advice-text">We use your local climate data (Pollution, UV, Humidity) to provide hyper-tailored skincare tips for your PCOS-prone skin. Please allow location access when prompted.</p>
-                <div id="fallback-note" class="fallback-note">Location access denied. Displaying default climate data for Delhi.</div>
-                <div id="hard-water-note" class="hard-water-note">
-                    <strong>🚰 Hard Water Alert:</strong> Your city is known for hard water. Minerals can leave a pore-clogging film. Consider a clarifying toner or washing with filtered water.
-                </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">Can hard water worsen my PCOS acne?</span>
+              <span class="faq-toggle"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="1" x2="5" y2="9"><line x1="1" y1="5" x2="9" y2="5"></svg></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Absolutely. Many Indian cities have hard water, which contains high levels of calcium and magnesium. These minerals can leave a film on your skin that clogs pores and reduces the effectiveness of your cleansers. Using a gentle toner or rinsing your face with filtered water can help prevent this.</p>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <h2>Understanding the Link Between PCOS and Hormonal Breakouts</h2>
-    <p>PCOS causes hormonal imbalances, specifically an overproduction of androgens (male hormones like testosterone). In the skin, excess androgens send your sebaceous (oil) glands into overdrive. When this excess oil mixes with dead skin cells and the daily dust and pollution of Indian cities, it creates the perfect breeding ground for acne-causing bacteria.</p>
-
-    <img src="/acne/acne-pcos-treatment-indian-skin/pcos-acne.png" alt="Pictures of Typical Acne vs PCOS Acne" style="width:100%; height:auto; border-radius:12px; margin:2rem 0 1rem 0; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
-    <p>You might be wondering if your breakouts are just regular pimples or hormone-driven. If you search for pictures of PCOS acne, you will notice a distinct pattern. Unlike the superficial whiteheads of teenage acne, PCOS acne typically presents as:</p>
-    <ul>
-        <li>Deep, tender, and painful cysts.</li>
-        <li>Breakouts heavily concentrated on the lower third of the face (jawline, chin, upper neck).</li>
-        <li>Flare-ups that sync with your menstrual cycle.</li>
-    </ul>
-
-    <h2>Why Indian Skin Needs a Highly Tailored Approach</h2>
-    <p>Treating PCOS acne in India is not as simple as buying an over-the-counter drying lotion. An effective treatment for acne with pcos must account for three uniquely Indian factors:</p>
-    <ol>
-        <li><strong>The Climate and Urban Pollution:</strong> High humidity and monsoon seasons keep the skin in a constant state of dampness, leading to excess sebum production. When combined with the high particulate matter (PM 2.5) in Indian cities, your pores get clogged much faster.</li>
-        <li><strong>Melanin-Rich Skin and Hyperpigmentation (PIH):</strong> Indian skin types (Fitzpatrick types III to V) are rich in melanin. This means every inflammatory acne lesion leaves behind a stubborn dark mark, known as Post-Inflammatory Hyperpigmentation (PIH). Aggressive acne treatments can actually worsen these dark spots. Your routine must treat the acne while gently fading pigmentation.</li>
-        <li><strong>The Traditional Indian Diet:</strong> Our diets are rich and diverse, but certain staples can trigger insulin spikes—a major catalyst for PCOS symptoms. High-glycemic foods, refined carbohydrates (like white rice and maida), and heavy dairy consumption can stimulate androgen production, leading to more breakouts.</li>
-    </ol>
-
-    <h2>Proven Treatments for Acne with PCOS</h2>
-    <p>Managing this condition requires a 360-degree approach, combining dermatological science with lifestyle shifts.</p>
-
-    <h3>Dermatological & Medical Solutions</h3>
-    <p>For severe cases, topical creams aren't enough because the root cause is internal. A dermatologist may recommend:</p>
-    <ul>
-        <li><strong>Topical Retinoids:</strong> (Like Adapalene or Tretinoin) to speed up cell turnover and unclog pores, while also fading dark spots.</li>
-        <li><strong>Salicylic Acid (BHA):</strong> An oil-soluble acid that penetrates deep into the pores to clear out trapped sweat, oil, and city pollution.</li>
-        <li><strong>Anti-Androgen Medications:</strong> Prescription treatments like Spironolactone can block the effects of androgens on the skin.</li>
-        <li><strong>Oral Contraceptives:</strong> Certain birth control pills can regulate hormone levels and significantly reduce acne. (Always consult a gynecologist).</li>
-    </ul>
-
-    <h3>Natural Treatment for PCOS Acne & Dietary Shifts</h3>
-    <p>Many women prefer to support their medical treatments with holistic, science-backed lifestyle changes. An effective natural treatment for pcos acne focuses on lowering inflammation and improving insulin resistance:</p>
-    <ul>
-        <li><strong>Spearmint Tea:</strong> Clinical studies suggest that drinking two cups of organic spearmint tea daily has mild anti-androgen properties, helping to reduce hormonal breakouts.</li>
-        <li><strong>Zinc Supplements:</strong> Zinc is a powerful anti-inflammatory mineral that helps regulate sebum production and immune function.</li>
-        <li><strong>Dietary Adjustments:</strong> Swap high-GI foods for complex carbs. Consider limiting dairy (particularly A1 cow's milk), as it contains hormones that can trigger acne in PCOS-prone individuals.</li>
-        <li><strong>Ayurvedic Support:</strong> Ingredients like Neem and Tulsi have powerful antibacterial properties. While they won't balance hormones internally, mild, natural cleansers containing these can help keep the skin surface clean during humid Indian summers.</li>
-    </ul>
-
-    <h2>Your Step-by-Step Daily Skincare Routine</h2>
-    <p>To keep your skin clear without triggering PIH, follow this dermatologist-approved daily framework:</p>
-    <ol>
-        <li><strong>Cleanse:</strong> Use a gentle, foaming Salicylic Acid cleanser twice a day to cut through urban pollution and humidity-induced oil.</li>
-        <li><strong>Treat (Morning):</strong> Apply a Vitamin C or Niacinamide serum. Niacinamide is fantastic for Indian skin as it controls oil, reduces redness, and fades dark spots safely.</li>
-        <li><strong>Protect:</strong> Use a broad-spectrum, non-comedogenic gel sunscreen (SPF 50). Sun protection is non-negotiable to prevent acne marks from getting darker.</li>
-        <li><strong>Repair (Night):</strong> Apply a pea-sized amount of a topical retinoid (as prescribed by your dermatologist) followed by a lightweight, oil-free moisturizer with ceramides to protect your skin barrier.</li>
-    </ol>
-
-    <h2>Take Control of Your Skin Today</h2>
-    <p>Acne caused by PCOS is stubborn, but with the right blend of hormonal management, climate-appropriate skincare, and targeted hyperpigmentation treatment, clear skin is absolutely achievable.</p>
-    <p>Consult with our board-certified dermatologists today to get a customized treatment plan designed specifically for your skin profile.</p>
-
-    <div class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      
-      <div class="faq-item">
-        <button class="faq-q">Does PCOS acne ever go away? <span>+</span></button>
-        <div class="faq-a">
-          <p>Yes, but it requires a long-term strategy. Since the root cause is hormonal, topical treatments alone are not a cure. You need a combination of a tailored skincare routine, dietary adjustments to control insulin, and often medical treatments prescribed by a dermatologist or endocrinologist.</p>
         </div>
       </div>
-      
-      <div class="faq-item">
-        <button class="faq-q">Is Indian diet bad for PCOS acne? <span>+</span></button>
-        <div class="faq-a">
-          <p>Not entirely, but certain staples like white rice, maida (refined flour), and heavy dairy (like standard milk and paneer) can spike insulin levels. High insulin triggers androgen production, which in turn causes acne. Swapping to complex carbohydrates (like millets and brown rice) and limiting dairy can make a significant difference.</p>
-        </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-card highlight">
+        <h4>💡 Did You Know?</h4>
+        <p>PCOS affects up to 1 in 5 Indian women, making hormonal jawline acne one of the most common dermatological complaints in the country.</p>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-q">Can hard water worsen my PCOS acne? <span>+</span></button>
-        <div class="faq-a">
-          <p>Absolutely. Many Indian cities have hard water, which contains high levels of calcium and magnesium. These minerals can leave a film on your skin that clogs pores and reduces the effectiveness of your cleansers. Using a gentle toner or rinsing your face with filtered water can help prevent this.</p>
-        </div>
+      <div class="sidebar-card info">
+        <h4>Key Actives for PCOS Acne</h4>
+        <ul class="sidebar-list">
+          <li>Salicylic acid 2% — unclogs sebum</li>
+          <li>Niacinamide 10% — fades dark spots</li>
+          <li>Retinoids — increases cell turnover</li>
+          <li>Azelaic acid — reduces inflammation</li>
+        </ul>
       </div>
-    </div>
+
+      <div class="sidebar-card">
+        <h4>Related Guides</h4>
+        <ul class="sidebar-list">
+          <li><a href="/acne/face-map/">Jawline acne causes</a></li>
+          <li><a href="/acne/indian-acne-diet-guide/">Indian Anti-Acne Diet</a></li>
+          <li><a href="/acne/hormonal-acne-vs-oily-skin/">Hormonal Acne vs Oily Skin</a></li>
+          <li><a href="/acne/best-non-comedogenic-moisturizer-india/">Best Moisturizers for India</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card success">
+        <h4>Quick PCOS Routine</h4>
+        <div class="tip-chips">
+          <div class="tip-chip">
+            <div class="tip-chip-icon">🌅</div>
+            <div class="tip-chip-text"><strong>Morning</strong>BHA Cleanser → Vit C/Niacinamide → SPF 50 Gel</div>
+          </div>
+          <div class="tip-chip">
+            <div class="tip-chip-icon">🌙</div>
+            <div class="tip-chip-text"><strong>Evening</strong>Gentle Cleanser → Retinoid → Ceramide Cream</div>
+          </div>
+          <div class="tip-chip">
+            <div class="tip-chip-icon">🌿</div>
+            <div class="tip-chip-text"><strong>Daily Habit</strong>2 cups of Spearmint Tea</div>
+          </div>
+        </div>
+        <a href="https://face3layerscanner.onrender.com/" class="sidebar-cta" target="_blank" rel="noopener">Try Free Skin Analysis →</a>
+      </div>
+
+    </aside>
 
   </div>
 
-  <script>
-    // FAQ Toggle
-    document.querySelectorAll('.faq-q').forEach(button => {
-      button.addEventListener('click', () => {
-        const faqItem = button.parentElement;
-        const isActive = faqItem.classList.contains('active');
-        
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.classList.remove('active');
-          item.querySelector('.faq-q span').innerText = '+';
-        });
+  <!-- QUICK TIPS STRIP -->
+  <section class="quick-tips">
+    <div class="quick-tips-inner">
+      <h3>Quick Tips for Clearer Skin</h3>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🧴</div>
+          <div class="tip-title">Cleanse Gently</div>
+          <div class="tip-note">Twice a day with a BHA cleanser</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💧</div>
+          <div class="tip-title">Moisturise</div>
+          <div class="tip-note">Use ceramide creams to repair barrier</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">☀️</div>
+          <div class="tip-title">Use Sunscreen</div>
+          <div class="tip-note">Prevent PIH with SPF 50 daily</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🥤</div>
+          <div class="tip-title">Stay Hydrated</div>
+          <div class="tip-note">Flush toxins naturally</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">😴</div>
+          <div class="tip-title">Sleep Well</div>
+          <div class="tip-note">Reduce cortisol with 8h sleep</div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🥗</div>
+          <div class="tip-title">Eat Smart</div>
+          <div class="tip-note">Lower glycemic index foods</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Toggle current
-        if (!isActive) {
-          faqItem.classList.add('active');
-          button.querySelector('span').innerText = '−';
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <a href="https://mymirror.fit">mymirror.fit</a> &nbsp;·&nbsp; Science-backed skin health for everyone &nbsp;·&nbsp; Medically Reviewed & Fact-Checked</p>
+    <p style="margin-top:6px; font-size:11px;">This content is for informational purposes only and does not constitute medical advice.</p>
+  </footer>
+
+  <script>
+    // ── ACCORDION ──
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-a');
+        const isOpen = item.classList.contains('open');
+
+        // Close all siblings in same list
+        const list = item.closest('.faq-list');
+        if (list) {
+          list.querySelectorAll('.faq-item.open').forEach(openItem => {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-a').classList.remove('open');
+            openItem.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
 
-    // Fallback coordinates for Delhi, India
+    // ── WEATHER WIDGET LOGIC ──
     const FALLBACK_LAT = 28.6139;
     const FALLBACK_LON = 77.2090;
 
