@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/acne/indian-acne-diet-guide",
-      "destination": "/acne/acne-diet-india",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/scan",
