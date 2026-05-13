@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/blog/pimple-vs-zit-inflammatory-papules-pustules-indian-skin",
+      "destination": "/acne/pimple-zit",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/scan",
