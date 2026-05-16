@@ -102,10 +102,39 @@
     .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s var(--ease-bouncy); }
     .reveal.active { opacity: 1; transform: none; }
 
+    .hamburger-btn { display: none; flex-direction: column; justify-content: space-around; width: 24px; height: 18px; background: transparent; border: none; cursor: pointer; padding: 0; z-index: 1005; }
+    .hamburger-btn span { width: 100%; height: 2px; background: var(--color-text-primary); transition: all 0.3s linear; transform-origin: left; }
+    .hamburger-btn.open span:nth-child(1) { transform: rotate(45deg); }
+    .hamburger-btn.open span:nth-child(2) { opacity: 0; }
+    .hamburger-btn.open span:nth-child(3) { transform: rotate(-45deg); }
+
     @media (max-width: 900px) {
       .page-body { grid-template-columns: 1fr; }
       .sidebar { display: none; }
       .bento-grid { grid-template-columns: 1fr; }
+      .nav-inner { align-items: center; flex-direction: row; justify-content: space-between; gap: 0; padding: 1rem 1.5rem; }
+      nav { position: relative; height: auto; }
+      .hamburger-btn { display: flex; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-bg-primary); padding: 1rem 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 1px solid var(--color-border); }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1rem; width: 100%; padding: 12px 0; border-bottom: 1px solid var(--color-border); border-radius: 0; }
+      .nav-links li:last-child a { border-bottom: none; }
+    }
+
+    @media (max-width: 768px) {
+      .page-body { padding: 2rem 1.5rem; gap: 2rem; }
+      .hero { padding: 4rem 1.5rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; margin-bottom: 1rem; }
+      .acne-table, .acne-table tbody, .acne-table tr, .acne-table th, .acne-table td { display: block; width: 100%; box-sizing: border-box; }
+      .acne-table { margin: 1rem 0; border-spacing: 0; }
+      .acne-table tr { margin-bottom: 1.5rem; border-radius: 15px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+      .acne-table td { border: none; padding: 1rem; border-bottom: 1px solid var(--color-border); }
+      .acne-table td:last-child { border-bottom: none; }
+      .acne-table th { text-align: center; border-radius: 0; }
+      .acne-table td:first-child, .acne-table td:last-child { border-radius: 0; }
+      .trust-bar { flex-direction: column; gap: 5px; text-align: center; }
+      .toc-inner { justify-content: flex-start; }
     }
   </style>
 </head>
@@ -120,6 +149,9 @@
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
+          <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="/">Knowledge Hub</a></li>
         <li><a href="/acne/face-map/">Face Map</a></li>
