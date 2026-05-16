@@ -129,6 +129,15 @@
       .hero p { font-size: 1rem; margin-bottom: 1rem; }
       .trust-bar { flex-direction: column; gap: 5px; text-align: center; }
       .toc-inner { justify-content: flex-start; }
+      
+      /* Card Layout for Table */
+      .acne-table, .acne-table tbody, .acne-table tr, .acne-table td { display: block; width: 100%; box-sizing: border-box; }
+      .acne-table thead { display: none; }
+      .acne-table { border: none; margin: 1rem 0; }
+      .acne-table tr { margin-bottom: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: 0 4px 15px rgba(0,0,0,0.03); background: var(--color-bg-primary); }
+      .acne-table td { border-bottom: 1px solid var(--color-border); padding: 1rem 1rem 1rem 45%; position: relative; min-height: 50px; }
+      .acne-table td:last-child { border-bottom: none; }
+      .acne-table td::before { content: attr(data-label); position: absolute; left: 1rem; width: 40%; font-weight: 700; color: var(--color-text-secondary); top: 1rem; }
     }
   </style>
 </head>
@@ -196,34 +205,34 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>Open Comedone</strong></td>
-                <td>Blackhead</td>
-                <td>A non-inflammatory clogged pore that remains open at the surface. The dark appearance is caused by oxidation.</td>
+                <td data-label="Technical Name"><strong>Open Comedone</strong></td>
+                <td data-label="Commonly Known Name">Blackhead</td>
+                <td data-label="Characteristics">A non-inflammatory clogged pore that remains open at the surface. The dark appearance is caused by oxidation.</td>
               </tr>
               <tr>
-                <td><strong>Closed Comedone</strong></td>
-                <td>Whitehead</td>
-                <td>A non-inflammatory clogged pore closed over by skin. Appears as a small, flesh-colored or white bump.</td>
+                <td data-label="Technical Name"><strong>Closed Comedone</strong></td>
+                <td data-label="Commonly Known Name">Whitehead</td>
+                <td data-label="Characteristics">A non-inflammatory clogged pore closed over by skin. Appears as a small, flesh-colored or white bump.</td>
               </tr>
               <tr>
-                <td><strong>Inflammatory Papule</strong></td>
-                <td>Red Bump / Pimple</td>
-                <td>A small, inflamed, red, and tender bump on the skin without a visible pus-filled center.</td>
+                <td data-label="Technical Name"><strong>Inflammatory Papule</strong></td>
+                <td data-label="Commonly Known Name">Red Bump / Pimple</td>
+                <td data-label="Characteristics">A small, inflamed, red, and tender bump on the skin without a visible pus-filled center.</td>
               </tr>
               <tr>
-                <td><strong>Inflammatory Pustule</strong></td>
-                <td>Pimple / Zit</td>
-                <td>A classic inflamed pimple characterized by a red base and a visible white or yellow pus-filled center.</td>
+                <td data-label="Technical Name"><strong>Inflammatory Pustule</strong></td>
+                <td data-label="Commonly Known Name">Pimple / Zit</td>
+                <td data-label="Characteristics">A classic inflamed pimple characterized by a red base and a visible white or yellow pus-filled center.</td>
               </tr>
               <tr>
-                <td><strong>Acne Nodule</strong></td>
-                <td>Nodular Acne</td>
-                <td>A severe, deep, solid, and painful lump beneath the skin's surface. No "head" and can linger for weeks.</td>
+                <td data-label="Technical Name"><strong>Acne Nodule</strong></td>
+                <td data-label="Commonly Known Name">Nodular Acne</td>
+                <td data-label="Characteristics">A severe, deep, solid, and painful lump beneath the skin's surface. No "head" and can linger for weeks.</td>
               </tr>
               <tr>
-                <td><strong>Acne Cyst</strong></td>
-                <td>Cystic Acne</td>
-                <td>A severe, deep, painful lump filled with pus. Cysts are softer than nodules and carry a high risk of scarring.</td>
+                <td data-label="Technical Name"><strong>Acne Cyst</strong></td>
+                <td data-label="Commonly Known Name">Cystic Acne</td>
+                <td data-label="Characteristics">A severe, deep, painful lump filled with pus. Cysts are softer than nodules and carry a high risk of scarring.</td>
               </tr>
             </tbody>
           </table>
