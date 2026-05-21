@@ -1,32 +1,62 @@
 {
   "redirects": [
     {
-      "source": "/acne/?",
+      "source": "/acne",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/blog/adapalene-before-after-results/?",
+      "source": "/acne/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/adapalene-before-after-results",
       "destination": "/acne/adapalene-before-after-results/",
       "permanent": true
     },
     {
-      "source": "/blog/adapalene-differin-adaferin-gel-comparison-india/?",
+      "source": "/blog/adapalene-before-after-results/",
+      "destination": "/acne/adapalene-before-after-results/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/adapalene-differin-adaferin-gel-comparison-india",
       "destination": "/acne/adapalene-differin-adaferin-gel-comparison-india/",
       "permanent": true
     },
     {
-      "source": "/acne/ut-treatment-guide/?",
+      "source": "/blog/adapalene-differin-adaferin-gel-comparison-india/",
+      "destination": "/acne/adapalene-differin-adaferin-gel-comparison-india/",
+      "permanent": true
+    },
+    {
+      "source": "/acne/ut-treatment-guide",
       "destination": "/acne/nose-pimple-treatments-home-remedies-clinical-cures/",
       "permanent": true
     },
     {
-      "source": "/acne/nodule-vs-cyst/?",
+      "source": "/acne/ut-treatment-guide/",
+      "destination": "/acne/nose-pimple-treatments-home-remedies-clinical-cures/",
+      "permanent": true
+    },
+    {
+      "source": "/acne/nodule-vs-cyst",
       "destination": "/acne/nodule-cyst/",
       "permanent": true
     },
     {
-      "source": "/blog/pimple-vs-zit-inflammatory-papules-pustules-indian-skin/?",
+      "source": "/acne/nodule-vs-cyst/",
+      "destination": "/acne/nodule-cyst/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pimple-vs-zit-inflammatory-papules-pustules-indian-skin",
+      "destination": "/acne/pimple-zit/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pimple-vs-zit-inflammatory-papules-pustules-indian-skin/",
       "destination": "/acne/pimple-zit/",
       "permanent": true
     }
