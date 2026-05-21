@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/blog/adapalene-before-after-results",
+      "destination": "/acne/adapalene-before-after-results",
+      "permanent": true
+    },
+    {
       "source": "/blog/adapalene-differin-adaferin-gel-comparison-india",
       "destination": "/acne/adapalene-differin-adaferin-gel-comparison-india",
       "permanent": true
