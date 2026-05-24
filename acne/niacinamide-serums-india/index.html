@@ -53,7 +53,7 @@
     .nav-links a { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-decoration: none; padding: 6px 12px; border-radius: 6px; }
 
     /* ── HERO ── */
-    .hero { background: linear-gradient(135deg, #0a0a0c 0%, #1a1410 100%); padding: 6rem 2rem 8rem; color: #fff; text-align: center; }
+    .hero { background: linear-gradient(135deg, #0a0a0c 0%, #1a1410 100%); padding:  6rem 2rem 10rem; color: #fff; text-align: center; }
     .hero h1 { font-family: 'Kantumruy Pro', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.04em; color: #fff; }
     .hero p { color: rgba(255,255,255,0.8); font-size: 1.25rem; max-width: 800px; margin: 0 auto 3rem; }
 
@@ -123,7 +123,7 @@
 
     @media (max-width: 768px) {
       .page-body { padding: 2rem 1.5rem; gap: 2rem; }
-      .hero { padding: 4rem 1.5rem; }
+      .hero { padding:  6rem 2rem 10rem; }
       .hero h1 { font-size: 1.8rem; }
       .hero p { font-size: 1rem; margin-bottom: 1rem; }
       .trust-bar { flex-direction: column; gap: 5px; text-align: center; }
@@ -138,6 +138,76 @@
       .acne-table td:last-child { border-bottom: none; }
       .acne-table td::before { content: attr(data-label); position: absolute; left: 1rem; width: 40%; font-weight: 700; color: var(--color-text-secondary); top: 1rem; }
     }
+  
+    /* Face AI CTA Styling - Premium Perimeter Rail Animation */
+    .face-ai-cta-wrapper { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 3rem auto 0; text-align: center; width: 100%; position: relative; z-index: 50; }
+    .face-ai-btn { 
+      position: relative; 
+      display: inline-flex; 
+      align-items: center;
+      justify-content: center;
+      padding: 18px 44px; 
+      background: #EC610E; 
+      color: #ffffff !important; 
+      text-decoration: none; 
+      font-weight: 800; 
+      font-size: 1.15rem; 
+      border-radius: 9999px; 
+      box-shadow: 0 10px 30px rgba(236,97,14,0.3); 
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+      z-index: 10;
+      overflow: visible;
+    }
+    .face-ai-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(236,97,14,0.5); }
+    .face-ai-btn-text { position: relative; z-index: 12; }
+    .face-ai-subtext { color: rgba(255,255,255,0.85); font-size: 13px; max-width: 480px; line-height: 1.5; margin: 0 auto; display: block !important; visibility: visible !important; }
+    
+    .face-ai-energy-rail { 
+      position: absolute; 
+      inset: -3px; 
+      border-radius: 9999px; 
+      pointer-events: none;
+      z-index: 5;
+      padding: 3px;
+      overflow: hidden;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: xor;
+    }
+    
+    .face-ai-energy-rail::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400%; 
+      height: 400%;
+      background: conic-gradient(from 0deg, transparent 65%, #EC610E 80%, #FFE1CE 95%, #ffffff 100%);
+      animation: energy-loop 3.5s ease-in-out forwards;
+    }
+
+    @keyframes energy-loop {
+      0% { transform: translate(-50%, -50%) rotate(0deg); opacity: 0; }
+      5% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translate(-50%, -50%) rotate(765deg); opacity: 0.8; }
+    }
+
+    .face-ai-energy-rail::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: inherit;
+      filter: blur(8px);
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .face-ai-btn { padding: 16px 32px; font-size: 1rem; width: 100%; max-width: 340px; }
+      .face-ai-subtext { font-size: 12px; padding: 0 10px; }
+    }
+
   </style>
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
@@ -190,7 +260,16 @@
       <h1><span style="color:var(--color-brand);">The Ultimate Guide to Niacinamide Serums</span><br /><em>in India (2026 Edition)</em></h1>
       <p>Compare the top Niacinamide serums in India across concentration, ingredients, texture, and price. Find the perfect 5%, 10%, or specialized B3 serum for your skin type.</p>
       <a href="#eval" style="display:inline-block; padding:16px 42px; background:var(--color-brand); color:#fff; border-radius:9999px; text-decoration:none; font-weight:800; box-shadow: 0 10px 30px rgba(236,97,14,0.3); transition: 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">Find Your Serum →</a>
-    </div>
+    
+      <!-- Face AI Skin Analysis CTA -->
+      <div class="face-ai-cta-wrapper reveal" style="transition-delay: 0.5s; margin-top: 2.5rem;">
+        <a href="/scan" class="face-ai-btn">
+          <span class="face-ai-btn-text">Start your free skin analysis now</span>
+          <div class="face-ai-energy-rail"></div>
+        </a>
+        <p class="face-ai-subtext">Scan your face to understand visible acne, oiliness, marks, texture, and skin signals in about 60 seconds.</p>
+      </div>
+</div>
   </section>
 
   <div class="toc-bar">
