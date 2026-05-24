@@ -235,6 +235,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/adapalene-before-after-1.webp">
 </head>
 <body>
 
@@ -246,7 +247,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -336,7 +337,7 @@
         </div>
         <p>When tracking the before and after adapalene gel journey, patience is your best friend. Here is what the timeline actually looks like:</p>
 
-        <img src="/assets/adapalene-before-after-1.webp" alt="Real adapalene gel before and after results on acne prone skin" loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/adapalene-before-after-1.webp" alt="Real adapalene gel before and after results on acne prone skin" />
 
         <div class="bento-grid">
           <div class="bento-card">
@@ -353,7 +354,7 @@
           </div>
         </div>
         
-        <img src="/assets/adapalene-before-after-2.webp" alt="Adapalene and Clindamycin before and after clearing cystic acne" loading="lazy" />
+        <img loading="lazy" decoding="async" src="/assets/adapalene-before-after-2.webp" alt="Adapalene and Clindamycin before and after clearing cystic acne" />
       </section>
 
       <!-- SECTION 4 -->

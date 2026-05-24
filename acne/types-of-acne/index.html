@@ -213,6 +213,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/types-of-acne.png">
 </head>
 <body>
 
@@ -224,7 +225,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -272,7 +273,7 @@
           <strong>Medical Disclaimer:</strong> The information provided in this article is for educational purposes only and does not substitute for professional medical advice. Always consult with a board-certified dermatologist for a personalized diagnosis and treatment plan.
         </div>
 
-        <img src="/assets/types-of-acne.png" alt="Types of Acne Guide Illustration" style="width: 100%; border-radius: 24px; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/types-of-acne.png" alt="Types of Acne Guide Illustration" style="width: 100%; border-radius: 24px; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" />
       </section>
 
       <section class="content-section reveal" id="primary-lesions">

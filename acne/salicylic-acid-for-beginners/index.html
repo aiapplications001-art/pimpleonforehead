@@ -258,6 +258,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/sa-beginners-hero.jpeg">
 </head>
 <body>
 
@@ -269,7 +270,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -328,7 +329,7 @@
         
         <p>The word “acid” sounds intimidating. What if it burns? What if your skin starts peeling?</p>
 
-        <img src="/assets/sa-beginners-hero.jpeg" alt="Gentle salicylic acid for beginners skincare routine." class="article-img" loading="lazy" style="border-radius: 16px;" />
+        <img fetchpriority="high" decoding="async" src="/assets/sa-beginners-hero.jpeg" alt="Gentle salicylic acid for beginners skincare routine." class="article-img" style="border-radius: 16px;" />
         
         <p>If you are stepping into the world of chemical exfoliation for the first time, you are not alone in your hesitation. Nailing the right routine with salicylic acid for beginners is the absolute difference between achieving a flawless, glass-skin glow and accidentally damaging your skin barrier.</p>
         
@@ -466,7 +467,7 @@
 
     <aside class="sidebar reveal">
       <div class="sidebar-card" style="padding: 0; overflow: hidden;">
-        <img src="/assets/sa-beginners-timeline.jpeg" alt="How often to use salicylic acid for face week by week schedule." style="width: 100%; margin: 0; display: block; border-radius: 20px;" loading="lazy" />
+        <img loading="lazy" decoding="async" src="/assets/sa-beginners-timeline.jpeg" alt="How often to use salicylic acid for face week by week schedule." style="width: 100%; margin: 0; display: block; border-radius: 20px;" />
       </div>
       
       <div class="sidebar-card highlight">

@@ -257,6 +257,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/differin-gel.jpg">
 </head>
 <body>
 
@@ -268,7 +269,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -337,25 +338,25 @@
         
         <div class="bento-grid">
           <div class="bento-card">
-            <img src="/assets/differin-gel.jpg" alt="Differin Adapalene Gel 0.1%" class="product-img" loading="lazy" />
+            <img fetchpriority="high" decoding="async" src="/assets/differin-gel.jpg" alt="Differin Adapalene Gel 0.1%" class="product-img" />
             <h3>Differin Gel</h3>
             <p>The original, global innovator brand by Galderma. Highly sought after but often imported and expensive in India.</p>
             <p style="margin-top: 10px; font-weight: 600;"><a href="https://www.amazon.com/Differin-Adapalene-0-1-Acne-Treatment/dp/B07L1PHSY9" target="_blank" rel="nofollow" style="color:var(--color-brand); text-decoration:none;">View Product →</a></p>
           </div>
           <div class="bento-card">
-            <img src="/assets/adaferin-gel.webp" alt="Adaferin 0.1% Gel Tube" class="product-img" loading="lazy" />
+            <img loading="lazy" decoding="async" src="/assets/adaferin-gel.webp" alt="Adaferin 0.1% Gel Tube" class="product-img" />
             <h3>Adaferin Gel</h3>
             <p>Galderma India’s exact equivalent to Differin. Same parent company, same quality, but priced reasonably for the Indian market.</p>
             <p style="margin-top: 10px; font-weight: 600;"><a href="https://www.1mg.com/drugs/adaferin-gel-123250?srsltid=AfmBOoq8FddevF-ipcAn2A_UaOUxvMwLCKMCyuYBrXpZnqZc1S0vdY9R&wpsrc=Google+Organic+Search" target="_blank" rel="nofollow" style="color:var(--color-brand); text-decoration:none;">View Product →</a></p>
           </div>
           <div class="bento-card">
-            <img src="/assets/adalene-nano-gel.webp" alt="Adalene Nano Gel Box" class="product-img" loading="lazy" />
+            <img loading="lazy" decoding="async" src="/assets/adalene-nano-gel.webp" alt="Adalene Nano Gel Box" class="product-img" />
             <h3>Adalene Nano Gel</h3>
             <p>A popular Indian formulation that uniquely combines Adapalene with Clindamycin (an antibiotic) to fight active bacterial acne.</p>
             <p style="margin-top: 10px; font-weight: 600;"><a href="https://www.1mg.com/drugs/adalene-nanogel-gel-134348?srsltid=AfmBOopExsrdGOKHQf4hjd_T4CiHWFElACghncjGr03nsXuequXoJgDO&wpsrc=Google+Organic+Search" target="_blank" rel="nofollow" style="color:var(--color-brand); text-decoration:none;">View Product →</a></p>
           </div>
           <div class="bento-card">
-            <img src="/assets/adiff-gel.jpg" alt="Adiff Adapalene Gel" class="product-img" loading="lazy" />
+            <img loading="lazy" decoding="async" src="/assets/adiff-gel.jpg" alt="Adiff Adapalene Gel" class="product-img" />
             <h3>Adiff / Adaphyllene</h3>
             <p>Generic Adapalene formulations in India. These are the cheapest options but may have slightly different textures or absorbency rates.</p>
             <p style="margin-top: 10px; font-weight: 600;"><a href="https://www.1mg.com/drugs/adiff-gel-41034?srsltid=AfmBOoqClveTdpP-E-LHebP2_3QAE9fBQKyOjyy-Hh60w0mN3jK-qhc8&wpsrc=Google+Organic+Search" target="_blank" rel="nofollow" style="color:var(--color-brand); text-decoration:none;">View Product →</a></p>

@@ -258,6 +258,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/sa-wash-vs-serum-hero.png">
 </head>
 <body>
 
@@ -269,7 +270,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -329,7 +330,7 @@
         
         <p>Living in India—with its mix of heat, humidity, and city pollution—means our skin's oil glands often work overtime.</p>
 
-        <img src="/assets/sa-wash-vs-serum-hero.png" alt="Salicylic acid face wash vs ordinary salicylic acid serum texture comparison." class="article-img" loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/sa-wash-vs-serum-hero.png" alt="Salicylic acid face wash vs ordinary salicylic acid serum texture comparison." class="article-img" />
         
         <p>You know you need a Beta Hydroxy Acid (BHA) to unclog those pores. But when browsing online, you are hit with a massive dilemma: Should you invest in a salicylic acid based face wash or a dedicated salicylic acid serum?</p>
         
@@ -549,7 +550,7 @@
 
     <aside class="sidebar reveal">
       <div class="sidebar-card" style="padding: 0; overflow: hidden;">
-        <img src="/assets/sa-percentage-chart.jpeg" alt="Difference between 0.5 and 1 salicylic acid face serum benefits." style="width: 100%; margin: 0; display: block; border-radius: 20px;" loading="lazy" />
+        <img loading="lazy" decoding="async" src="/assets/sa-percentage-chart.jpeg" alt="Difference between 0.5 and 1 salicylic acid face serum benefits." style="width: 100%; margin: 0; display: block; border-radius: 20px;" />
       </div>
       
       <div class="sidebar-card highlight">

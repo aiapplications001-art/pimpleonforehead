@@ -689,6 +689,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/hero-man-mirror.webp">
 </head>
 <body>
 
@@ -704,7 +705,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <ul class="nav-links">
         <li><a href="/acne/why-men-get-acne/">Causes</a></li>
         <li><a href="/acne/forehead-acne/fast-treatment/">Treatments</a></li>
@@ -759,7 +760,7 @@
       </div>
       <div class="hero-image-stack">
         <div class="hero-photo">
-          <img src="/assets/hero-man-mirror.webp" alt="Man examining skin in mirror" loading="lazy" />
+          <img fetchpriority="high" decoding="async" src="/assets/hero-man-mirror.webp" alt="Man examining skin in mirror" />
         </div>
         <div class="hero-stat-card">
           <div class="stat-num">4 in 10</div>

@@ -176,6 +176,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/blackheads-visual.png">
 </head>
 <body>
 
@@ -187,7 +188,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <ul class="nav-links">
         <li><a href="/">Knowledge Hub</a></li>
         <li><a href="/acne/face-map/">Face Map</a></li>
@@ -238,7 +239,7 @@
           <strong>Step away from the mirror:</strong> Your skin isn't "dirty." You are simply dealing with non-inflammatory acne (open and closed comedones). They aren't angry red zits; they are just clogged facial pores.
         </div>
 
-        <img src="/assets/blackheads-visual.png" alt="Detailed view of blackheads and whiteheads on skin" />
+        <img fetchpriority="high" decoding="async" src="/assets/blackheads-visual.png" alt="Detailed view of blackheads and whiteheads on skin" />
       </section>
 
       <!-- SECTION 2: THE SCIENCE -->
@@ -322,7 +323,7 @@
           </ul>
         </div>
 
-        <img src="/assets/whiteheads-visual.png" alt="Recommended routine for blackheads and whiteheads" loading="lazy" />
+        <img loading="lazy" decoding="async" src="/assets/whiteheads-visual.png" alt="Recommended routine for blackheads and whiteheads" />
 
         <p style="margin-top: 2rem;">Treat your skin with grace. Swap the harsh scrubs for gentle chemical exfoliation, and you'll be well on your way to the smooth, clear skin you deserve.</p>
       </section>

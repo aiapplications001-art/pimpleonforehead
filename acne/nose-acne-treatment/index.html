@@ -194,6 +194,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/nose-mapping-zones.jpeg">
 </head>
 <body>
 
@@ -205,7 +206,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -272,7 +273,7 @@
         </div>
         <p>People often search for the meaning of pimple on nose, wondering if it connects to their diet or health. While stress and diet do play a role, the most common cause of nose pimples comes down to three simple things: trapped oil, sweat, and rubbing.</p>
 
-        <img src="/assets/nose-mapping-zones.jpeg" alt="Face map showing causes of nose pimples including glasses friction on the bridge and trapped oil in nostril creases." loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/nose-mapping-zones.jpeg" alt="Face map showing causes of nose pimples including glasses friction on the bridge and trapped oil in nostril creases." />
 
         <div class="bento-grid">
           <div class="bento-card">

@@ -274,6 +274,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/bpo-bodywise.jpg">
 </head>
 <body>
 
@@ -285,7 +286,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -420,7 +421,7 @@
 
         <!-- Product 1 -->
         <div class="product-showcase reveal">
-          <img src="/assets/bpo-bodywise.jpg" alt="Be Bodywise 2.5% Benzoyl Peroxide Face Wash for acne" class="product-img" loading="lazy" />
+          <img fetchpriority="high" decoding="async" src="/assets/bpo-bodywise.jpg" alt="Be Bodywise 2.5% Benzoyl Peroxide Face Wash for acne" class="product-img" />
           <div class="product-details">
             <h3 class="product-name">1. Be Bodywise 2.5% Benzoyl Peroxide Face Wash</h3>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">
@@ -436,7 +437,7 @@
 
         <!-- Product 2 -->
         <div class="product-showcase reveal">
-          <img src="/assets/bpo-wildoak.webp" alt="WildOak 5% Benzoyl Peroxide Acne Wash for Face & Body" class="product-img" loading="lazy" />
+          <img loading="lazy" decoding="async" src="/assets/bpo-wildoak.webp" alt="WildOak 5% Benzoyl Peroxide Acne Wash for Face & Body" class="product-img" />
           <div class="product-details">
             <h3 class="product-name">2. WildOak 5% Benzoyl Peroxide Acne Wash</h3>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">
@@ -452,7 +453,7 @@
 
         <!-- Product 3 -->
         <div class="product-showcase reveal">
-          <img src="/assets/bpo-panoxyl.png" alt="PanOxyl 4% Creamy Acne Wash" class="product-img" loading="lazy" />
+          <img loading="lazy" decoding="async" src="/assets/bpo-panoxyl.png" alt="PanOxyl 4% Creamy Acne Wash" class="product-img" />
           <div class="product-details">
             <h3 class="product-name">3. PanOxyl 4% Creamy Acne Wash</h3>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">
@@ -468,7 +469,7 @@
         
         <!-- Product 4 -->
         <div class="product-showcase reveal">
-          <img src="/assets/bpo-1rx.webp" alt="1RX Hydrous 2.5% Face Wash by Zeelab Pharmacy" class="product-img" loading="lazy" />
+          <img loading="lazy" decoding="async" src="/assets/bpo-1rx.webp" alt="1RX Hydrous 2.5% Face Wash by Zeelab Pharmacy" class="product-img" />
           <div class="product-details">
             <h3 class="product-name">4. 1RX Hydrous 2.5% Face Wash (Zeelab Pharmacy)</h3>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">

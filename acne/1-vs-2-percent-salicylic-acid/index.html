@@ -266,6 +266,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/sa-1-vs-2-hero.png">
 </head>
 <body>
 
@@ -277,7 +278,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -335,7 +336,7 @@
         <p>The Great BHA Debate: "How Much Salicylic Acid is Right for My Acne?"</p>
         <p>If you're dealing with clogged pores, blackheads, or oily skin in India's humid weather, you already know Salicylic Acid (BHA) is your best friend. But when you browse through Nykaa or Amazon, you are instantly hit with a dilemma: 1% Salicylic Acid Face Washes from brands like Bodywise, 2% Salicylic Acid Serums from The Derma Co and Minimalist, and even 12% Ointments like Salicylix at your local pharmacy.</p>
         
-        <img src="/assets/sa-1-vs-2-hero.png" alt="1 percent salicylic acid face wash foam versus 2 percent salicylic acid serum dropper." class="article-img" loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/sa-1-vs-2-hero.png" alt="1 percent salicylic acid face wash foam versus 2 percent salicylic acid serum dropper." class="article-img" />
         
         <p>What strength is actually best? Do you need a gentle 1% sweep, the standard 2% punch, or something stronger?</p>
         
@@ -460,7 +461,7 @@
         <h3 style="margin-top: 2rem; color: var(--color-brand);">The Pro-Tip: Short Contact Therapy</h3>
         <p>Instead of buying a 2% salicylic acid face serum and leaving it on all night (which risks irritation), buy a 1% or 2% Salicylic Acid Face Wash (like Minimalist 2% or Derma Co 1%).</p>
 
-        <img src="/assets/sa-short-contact.png" alt="Short contact therapy leaving salicylic acid face wash on skin for 2 minutes." class="article-img" loading="lazy" />
+        <img loading="lazy" decoding="async" src="/assets/sa-short-contact.png" alt="Short contact therapy leaving salicylic acid face wash on skin for 2 minutes." class="article-img" />
 
         <ol style="margin-left: 1.5rem; margin-top: 1rem; margin-bottom: 2rem;">
           <li>Lather it onto a dry or slightly damp face.</li>

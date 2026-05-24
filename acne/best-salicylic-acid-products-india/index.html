@@ -234,6 +234,7 @@
   }
   </script>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/sa-texture-flat-lay.jpeg">
 </head>
 <body>
 
@@ -245,7 +246,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -367,7 +368,7 @@
         </ul>
         <p>Here is the ultimate data-driven bifurcation of the top Salicylic Acid products in India, calculated down to the price per 10ml/10g to reveal the true value.</p>
         
-        <img src="/assets/sa-texture-flat-lay.jpeg" alt="Different textures of salicylic acid skincare products including cleanser, serum, mask, and pimple patch." loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/sa-texture-flat-lay.jpeg" alt="Different textures of salicylic acid skincare products including cleanser, serum, mask, and pimple patch." />
       </section>
 
       <!-- SECTION 3 -->

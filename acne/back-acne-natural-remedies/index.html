@@ -493,6 +493,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/acne/back-acne-apple/back.jpg">
 </head>
 <body>
 
@@ -508,7 +509,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <ul class="nav-links">
         <li><a href="/acne/back-acne/">Bacne Guide</a></li>
         <li><a href="/acne/forehead-acne/home-remedies/">Face Remedies</a></li>
@@ -539,7 +540,7 @@
         <!-- Card 1: 50% Rule -->
         <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
           <div class="hero-photo">
-            <img src="/acne/back-acne-apple/back.jpg" alt="Person with clear back skin" loading="lazy" />
+            <img fetchpriority="high" decoding="async" src="/acne/back-acne-apple/back.jpg" alt="Person with clear back skin" />
           </div>
           <div class="hero-stat-card">
             <div class="stat-num">50%</div>
@@ -550,7 +551,7 @@
         <!-- Card 2: Tea Tree Clinical Evidence -->
         <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
           <div class="hero-photo">
-            <img src="/acne/back-acne-natural-remedies/teatree.jpg" alt="Clinical Tea Tree Oil Extract" loading="lazy" />
+            <img loading="lazy" decoding="async" src="/acne/back-acne-natural-remedies/teatree.jpg" alt="Clinical Tea Tree Oil Extract" />
           </div>
           <div class="hero-stat-card">
             <div class="stat-num">5% Tea Tree</div>

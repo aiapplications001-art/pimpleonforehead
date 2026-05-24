@@ -192,6 +192,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/foreheadacne.png">
 </head>
 <body>
 
@@ -203,7 +204,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+    <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
     <ul class="nav-links">
       <li><a href="/acne/forehead-acne/">Main Guide</a></li>
       <li><a href="/acne/back-acne-faq/">Bacne FAQ</a></li>
@@ -231,7 +232,7 @@
 </div>
     <div class="hero-image reveal" style="transition-delay: 0.2s;">
       <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
-        <img src="/assets/foreheadacne.png" alt="Forehead Acne Triggers" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <img fetchpriority="high" decoding="async" src="/assets/foreheadacne.png" alt="Forehead Acne Triggers" style="width: 100%; height: auto; display: block;">
       </div>
     </div>
   </div>

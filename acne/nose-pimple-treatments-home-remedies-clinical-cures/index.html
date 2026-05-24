@@ -210,6 +210,7 @@
 
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/assets/nose-prevention-dos-donts.jpeg">
 </head>
 <body>
 
@@ -221,7 +222,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-logo" href="/"><img src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
+      <a class="nav-logo" href="/"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="mymirror" /></a>
       <button class="hamburger-btn" aria-label="Toggle Navigation" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('open');">
           <span></span><span></span><span></span>
       </button>
@@ -388,7 +389,7 @@
         </div>
         <p>Treating a nose pimple is great, but stopping it from forming in the first place is even better. Because our local weather shifts between sticky humidity and dusty heat, your nose is constantly fighting trapped sweat and excess oil.</p>
 
-        <img src="/assets/nose-prevention-dos-donts.jpeg" alt="Do's and don'ts of nose acne prevention, showing gentle liquid exfoliation, gel sunscreen, and hydration versus harsh scrubs and squeezing." loading="lazy" />
+        <img fetchpriority="high" decoding="async" src="/assets/nose-prevention-dos-donts.jpeg" alt="Do's and don'ts of nose acne prevention, showing gentle liquid exfoliation, gel sunscreen, and hydration versus harsh scrubs and squeezing." />
 
         <p style="margin-top: 2rem;">To keep your nose smooth and clear, build these simple habits into your daily routine:</p>
 

@@ -255,13 +255,14 @@
   </style>
   <meta name="twitter:image" content="https://mymirror.fit/acne/face-map/face-1.png" />
   <script defer src="/assets/site-analytics.js"></script>
+  <link rel="preload" as="image" href="/acne/face-map/face-1.png">
 </head>
 <body>
 
 <nav class="site-header">
     <div class="header-container">
         <div class="logo-wrapper">
-            <a href="https://mymirror.fit"><img src="/acne/forehead-acne/logo-v4.png" alt="MyMirror Logo" class="logo"></a>
+            <a href="https://mymirror.fit"><img fetchpriority="high" decoding="async" src="/acne/forehead-acne/logo-v4.png" alt="MyMirror Logo" class="logo"></a>
         </div>
         <div class="nav-links">
             <a href="/acne/forehead-acne/">Causes</a>
@@ -308,7 +309,7 @@
         <p>Hover over the regions of the face below to explore what your breakouts are signaling.</p>
         
         <div class="stage-wrapper">
-            <img src="/acne/face-map/face-1.png" class="face-img" alt="Detailed Acne Face Map chart showing causes for forehead, cheek, and chin breakouts." loading="lazy">
+            <img fetchpriority="high" decoding="async" src="/acne/face-map/face-1.png" class="face-img" alt="Detailed Acne Face Map chart showing causes for forehead, cheek, and chin breakouts.">
             
             <svg viewBox="0 0 2048 1586" class="overlay-svg">
                 <ellipse class="organ-zone" data-type="intestine" data-name="Small Intestine (Digestion)" cx="1018" cy="219" rx="191" ry="117" transform="rotate(0, 1018, 219)" />
