@@ -743,7 +743,7 @@
     const sections = document.querySelectorAll('.content-section');
     window.addEventListener('scroll', () => {
       let current = '';
-      sections.forEach(s => { if(pageYOffset >= s.offsetTop - 150) current = s.getAttribute('id'); sections.forEach(s => { if(pageYOffset >= s.offsetTop - 150) current = s.getAttribute('id'); });
+      sections.forEach(s => { if(window.pageYOffset >= s.offsetTop - 150) current = s.getAttribute('id'); });
       tocLinks.forEach(l => {
         l.classList.remove('active');
         if(l.getAttribute('href') === `#${current}`) l.classList.add('active');
