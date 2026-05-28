@@ -4,10 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Acne Knowledge Hub: Expert Guides & Cheat Sheets | MyMirror</title>
-  <meta name="description" content="Explore our complete collection of dermatology-backed acne guides. From forehead and back acne to specialized routines for men, pregnancy, and monsoon skin." />
+  <title>60s AI Face Scan: Acne Knowledge Hub: Get Expert Solutions & AI Face Analysis | MyMirror</title>
+  <meta name="description" content="Free AI Skin Analysis with 60-second results. Discover dermatology-backed guides for all acne types. Use our free AI face analysis to identify your specific triggers and get a custom routine in 60 seconds." />
   <link rel="canonical" href="https://mymirror.fit/" />
   <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mymirror.fit/">
+  <meta property="og:title" content=" 60s AI Face Scan: MyMirror Acne Knowledge Hub | Free AI Skin Analysis">
+  <meta property="og:description" content="Expert-backed acne guides and AI face scan. Identify your triggers and clear your skin.">
+  <meta property="og:image" content="https://mymirror.fit/acne/forehead-acne/forehead.jpg">
+
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+    [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "60s AI Face Scan: Acne Knowledge Hub",
+    "description": "The complete MyMirror collection of science-backed guides to identify, treat, and prevent breakouts.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MyMirror Skin Health"
+    },
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Analyze Your Skin Now",
+      "target": "https://face3layerscanner.onrender.com/",
+      "description": "Start a 60-second AI face analysis to identify acne types and triggers."
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://face3layerscanner.onrender.com/",
+    "description": "Identify visible acne, oiliness, marks, and texture in about 60 seconds with our AI-powered skin analysis tool.",
+    "featureList": "Acne identification, Oiliness detection, Skin texture analysis",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    }
+  }
+]
+    </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,8 +233,48 @@
       .face-ai-subtext { font-size: 12px; padding: 0 10px; }
     }
 
+    /* ── STICKY BOTTOM CTA (MOBILE ONLY) ── */
+    .sticky-cta-mobile {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 0.8rem 1.2rem;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        z-index: 2000;
+        display: none; /* Hidden on desktop */
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .sticky-cta-mobile .nav-cta {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 1.05rem;
+        box-shadow: 0 8px 20px rgba(236,97,14,0.3);
+        text-decoration: none;
+        border-radius: 9999px;
+        background: var(--color-brand);
+        color: #fff;
+        font-weight: 800;
+    }
+
+    @media (max-width: 768px) {
+        .sticky-cta-mobile {
+            display: flex;
+        }
+        body {
+            padding-bottom: 70px;
+        }
+    }
+
   </style>
   <script defer src="/assets/site-analytics.js"></script>
+    <link rel="stylesheet" href="/assets/styles/forehead-acne.css">
 </head>
 <body>
 
@@ -368,5 +452,9 @@
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta-mobile">
+      <a href="https://face3layerscanner.onrender.com/" class="nav-cta" target="_blank" rel="noopener">Free AI Skin Analysis ✨</a>
+  </div>
 </body>
 </html>
