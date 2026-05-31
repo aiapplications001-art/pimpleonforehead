@@ -9,42 +9,40 @@
     
     <link rel="stylesheet" href="/assets/styles/forehead-acne.css">
     <style>
-        /* ── REFINED NON-BOXY STYLES ── */
         :root {
-            --glass: rgba(255, 255, 255, 0.7);
+            --glass: rgba(255, 255, 255, 0.75);
             --accent-soft: #f0f9ff;
         }
 
         /* 1. Fluid Intro Fold */
-        .intro-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; margin: 3rem 0; align-items: center; }
-        .toc-panel { background: var(--glass); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 40px; border: 1px solid rgba(232, 221, 213, 0.5); box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
+        .intro-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; margin: 3rem 0; align-items: start; }
+        .toc-panel { background: var(--glass); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 40px; border: 1px solid var(--color-border); box-shadow: 0 20px 40px rgba(0,0,0,0.03); position: sticky; top: 100px; }
         
-        /* 2. Clinical Flowchart (The "Why" Section) */
+        /* 2. Clinical Flowchart */
         .flow-container { position: relative; padding-left: 3rem; margin: 3rem 0; border-left: 3px dashed var(--color-border); }
         .flow-step { position: relative; margin-bottom: 3rem; }
         .flow-step::before { content: ""; position: absolute; left: -3.6rem; top: 0; width: 1.2rem; height: 1.2rem; background: var(--primary); border-radius: 50%; border: 4px solid white; box-shadow: 0 0 15px rgba(236,97,14,0.3); }
-        .flow-step h3 { margin: 0 0 0.5rem 0; font-size: 1.3rem; color: var(--text); }
+        .flow-step h3 { margin: 0 0 0.5rem 0; font-size: 1.4rem; color: var(--text); }
 
-        /* 3. Numbered Stepper (Identifying) */
+        /* 3. Stepper */
         .stepper-item { display: flex; gap: 2rem; margin-bottom: 3rem; align-items: flex-start; }
         .step-num { flex: 0 0 50px; height: 50px; background: var(--color-text-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; }
         .step-content { flex: 1; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem; }
 
-        /* 4. Pill Cloud (Ingredients) */
+        /* 4. Pill Cloud */
         .pill-cloud { display: flex; flex-wrap: wrap; gap: 12px; margin: 2rem 0; }
         .ingredient-pill { background: white; border: 1.5px solid var(--color-border); padding: 12px 24px; border-radius: 99px; font-weight: 700; font-size: 0.95rem; color: var(--color-text-primary); transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; }
-        .ingredient-pill:hover { border-color: var(--primary); background: var(--color-brand-light); transform: translateY(-3px); }
-        .pill-icon { font-size: 1.1rem; }
-
-        /* 5. Score Bars (Performance Scorecard) */
-        .score-bar-bg { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-top: 5px; position: relative; }
+        
+        /* 5. Score Bars */
+        .score-bar-bg { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-top: 5px; }
         .score-bar-fill { height: 100%; background: var(--primary); border-radius: 4px; }
-        .score-val { position: absolute; right: 0; top: -20px; font-size: 0.75rem; font-weight: 800; color: var(--primary); }
 
-        /* Responsive */
+        .expert-list { list-style: none; padding: 0; }
+        .expert-item { margin-bottom: 2rem; padding: 1.5rem; background: #fff; border-radius: 20px; border-left: 5px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+
         @media (max-width: 900px) { 
             .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .toc-panel { order: -1; padding: 1.5rem; }
+            .toc-panel { order: -1; position: static; }
         }
     </style>
 </head>
@@ -73,8 +71,8 @@
     <div class="hero-video-bg" style="background: url('/acne/forehead-acne/forehead.jpg') center/cover no-repeat;"></div>
     <div class="glider-overlay"></div>
     <div class="container hero-content">
-        <h1>Best Sunscreen for Acne-Prone Skin in India (2026 Guide)</h1>
-        <p>Advanced clinical analysis meets lightweight, invisible protection.</p>
+        <h1>Best Sunscreen for Acne-Prone Skin in India: 2026 Guide</h1>
+        <p>Expert clinical analysis meets lightweight, invisible protection.</p>
         <div class="face-ai-cta-wrapper reveal" style="margin-top: 2.5rem;">
             <a href="https://face3layerscanner.onrender.com/" class="face-ai-btn">
                 <span class="face-ai-btn-text">Find your perfect filter in 60s</span>
@@ -92,167 +90,221 @@
         <span style="color: var(--primary); font-weight: 700;">Acne-Prone Sunscreen</span>
     </nav>
 
-    <!-- Section 1: Fluid Intro -->
     <div class="intro-grid reveal">
         <div class="intro-text">
-            <p class="lead-text">Finding the best sunscreen for acne-prone skin can be challenging. Many people avoid it because they worry about clogged pores, increased oiliness, white cast, or new breakouts.</p>
-            <p style="margin-top: 1.5rem; border-left: 4px solid var(--primary); padding-left: 1.5rem; font-style: italic;">"However, skipping sunscreen can worsen acne marks, pigmentation, redness, and premature skin aging."</p>
-            <p style="margin-top: 1.5rem;">The good news is that modern sunscreens offer high UV protection and non-comedogenic formulations without triggering acne.</p>
+            <p class="lead-text">Finding the best sunscreen for acne-prone skin can be challenging. Many people avoid it because they worry about clogged pores, increased oiliness, white cast, or new breakouts. <strong>However, skipping sunscreen can worsen acne marks, pigmentation, and premature aging.</strong></p>
+            <p style="margin-top: 1.5rem;">The good news is that modern sunscreens are specifically formulated for oily and acne-prone skin. These products offer high UV protection, lightweight textures, non-comedogenic formulations, and excellent cosmetic elegance without triggering acne.</p>
         </div>
         <div class="toc-panel">
-            <h3 style="margin-top:0">In this guide:</h3>
+            <h3 style="margin-top:0">In this guide, we'll cover:</h3>
             <ul class="sidebar-list">
-                <li>Why you need it every day</li>
-                <li>Identifying acne-safe formulas</li>
-                <li>Recommended clinical ingredients</li>
-                <li>Tiered Product Recommendations</li>
-                <li>2026 Comparison Tables</li>
-                <li>Final Verdict & Winners</li>
+                <li>Why acne-prone skin needs sunscreen</li>
+                <li>How to identify an acne-safe sunscreen</li>
+                <li>Ingredients dermatologists recommend</li>
+                <li>Budget, mid-range, and premium recommendations</li>
+                <li>Detailed sunscreen comparison tables</li>
+                <li>Best sunscreen winners by category</li>
             </ul>
         </div>
     </div>
 
-    <!-- Section 2: Clinical Flow (Why you need it) -->
     <section class="reveal">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Why Acne-Prone Skin Needs Sunscreen Every Day</h2>
+        <h2>Why Acne-Prone Skin Needs Sunscreen Every Day</h2>
         <div class="flow-container">
             <div class="flow-step">
-                <h3>Prevents Darker Acne Marks</h3>
-                <p>Acne often leaves behind post-inflammatory hyperpigmentation (PIH). Sun exposure stimulates melanin, causing these marks to become darker and last longer.</p>
+                <h3>Prevents Acne Marks from Getting Darker</h3>
+                <p>Acne often leaves behind post-inflammatory hyperpigmentation (PIH). Sun exposure stimulates melanin production, causing these marks to become darker and last longer.</p>
             </div>
             <div class="flow-step">
-                <h3>Protects Skin During Treatment</h3>
-                <p>Treatments like Retinoids, Salicylic Acid, or Adapalene increase sun sensitivity. Sunscreen prevents secondary irritation and barrier damage.</p>
+                <h3>Protects Skin During Acne Treatment</h3>
+                <p>Many acne treatments increase sun sensitivity, including: Retinoids, Tretinoin, Adapalene, Benzoyl Peroxide, Salicylic Acid, and Isotretinoin. Without sunscreen, irritation and pigmentation can worsen.</p>
             </div>
             <div class="flow-step">
-                <h3>Reduces Inflammation & Redness</h3>
-                <p>Modern formulas with Niacinamide or Zinc Oxide help calm inflamed skin and support active barrier repair.</p>
+                <h3>Reduces Redness and Inflammation</h3>
+                <p>Certain sunscreen ingredients like Niacinamide, Zinc Oxide, and Centella Asiatica help calm inflamed acne-prone skin.</p>
+            </div>
+            <div class="flow-step">
+                <h3>Prevents Premature Aging</h3>
+                <p>UV rays break down collagen and elastin, accelerating fine lines, wrinkles, enlarged pores, and uneven skin texture.</p>
             </div>
             <div class="flow-step" style="margin-bottom:0">
-                <h3>Prevents Premature Aging</h3>
-                <p>UV exposure breaks down collagen, accelerating fine lines and enlarging pores—often a side effect of chronic acne.</p>
+                <h3>Helps Control Oil Production</h3>
+                <p>Contrary to popular belief, sunscreen does not automatically make oily skin worse. Lightweight gel and fluid sunscreens help maintain hydration without causing greasiness.</p>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Numbered Stepper (Identifying) -->
     <section class="reveal" style="margin-top: 6rem;">
-        <h2 style="margin-bottom: 3rem;">How to Identify an Acne-Safe Sunscreen</h2>
-        
+        <h2>How to Identify an Acne-Safe Sunscreen</h2>
         <div class="stepper-item">
             <div class="step-num">1</div>
             <div class="step-content">
                 <h4>Look for "Non-Comedogenic"</h4>
-                <p>This is your primary filter. It means the formula is specifically designed not to clog pores. Look for "Oil-free" and "Dermatologist-tested".</p>
+                <p>This means the product is designed not to clog pores. Look for: Non-comedogenic, Oil-free, Acne-safe, and Dermatologist-tested.</p>
             </div>
         </div>
-
         <div class="stepper-item">
             <div class="step-num">2</div>
             <div class="step-content">
                 <h4>Choose SPF 50 or Higher</h4>
-                <p>For intense Indian UV indices, SPF 30 is the bare minimum, but SPF 50+ is ideal for outdoor exposure and pigmentation prevention.</p>
+                <p>For Indian weather conditions: SPF 30 is the minimum, SPF 50 is recommended, and SPF 50+ is ideal for outdoor exposure.</p>
             </div>
         </div>
-
         <div class="stepper-item">
             <div class="step-num">3</div>
             <div class="step-content">
-                <h4>Understand PA Ratings (PA++++)</h4>
-                <p>PA ratings indicate UVA protection. For Indian skin prone to tanning and marks, <strong>PA++++</strong> is the recommended standard.</p>
+                <h4>Understand PA Ratings (Prefer PA++++)</h4>
+                <p>PA measures UVA protection. PA+ is basic, while <strong>PA++++</strong> is very high. For Indian summers and pigmentation-prone skin, PA++++ is recommended.</p>
             </div>
         </div>
-
         <div class="stepper-item">
             <div class="step-num">4</div>
             <div class="step-content">
-                <h4>Demand Modern UV Filters</h4>
-                <p>Prefer photostable filters like <strong>Tinosorb S, Tinosorb M,</strong> or <strong>Uvinul A Plus</strong>. They last longer and are less irritating than older chemicals like Oxybenzone.</p>
+                <h4>Prefer Broad Spectrum Protection</h4>
+                <p>The sunscreen should protect against both UVA rays (aging and pigmentation) and UVB rays (sunburn).</p>
             </div>
         </div>
-
         <div class="stepper-item">
             <div class="step-num">5</div>
             <div class="step-content">
+                <h4>Choose Modern UV Filters</h4>
+                <p>Best acne-safe sunscreens contain photostable filters: Tinosorb S, Tinosorb M, Uvinul A Plus, Uvinul T150, Mexoryl SX, Mexoryl XL, and Mexoryl 400.</p>
+            </div>
+        </div>
+        <div class="stepper-item">
+            <div class="step-num">6</div>
+            <div class="step-content">
                 <h4>Select the Right Texture</h4>
-                <p>Opt for Aqua Gels, Water Fluids, or Silicone Gels. Avoid heavy, greasy creams if you have extremely oily skin.</p>
+                <p>Best options: Gel Sunscreens, Aqua Gels, Water Fluids, and Silicone Gels. Avoid heavy greasy creams if you have extremely oily skin.</p>
+            </div>
+        </div>
+        <div class="stepper-item">
+            <div class="step-num">7</div>
+            <div class="step-content">
+                <h4>Check for White Cast</h4>
+                <p>Indian skin tones often prefer Hybrid, Chemical, or Tinted mineral sunscreens to avoid the ghostly cast from traditional Zinc or Titanium filters.</p>
+            </div>
+        </div>
+        <div class="stepper-item">
+            <div class="step-num">8</div>
+            <div class="step-content">
+                <h4>Consider Water Resistance</h4>
+                <p>Important for Indian summers, outdoor sports, and humid cities. Look for water resistance of 40–80 minutes.</p>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Pill Cloud (Ingredients) -->
     <section class="reveal" style="margin-top: 4rem;">
-        <h2>Key Ingredients in Top Sunscreens</h2>
+        <h2>Key Ingredients to Look For</h2>
         <div class="pill-cloud">
-            <div class="ingredient-pill"><span class="pill-icon">🧪</span> Niacinamide (Oil Control)</div>
-            <div class="ingredient-pill"><span class="pill-icon">💧</span> Hyaluronic Acid (Hydration)</div>
-            <div class="ingredient-pill"><span class="pill-icon">🛡️</span> Zinc Oxide (Anti-Inflammatory)</div>
-            <div class="ingredient-pill"><span class="pill-icon">☀️</span> Tinosorb S (Stability)</div>
-            <div class="ingredient-pill"><span class="pill-icon">✨</span> Silica (Matte Finish)</div>
-            <div class="ingredient-pill"><span class="pill-icon">🌿</span> Centella Asiatica (Soothing)</div>
+            <div class="ingredient-pill">Niacinamide (Oil Control & Fading Marks)</div>
+            <div class="ingredient-pill">Hyaluronic Acid (Barrier Support)</div>
+            <div class="ingredient-pill">Zinc Oxide (Anti-inflammatory)</div>
+            <div class="ingredient-pill">Tinosorb S (Photostable UV Filter)</div>
+            <div class="ingredient-pill">Uvinul A Plus (UVA Protection)</div>
+            <div class="ingredient-pill">Silica (Matte Finish)</div>
+            <div class="ingredient-pill">Vitamin E (Antioxidant)</div>
         </div>
     </section>
 
-    <!-- Section 5: Comparison (The Data) -->
+    <section class="reveal" style="margin-top: 4rem;">
+        <h2>Clinical vs. Generic OTC Sunscreens</h2>
+        <p>Many OTC sunscreens focus only on SPF. Clinical or dermatologist-recommended formulas typically offer: Better UVA protection, more photostable filters, non-comedogenic testing, improved water resistance, and better oil control with less irritation.</p>
+    </section>
+
+    <!-- Detailed Recommendations -->
     <section class="reveal" style="margin-top: 6rem;">
-        <h2>2026 Sunscreen Master Comparison</h2>
+        <h2>Best Budget Sunscreens (Under ₹500)</h2>
+        <ul class="expert-list">
+            <li class="expert-item"><strong>1. The Derma Co 1% Hyaluronic Sunscreen Gel SPF 50:</strong> Best Budget Overall. Lightweight gel texture, HA hydration, non-comedogenic.</li>
+            <li class="expert-item"><strong>2. Re'equil Oxybenzone Free Sunscreen SPF 50:</strong> Best for Sensitive Skin. Modern filters, lightweight lotion.</li>
+            <li class="expert-item"><strong>3. Fixderma Shadow SPF 50+ Gel:</strong> Best for Daily Use. Comfortable in humidity.</li>
+            <li class="expert-item"><strong>4. Minimalist Light Fluid Sunscreen SPF 50:</strong> Best for Pigmentation. Modern UV filters.</li>
+            <li class="expert-item"><strong>5. Aqualogica Glow+ Sunscreen SPF 50:</strong> Best for Dry Acne-Prone Skin. Hydrating.</li>
+        </ul>
+
+        <h2>Best Mid-Range Sunscreens (₹500–₹1000)</h2>
+        <ul class="expert-list">
+            <li class="expert-item"><strong>1. Re'equil Ultra Matte Dry Touch SPF 50:</strong> Best Mid-Range Overall. Extremely matte, water-resistant.</li>
+            <li class="expert-item"><strong>2. Re'equil Oil Free Aqua Gel SPF 50:</strong> Best Everyday Office Sunscreen. Lightweight and non-comedogenic.</li>
+            <li class="expert-item"><strong>3. Photostable Gold SPF 55:</strong> Best for Outdoor Activities. Controls oil, dermatologist favourite.</li>
+            <li class="expert-item"><strong>4. UV Doux Silicone Sunscreen Gel:</strong> Best for Humid Weather. Popular dermatology prescription.</li>
+            <li class="expert-item"><strong>5. Acne UV Gel SPF 50:</strong> Best Pharmacy Sunscreen. Acne-safe and broad-spectrum.</li>
+        </ul>
+
+        <h2>Best Premium Sunscreens (₹1000+)</h2>
+        <ul class="expert-list">
+            <li class="expert-item"><strong>1. Bioderma Photoderm Aquafluide SPF 50+:</strong> Best Premium Overall. Excellent filters, very lightweight.</li>
+            <li class="expert-item"><strong>2. Heliocare 360 Fluid SPF 50+:</strong> Best for Hyperpigmentation. Advanced antioxidant protection.</li>
+            <li class="expert-item"><strong>3. ISDIN Fusion Water SPF 50:</strong> Best Lightweight Fluid. Invisible finish.</li>
+            <li class="expert-item"><strong>4. La Roche-Posay Anthelios UVMune 400 SPF 50+:</strong> Best UVA Protection. Global dermatologist favourite.</li>
+            <li class="expert-item"><strong>5. EltaMD UV Clear SPF 46:</strong> Best for Acne + Sensitive Skin. Niacinamide enriched.</li>
+        </ul>
+    </section>
+
+    <!-- Master Table -->
+    <section class="reveal" style="margin-top: 6rem;">
+        <h2>Complete Sunscreen Comparison Table (2026)</h2>
         <div style="overflow-x: auto;">
             <table class="acne-table">
                 <thead>
-                    <tr><th>Sunscreen</th><th>Range</th><th>Typical Price</th><th>Type</th><th>Finish</th><th>Water Resist</th></tr>
+                    <tr><th>Sunscreen</th><th>Range</th><th>Typical Price</th><th>SPF</th><th>PA</th><th>Type</th><th>Finish</th><th>White Cast</th><th>Water Resist</th><th>Key Ingredients</th><th>Best For</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>The Derma Co 1% HA</td><td>Budget</td><td>₹450–₹550</td><td>Hybrid Gel</td><td>Dewy</td><td>Moderate</td></tr>
-                    <tr><td>Re'equil Ultra Matte</td><td>Mid</td><td>₹695–₹850</td><td>Silicone Gel</td><td>Ultra Matte</td><td>Excellent</td></tr>
-                    <tr><td>UV Doux Silicone</td><td>Mid</td><td>₹700–₹950</td><td>Silicone Gel</td><td>Smooth Matte</td><td>Excellent</td></tr>
-                    <tr><td>Acne UV Gel SPF 50</td><td>Mid</td><td>₹750–₹950</td><td>Gel</td><td>Matte</td><td>Excellent</td></tr>
-                    <tr><td>Bioderma Aquafluide</td><td>Premium</td><td>₹1,450+</td><td>Fluid</td><td>Natural Matte</td><td>Excellent</td></tr>
-                    <tr><td>ISDIN Fusion Water</td><td>Premium</td><td>₹1,700+</td><td>Water Fluid</td><td>Invisible</td><td>Good</td></tr>
+                    <tr><td>Derma Co 1% HA Gel</td><td>Budget</td><td>₹450–₹550</td><td>50</td><td>PA++++</td><td>Hybrid Gel</td><td>Lightweight Dewy</td><td>None</td><td>Moderate</td><td>Hyaluronic Acid, Vit E</td><td>Oily, dehydrated skin</td></tr>
+                    <tr><td>Re'equil Oxybenzone Free</td><td>Budget</td><td>₹460–₹550</td><td>50</td><td>PA+++</td><td>Hybrid Lotion</td><td>Natural Matte</td><td>Very Low</td><td>Good</td><td>Zinc, Ti Oxide, Modern Filters</td><td>Sensitive acne-prone skin</td></tr>
+                    <tr><td>Fixderma Shadow SPF 50+</td><td>Budget</td><td>₹350–₹500</td><td>50+</td><td>PA+++</td><td>Gel</td><td>Light Matte</td><td>None</td><td>Moderate</td><td>Modern chemical filters</td><td>Daily wear, students</td></tr>
+                    <tr><td>Minimalist Light Fluid</td><td>Budget</td><td>₹450–₹600</td><td>50</td><td>PA++++</td><td>Fluid</td><td>Natural Finish</td><td>None</td><td>Moderate</td><td>Tinosorb S, Uvinul A+</td><td>Oily skin, pigmentation</td></tr>
+                    <tr><td>Aqualogica Glow+</td><td>Budget</td><td>₹350–₹500</td><td>50</td><td>PA++++</td><td>Gel-Cream</td><td>Dewy</td><td>None</td><td>Low</td><td>Papaya, HA</td><td>Dry acne-prone skin</td></tr>
+                    <tr><td>Re'equil Ultra Matte</td><td>Mid</td><td>₹695–₹850</td><td>50</td><td>PA++++</td><td>Silicone Gel</td><td>Ultra Matte</td><td>Very Low</td><td>Excellent</td><td>Uvinul A Plus, T150</td><td>Extremely oily skin</td></tr>
+                    <tr><td>Re'equil Aqua Gel</td><td>Mid</td><td>₹650–₹850</td><td>50</td><td>PA+++</td><td>Aqua Gel</td><td>Natural Matte</td><td>None</td><td>Good</td><td>Oxybenzone-Free Filters</td><td>Daily office use</td></tr>
+                    <tr><td>Photostable Gold Gel</td><td>Mid</td><td>₹650–₹850</td><td>55</td><td>PA+++</td><td>Gel</td><td>Matte</td><td>Low</td><td>Excellent</td><td>Tinosorb S</td><td>Outdoor use</td></tr>
+                    <tr><td>UV Doux Silicone Gel</td><td>Mid</td><td>₹700–₹950</td><td>50</td><td>PA+++</td><td>Silicone Gel</td><td>Smooth Matte</td><td>Very Low</td><td>Excellent</td><td>Silicone Elastomers</td><td>Humid weather</td></tr>
+                    <tr><td>Acne UV Gel SPF 50</td><td>Mid</td><td>₹750–₹950</td><td>50</td><td>PA+++</td><td>Gel</td><td>Matte</td><td>Very Low</td><td>Excellent</td><td>Zinc Oxide, Silicone Base</td><td>Active acne sufferers</td></tr>
+                    <tr><td>Bioderma Aquafluide</td><td>Premium</td><td>₹1,450–₹1,900</td><td>50+</td><td>High UVA</td><td>Fluid</td><td>Natural Matte</td><td>None</td><td>Excellent</td><td>Cellular Bioprotection™</td><td>Sensitive skin</td></tr>
+                    <tr><td>Heliocare 360 Fluid</td><td>Premium</td><td>₹1,800–₹2,500</td><td>50+</td><td>PA++++ Eq</td><td>Fluid</td><td>Natural Finish</td><td>None</td><td>Excellent</td><td>Fernblock®, Antioxidants</td><td>Acne + pigmentation</td></tr>
+                    <tr><td>ISDIN Fusion Water</td><td>Premium</td><td>₹1,700–₹2,300</td><td>50</td><td>High UVA</td><td>Water Fluid</td><td>Invisible</td><td>None</td><td>Good</td><td>HA, Algae</td><td>Hot weather</td></tr>
+                    <tr><td>LRP Anthelios UVMune</td><td>Premium</td><td>₹2,000–₹3,000</td><td>50+</td><td>PA++++ Eq</td><td>Fluid</td><td>Lightweight</td><td>None</td><td>Excellent</td><td>Mexoryl 400</td><td>Max UVA protection</td></tr>
+                    <tr><td>EltaMD UV Clear</td><td>Premium</td><td>₹3,500–₹5,000</td><td>46</td><td>Broad Spec</td><td>Lotion</td><td>Lightweight Nat</td><td>None</td><td>Moderate</td><td>Niacinamide, Zinc Oxide</td><td>Acne + Rosacea</td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- Section 6: Scorecard (Visual Numbers) -->
+    <!-- Scorecard -->
     <section class="reveal" style="margin-top: 6rem;">
-        <h2>Performance Scorecard: Top Clinical Picks</h2>
+        <h2>Performance Scorecard: Top Picks Compared</h2>
         <div style="overflow-x: auto;">
             <table class="acne-table">
                 <thead>
-                    <tr><th>Product</th><th>Texture (10)</th><th>Oil Control (10)</th><th>Acne-Safe (10)</th></tr>
+                    <tr><th>Sunscreen</th><th>Texture (10)</th><th>Oil Control (10)</th><th>Acne-Safe (10)</th><th>UVA (10)</th><th>Value (10)</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Re'equil Ultra Matte</td>
-                        <td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td>
-                        <td>10 <div class="score-bar-bg"><div class="score-bar-fill" style="width:100%"></div></div></td>
-                        <td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td>Acne UV Gel</td>
-                        <td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td>
-                        <td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td>
-                        <td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td>
-                    </tr>
+                    <tr><td>Re'equil Ultra Matte</td><td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td><td>10 <div class="score-bar-bg"><div class="score-bar-fill" style="width:100%"></div></div></td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>9</td><td>9</td></tr>
+                    <tr><td>Acne UV Gel</td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td><td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td><td>8</td><td>8</td></tr>
+                    <tr><td>UV Doux</td><td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>8</td><td>8</td></tr>
+                    <tr><td>Minimalist Fluid</td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>8 <div class="score-bar-bg"><div class="score-bar-fill" style="width:80%"></div></div></td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>9</td><td>10</td></tr>
+                    <tr><td>Bioderma Aquafluide</td><td>9.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div></td><td>8.5 <div class="score-bar-bg"><div class="score-bar-fill" style="width:85%"></div></div></td><td>9 <div class="score-bar-bg"><div class="score-bar-fill" style="width:90%"></div></div></td><td>10</td><td>7</td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- Section 7: Quick Winners -->
     <section class="reveal" style="margin-top: 6rem;">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Quick Winners Summary</h2>
+        <h2 style="text-align: center;">Quick Winners</h2>
         <div class="bento-grid">
-            <div class="bento-item" style="border-top: 5px solid var(--primary);"><strong>Best Budget Overall:</strong> The Derma Co 1% HA</div>
-            <div class="bento-item" style="border-top: 5px solid var(--accent);"><strong>Best Pharmacy Choice:</strong> Acne UV Gel</div>
-            <div class="bento-item" style="border-top: 5px solid var(--primary);"><strong>Best Mid-Range:</strong> Re'equil Ultra Matte</div>
-            <div class="bento-item" style="border-top: 5px solid var(--info);"><strong>Best for Humidity:</strong> UV Doux Silicone</div>
+            <div class="bento-item"><strong>Best Budget:</strong> Derma Co 1% HA</div>
+            <div class="bento-item"><strong>Best for Pigmentation:</strong> Minimalist Light Fluid</div>
+            <div class="bento-item"><strong>Best Mid-Range Overall:</strong> Re'equil Ultra Matte</div>
+            <div class="bento-item"><strong>Best Pharmacy Choice:</strong> Acne UV Gel</div>
+            <div class="bento-item"><strong>Best Premium:</strong> Bioderma Aquafluide</div>
+            <div class="bento-item"><strong>Best UVA Protection:</strong> LRP Anthelios UVMune 400</div>
         </div>
     </section>
 
     <section class="reveal" style="margin-top: 6rem; background: var(--color-bg-secondary); padding: 4rem; border-radius: 50px; text-align: center;">
         <h2>Final Verdict</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">If you're looking for the single best sunscreen for acne-prone skin in India in 2026, <strong>Re'equil Ultra Matte Dry Touch SPF 50 PA++++</strong> offers the best combination of oil control, UVA defense, and water resistance for the Indian climate.</p>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">If you're looking for the single best sunscreen for acne-prone skin in India in 2026, <strong>Re'equil Ultra Matte Dry Touch SPF 50 PA++++</strong> offers the best combination of UVA protection, oil control, and water resistance. For budget buyers, <strong>The Derma Co 1% Hyaluronic Sunscreen</strong> remains the strongest value-for-money option.</p>
     </section>
 
 </div>
