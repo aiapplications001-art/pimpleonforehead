@@ -254,55 +254,105 @@
     </section>
 
     <section class="reveal">
-        <h2>Detailed Comparison: Best Acne-Prone Sunscreens by Parameter</h2>
-        <p>Finding the right formula depends on your skin's unique needs. We’ve evaluated the top Indian sunscreens based on **Base Type**, **White Cast**, and **Acne-Safe ratings** to help you choose your match.</p>
+        <h2>Visual Comparison: Best Acne-Prone Sunscreens (2026 Edition)</h2>
+        <p>We’ve evaluated the top Indian sunscreens based on **Base Type**, **White Cast**, and **Acne-Safe ratings**. Here are the best options for every budget.</p>
 
-        <!-- Tier 1: Budget Friendly -->
-        <h3 style="color: var(--primary); margin-top: 2rem;">Tier 1: Budget-Friendly (Under ₹500)</h3>
-        <div style="overflow-x: auto;">
-            <table class="acne-table">
-                <thead>
-                    <tr><th>Product</th><th>Base Type</th><th>White Cast</th><th>Water Resistant</th><th>Best For</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Minimalist SPF 50</td><td>Water-Based</td><td>Zero</td><td>No</td><td>Daily Office/Indoor</td></tr>
-                    <tr><td>Aqualogica Radiance</td><td>Aqueous/Fluid</td><td>Zero</td><td>No</td><td>Dewy Finish Lovers</td></tr>
-                    <tr><td>Fixderma Shadow Gel</td><td>Transparent Gel</td><td>Zero</td><td>Partial</td><td>Oily Skin (Budget)</td></tr>
-                    <tr><td>The Derma Co 1% HA</td><td>Hyaluronic Acid Gel</td><td>Zero</td><td>No</td><td>Hydration + Protection</td></tr>
-                </tbody>
-            </table>
+        <style>
+            .comparison-card { display: flex; align-items: center; background: white; border-radius: 20px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--color-border); transition: transform 0.3s var(--bouncy); }
+            .comparison-card:hover { transform: translateX(10px); border-color: var(--primary); }
+            .card-img { flex: 0 0 100px; height: 100px; margin-right: 1.5rem; display: flex; align-items: center; justify-content: center; background: #f9fbf9; border-radius: 12px; }
+            .card-img img { max-width: 80px; max-height: 80px; object-fit: contain; mix-blend-mode: multiply; }
+            .card-info { flex: 1; }
+            .card-info h4 { margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text); }
+            .card-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1rem; }
+            .card-price { font-weight: 800; color: var(--primary); font-size: 1rem; margin-bottom: 10px; display: block; }
+            .winner-badge { background: #fef3c7; color: #92400e; padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+            @media (max-width: 600px) { .comparison-card { flex-direction: column; text-align: center; } .card-img { margin: 0 0 1rem 0; } .comparison-card:hover { transform: translateY(-5px); } }
+        </style>
+
+        <!-- Tier 1: Budget -->
+        <h3 style="color: var(--primary); margin-top: 3rem; margin-bottom: 1.5rem;">Tier 1: Budget-Friendly (Under ₹500)</h3>
+        
+        <div class="comparison-card">
+            <div class="card-img"><img src="/acne/forehead-acne/logo-v4.png" alt="Minimalist SPF 50"></div>
+            <div class="card-info">
+                <span class="winner-badge">🏆 Category Winner</span>
+                <h4>Minimalist SPF 50 PA++++</h4>
+                <span class="card-price">₹399 (50g)</span>
+                <div class="card-meta">
+                    <div><strong>Base:</strong> Water-Based</div>
+                    <div><strong>Cast:</strong> Zero</div>
+                    <div><strong>Resistance:</strong> Low</div>
+                </div>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;"><strong>Why it wins:</strong> Uses stable, modern filters (Tinosorb) usually found in premium brands at a budget price.</p>
+                <a href="https://beminimalist.co/products/sunscreen-spf-50" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Buy Now →</a>
+            </div>
         </div>
 
-        <!-- Tier 2: Mid-Range Clinical -->
-        <h3 style="color: var(--primary); margin-top: 3rem;">Tier 2: Mid-Range Clinical Favorites (₹500 - ₹900)</h3>
-        <div style="overflow-x: auto;">
-            <table class="acne-table">
-                <thead>
-                    <tr><th>Product</th><th>Base Type</th><th>White Cast</th><th>Water Resistant</th><th>Best For</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Episoft AC SPF 30</td><td>Cream-Lotion</td><td>Minimal</td><td>No</td><td>Combination/Dry Acne</td></tr>
-                    <tr><td>La Shield Fisico</td><td>100% Mineral</td><td>Mild to High</td><td>Yes</td><td>Highly Sensitive Skin</td></tr>
-                    <tr><td>UV Doux Silicone Gel</td><td>Anhydrous Silicone</td><td>Zero</td><td>High</td><td>Sports & Commuting</td></tr>
-                    <tr><td>Blynds Emulgel</td><td>Emulgel</td><td>Minimal</td><td>Partial</td><td>Stable Daily Protection</td></tr>
-                </tbody>
-            </table>
+        <div class="comparison-card">
+            <div class="card-img"><img src="/acne/forehead-acne/logo-v4.png" alt="Aqualogica Radiance"></div>
+            <div class="card-info">
+                <h4>Aqualogica Radiance Dewy</h4>
+                <span class="card-price">₹399 (50g)</span>
+                <div class="card-meta">
+                    <div><strong>Base:</strong> Aqueous</div>
+                    <div><strong>Cast:</strong> Zero</div>
+                    <div><strong>Resistance:</strong> No</div>
+                </div>
+                <a href="https://aqualogica.in/product/radiance-dewy-sunscreen" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Buy Now →</a>
+            </div>
         </div>
 
-        <!-- Tier 3: Premium Clinical -->
-        <h3 style="color: var(--primary); margin-top: 3rem;">Tier 3: Premium & High Performance (Above ₹900)</h3>
-        <div style="overflow-x: auto;">
-            <table class="acne-table">
-                <thead>
-                    <tr><th>Product</th><th>Base Type</th><th>White Cast</th><th>Water Resistant</th><th>Best For</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Acne-UV Gel SPF 50</td><td>Silicone-Gel</td><td>Zero</td><td>Yes</td><td>Dermatologist-led Care</td></tr>
-                    <tr><td>Photostable Gold</td><td>Anhydrous Gel</td><td>Zero</td><td>High</td><td>90% Humidity (Matte)</td></tr>
-                    <tr><td>Cetaphil PRO Oil Control</td><td>Lotion (Zinc)</td><td>Minimal</td><td>No</td><td>Post-Medication Dryness</td></tr>
-                    <tr><td>Isdin Fusion Water</td><td>Liquid-to-Skin</td><td>Zero</td><td>High</td><td>Invisible Protection</td></tr>
-                </tbody>
-            </table>
+        <!-- Tier 2: Mid-Range -->
+        <h3 style="color: var(--primary); margin-top: 4rem; margin-bottom: 1.5rem;">Tier 2: Mid-Range Clinical (₹500 - ₹900)</h3>
+        
+        <div class="comparison-card">
+            <div class="card-img"><img src="/acne/forehead-acne/logo-v4.png" alt="UV Doux Silicone Gel"></div>
+            <div class="card-info">
+                <span class="winner-badge">🏆 Category Winner</span>
+                <h4>UV Doux Silicone Gel SPF 50</h4>
+                <span class="card-price">₹845 (50g)</span>
+                <div class="card-meta">
+                    <div><strong>Base:</strong> Silicone</div>
+                    <div><strong>Cast:</strong> Zero</div>
+                    <div><strong>Resistance:</strong> High</div>
+                </div>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;"><strong>Why it wins:</strong> Legendary "velvet matte" finish that controls oil even in peak Indian summer. Dermatologist favorite.</p>
+                <a href="https://www.1mg.com/otc/uv-doux-spf-50-silicone-sunscreen-gel-otc333649" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Buy Now →</a>
+            </div>
+        </div>
+
+        <div class="comparison-card">
+            <div class="card-img"><img src="/acne/forehead-acne/logo-v4.png" alt="La Shield Fisico"></div>
+            <div class="card-info">
+                <h4>La Shield Fisico (100% Mineral)</h4>
+                <span class="card-price">₹750 (50g)</span>
+                <div class="card-meta">
+                    <div><strong>Base:</strong> Mineral</div>
+                    <div><strong>Cast:</strong> Minimal</div>
+                    <div><strong>Resistance:</strong> Yes</div>
+                </div>
+                <a href="https://www.netmeds.com/prescriptions/la-shield-fisico-spf-50-sunscreen-gel-50gm" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Buy Now →</a>
+            </div>
+        </div>
+
+        <!-- Tier 3: Premium -->
+        <h3 style="color: var(--primary); margin-top: 4rem; margin-bottom: 1.5rem;">Tier 3: Premium Clinical (Above ₹900)</h3>
+        
+        <div class="comparison-card">
+            <div class="card-img"><img src="/acne/forehead-acne/logo-v4.png" alt="Acne-UV Gel"></div>
+            <div class="card-info">
+                <span class="winner-badge">🏆 Category Winner</span>
+                <h4>Ipca Acne-UV Gel SPF 50</h4>
+                <span class="card-price">₹975 (50g)</span>
+                <div class="card-meta">
+                    <div><strong>Base:</strong> Silicone-Gel</div>
+                    <div><strong>Cast:</strong> Zero</div>
+                    <div><strong>Resistance:</strong> Yes</div>
+                </div>
+                <p style="font-size: 0.85rem; margin-bottom: 1rem;"><strong>Why it wins:</strong> Purely formulated for acne patients; zero-oil content and high photostability across 12+ hours.</p>
+                <a href="https://www.apollopharmacy.in/otc/acne-uv-spf-50-gel-50g" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.9rem;">Buy Now →</a>
+            </div>
         </div>
 
         <div class="bento-item reveal" style="background: #fdf2f2; border-left: 5px solid #ef4444; margin-top: 2rem;">
