@@ -12,13 +12,13 @@
     <meta property="og:url" content="https://mymirror.fit/acne/best-sunscreen-for-acne-prone-skin-india/">
     <meta property="og:title" content="Identify Your Acne-Safe Sunscreen | MyMirror AI Guide">
     <meta property="og:description" content="Stop sunscreen breakouts. Free AI skin analysis to find non-comedogenic, zero-white-cast sunscreens for the Indian climate.">
-    <meta property="og:image" content="https://mymirror.fit/assets/images/sunscreen-guide-hero.jpg">
+    <meta property="og:image" content="https://mymirror.fit/acne/forehead-acne/forehead-interactive-opt.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Sunscreen Breaking You Out? Try Our 60s AI Scan">
     <meta property="twitter:description" content="Identify why your sunscreen triggers acne. Free AI skin analysis for custom clinical picks.">
-    <meta property="twitter:image" content="https://mymirror.fit/assets/images/sunscreen-guide-hero.jpg">
+    <meta property="twitter:image" content="https://mymirror.fit/acne/forehead-acne/forehead-interactive-opt.jpg">
 
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
         },
         "headline": "Best Sunscreens for Acne Prone Oily Skin in India: Clinical Guide (2026)",
         "description": "Expert-backed clinical guide to choosing sunscreens that don't trigger acne in the Indian climate. Featuring AI-powered skin analysis.",
-        "image": "https://mymirror.fit/assets/images/sunscreen-guide-hero.jpg",
+        "image": "https://mymirror.fit/acne/forehead-acne/forehead-interactive-opt.jpg",
         "author": {
           "@type": "Organization",
           "name": "MyMirror Skin Health Editorial"
@@ -98,7 +98,7 @@
 </div>
 
 <header class="full-hero">
-    <div class="hero-video-bg" style="background: url('/assets/images/sunscreen-bg.jpg') center/cover no-repeat;"></div>
+    <div class="hero-video-bg" style="background: url('/acne/forehead-acne/forehead.jpg') center/cover no-repeat;"></div>
     <div class="glider-overlay"></div>
     <div class="container hero-content">
         <h1>Sunscreen for Acne-Prone Skin: The 2026 Indian Manual</h1>
@@ -145,9 +145,17 @@
 
     <section id="quiz-container" class="reveal" style="background: var(--secondary); padding: 4rem 2rem; border-radius: 45px; text-align: center;">
         <span class="badge" style="background: var(--primary); color: white;">Sunscreen Vibe Check</span>
-        <h2>Which Sunscreen Formulation is Best for You?</h2>
-        <p id="quiz-text" style="font-weight: 800; font-size: 1.5rem; color: var(--primary); margin: 2rem 0;">Loading your diagnostic...</p>
-        <div id="quiz-options"></div>
+        <div id="quiz-question-box">
+            <h2 id="quiz-text">Which Sunscreen Formulation is Best for You?</h2>
+            <div id="quiz-options" style="max-width: 500px; margin: 2rem auto;"></div>
+        </div>
+        <div id="quiz-result" style="display:none;">
+            <div class="card" style="padding: 2rem; border-radius: 25px; background: white;">
+                <h3 id="result-title"></h3>
+                <p id="result-desc"></p>
+                <button class="nav-btn active" style="margin-top: 1rem;" onclick="location.reload()">Retake Diagnostic</button>
+            </div>
+        </div>
     </section>
 
     <section class="reveal">
@@ -168,11 +176,11 @@
         <h2>Clinical FAQ: Can Sunscreen Actually Cause More Pimples?</h2>
         <div class="faq-container">
             <div class="faq-item">
-                <div class="faq-question">1. Why does my face get sweaty under sunscreen?</div>
+                <div class="faq-question" onclick="toggleFAQ(0)">1. Why does my face get sweaty under sunscreen? <span class="faq-icon">+</span></div>
                 <div class="faq-answer">This is often due to "occlusive" ingredients that trap heat. Switch to a silicone-free gel or a matte-finish fluid.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">2. Do I need to double cleanse at night?</div>
+                <div class="faq-question" onclick="toggleFAQ(1)">2. Do I need to double cleanse at night? <span class="faq-icon">+</span></div>
                 <div class="faq-answer">Yes! Most high-protection sunscreens are water-resistant. Use a micellar water or oil-based cleanser followed by your regular face wash to prevent buildup.</div>
             </div>
         </div>
@@ -186,12 +194,35 @@
 
 <script src="/assets/js/forehead-acne.js"></script>
 <script>
-    // Custom Sunscreen Quiz Logic
     const sunscreenQuiz = [
-        { q: "How does your skin feel by 2 PM?", options: ["Like an oil field", "Normal/Dry", "Sweaty and irritated"] },
-        { q: "What is your #1 concern?", options: ["Acne breakouts", "Dark spots (PIH)", "White cast on my skin"] }
+        { q: "How does your skin feel by 2 PM in Indian humidity?", options: ["Greasy/Oily", "Stingy/Sweaty", "Normal/Dry"] },
+        { q: "What is your #1 priority for sunscreen?", options: ["Matte finish (No Shine)", "No White Cast", "Fading Acne Marks"] }
     ];
-    // ... logic to render and calculate ...
+    let step = 0;
+    function renderSunscreenQuiz() {
+        const q = sunscreenQuiz[step];
+        document.getElementById('quiz-text').innerText = q.q;
+        const opt = document.getElementById('quiz-options');
+        opt.innerHTML = '';
+        q.options.forEach((o, i) => {
+            const b = document.createElement('button');
+            b.className = 'quiz-choice-btn';
+            b.innerText = o;
+            b.onclick = () => {
+                step++;
+                if(step < sunscreenQuiz.length) renderSunscreenQuiz();
+                else showResult(o);
+            };
+            opt.appendChild(b);
+        });
+    }
+    function showResult(lastOpt) {
+        document.getElementById('quiz-question-box').style.display = 'none';
+        document.getElementById('quiz-result').style.display = 'block';
+        document.getElementById('result-title').innerText = "Silicone-Based Matte Gel Recommended";
+        document.getElementById('result-desc').innerText = "Based on your focus on " + lastOpt + ", a high-protection matte gel is your best bet for the Indian climate.";
+    }
+    renderSunscreenQuiz();
 </script>
 
 </body>
