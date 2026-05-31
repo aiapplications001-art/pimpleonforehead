@@ -212,74 +212,93 @@
 
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "name": "60s AI Face Scan: Adapalene and Benzoyl Peroxide Gel Guide: Uses, Price, & Side Effects",
-      "description": "Master your acne treatment with our comprehensive guide to Adapalene and Benzoyl Peroxide gel. Learn how to use it, Indian market options (Epiduo, Deriva BPO), price, side effects, and routine tips.",
-      "image": "https://mymirror.fit/assets/adapalene-bpo-science.jpeg",
-      "about": [
-        {
-          "@type": "MedicalEntity",
-          "name": "Adapalene"
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "60s AI Face Scan: Adapalene and Benzoyl Peroxide Gel Guide: Uses, Price, & Side Effects",
+        "description": "Master your acne treatment with our comprehensive guide to Adapalene and Benzoyl Peroxide gel. Learn how to use it, Indian market options (Epiduo, Deriva BPO), price, side effects, and routine tips.",
+        "image": "https://mymirror.fit/assets/adapalene-bpo-science.jpeg",
+        "about": [
+          {
+            "@type": "MedicalEntity",
+            "name": "Adapalene"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Benzoyl Peroxide"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Acne"
+          }
+        ],
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Dermatologist"
         },
-        {
-          "@type": "MedicalEntity",
-          "name": "Benzoyl Peroxide"
-        },
-        {
-          "@type": "MedicalEntity",
-          "name": "Acne"
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ],
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Dermatologist"
       },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Adapalene and Benzoyl Peroxide gel used for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It treats inflammatory papules, pustules, and deep nodules dramatically faster than using either ingredient alone by opening the pore and introducing oxygen to kill bacteria."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you use Adapalene and Benzoyl Peroxide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apply a pea-sized amount only at night on completely dry skin using the sandwich method (moisturizer, gel, moisturizer). Start slowly (twice a week) and always wear SPF 30+ the next morning."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Adapalene and Benzoyl Peroxide gel used for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It treats inflammatory papules, pustules, and deep nodules dramatically faster than using either ingredient alone by opening the pore and introducing oxygen to kill bacteria."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you use Adapalene and Benzoyl Peroxide?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Apply a pea-sized amount only at night on completely dry skin using the sandwich method (moisturizer, gel, moisturizer). Start slowly (twice a week) and always wear SPF 30+ the next morning."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "url": "https://face3layerscanner.onrender.com/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
   <script defer src="/assets/site-analytics.js"></script>
   <link rel="preload" as="image" href="/assets/adapalene-bpo-science.jpeg">

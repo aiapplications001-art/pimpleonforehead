@@ -28,74 +28,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "@id": "https://mymirror.fit/acne/face-map/",
-      "url": "https://mymirror.fit/acne/face-map/",
-      "name": "60s AI Face Scan: Acne Face Map: What Your Breakouts Say About Your Health",
-      "description": "Discover what your acne location says about your body. Use our interactive Acne Face Map to understand the causes of forehead, cheek, and chin breakouts.",
-      "image": "https://mymirror.fit/acne/face-map/face-1.png",
-      "author": {
-        "@type": "Organization",
-        "name": "MyMirror Skin Health Editorial"
-      },
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Board-Certified Dermatologist"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "MyMirror",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://mymirror.fit/acne/forehead-acne/logo-v4.png"
-        }
-      },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What does acne on the chin mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually hormonal fluctuations or gut health."
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://mymirror.fit/acne/face-map/",
+        "url": "https://mymirror.fit/acne/face-map/",
+        "name": "60s AI Face Scan: Acne Face Map: What Your Breakouts Say About Your Health",
+        "description": "Discover what your acne location says about your body. Use our interactive Acne Face Map to understand the causes of forehead, cheek, and chin breakouts.",
+        "image": "https://mymirror.fit/acne/face-map/face-1.png",
+        "author": {
+          "@type": "Organization",
+          "name": "MyMirror Skin Health Editorial"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Board-Certified Dermatologist"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "MyMirror",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mymirror.fit/acne/forehead-acne/logo-v4.png"
           }
         },
-        {
-          "@type": "Question",
-          "name": "Can dirty pillowcases cause cheek acne?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, bacteria and friction on the cheeks often lead to breakouts."
-          }
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
       },
-      "url": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does acne on the chin mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually hormonal fluctuations or gut health."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can dirty pillowcases cause cheek acne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, bacteria and friction on the cheeks often lead to breakouts."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
 
     <style>

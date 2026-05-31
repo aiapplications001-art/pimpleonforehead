@@ -215,78 +215,97 @@
 
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "name": "60s AI Face Scan: Best Salicylic Acid Face Wash in India: 1% vs 2% Cleansers Compared",
-      "description": "Looking for the best salicylic acid face wash? We compare top Indian cleansers from Derma Co, Minimalist, Neutrogena, and Mamaearth for oily, sensitive, teen, and adult acne.",
-      "image": "https://mymirror.fit/assets/sa-face-wash-hero.jpeg",
-      "about": [
-        {
-          "@type": "MedicalEntity",
-          "name": "Salicylic Acid Face Wash"
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "60s AI Face Scan: Best Salicylic Acid Face Wash in India: 1% vs 2% Cleansers Compared",
+        "description": "Looking for the best salicylic acid face wash? We compare top Indian cleansers from Derma Co, Minimalist, Neutrogena, and Mamaearth for oily, sensitive, teen, and adult acne.",
+        "image": "https://mymirror.fit/assets/sa-face-wash-hero.jpeg",
+        "about": [
+          {
+            "@type": "MedicalEntity",
+            "name": "Salicylic Acid Face Wash"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Acne Treatment"
+          }
+        ],
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Dermatologist"
         },
-        {
-          "@type": "MedicalEntity",
-          "name": "Acne Treatment"
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ],
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Dermatologist"
       },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which is the best salicylic acid face wash for sensitive skin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For sensitive or teenage skin, a 1% concentration is best. The Derma Co 1% Salicylic Acid Face Wash is an excellent gentle option."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is the best 2% salicylic acid face wash?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For very oily skin and stubborn adult acne, the Minimalist 2% Salicylic Acid Face Wash (with LHA and Zinc) is a top clinical-grade choice in India."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long should I leave salicylic acid face wash on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Practice 'short contact therapy'. Gently massage the cleanser onto a damp face and leave it on for 60 to 120 seconds before rinsing for maximum effect."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Which is the best salicylic acid face wash for sensitive skin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For sensitive or teenage skin, a 1% concentration is best. The Derma Co 1% Salicylic Acid Face Wash is an excellent gentle option."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which is the best 2% salicylic acid face wash?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For very oily skin and stubborn adult acne, the Minimalist 2% Salicylic Acid Face Wash (with LHA and Zinc) is a top clinical-grade choice in India."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long should I leave salicylic acid face wash on?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Practice 'short contact therapy'. Gently massage the cleanser onto a damp face and leave it on for 60 to 120 seconds before rinsing for maximum effect."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "url": "https://face3layerscanner.onrender.com/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
   <script defer src="/assets/site-analytics.js"></script>
   <link rel="preload" as="image" href="/assets/sa-face-wash-hero.jpeg">

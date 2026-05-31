@@ -229,70 +229,89 @@
 
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "name": "60s AI Face Scan: Best Men's Face Wash for Pimples & Dark Spots (2026 Price Guide)",
-      "description": "Cut the confusion. We categorized the best men's face wash for pimples and dark spots by Budget, Premium, and Ultra-Premium, complete with price-per-100g and clinical breakdowns.",
-      "image": "https://mymirror.fit/assets/mens-charcoal-wash.png",
-      "about": [
-        {
-          "@type": "MedicalEntity",
-          "name": "Acne Treatment"
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "60s AI Face Scan: Best Men's Face Wash for Pimples & Dark Spots (2026 Price Guide)",
+        "description": "Cut the confusion. We categorized the best men's face wash for pimples and dark spots by Budget, Premium, and Ultra-Premium, complete with price-per-100g and clinical breakdowns.",
+        "image": "https://mymirror.fit/assets/mens-charcoal-wash.png",
+        "about": [
+          {
+            "@type": "MedicalEntity",
+            "name": "Acne Treatment"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Hyperpigmentation"
+          }
+        ],
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Dermatologist"
         },
-        {
-          "@type": "MedicalEntity",
-          "name": "Hyperpigmentation"
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ],
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Dermatologist"
       },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the best men's face wash for oily skin and pimples?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For budget shoppers, Garnier Men Acno Fight is highly effective. For premium clinical results, the Minimalist 2% Salicylic Acid Face Wash is the gold standard for oily, acne-prone male skin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which face wash is best for dark spots for men?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Derma Co 1% Kojic Acid Wash uses Kojic Acid to aggressively fade dark post-acne marks (PIH) and sunspots. Nivea Men Dark Spot Reduction is a great budget alternative."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the best men's face wash for oily skin and pimples?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For budget shoppers, Garnier Men Acno Fight is highly effective. For premium clinical results, the Minimalist 2% Salicylic Acid Face Wash is the gold standard for oily, acne-prone male skin."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which face wash is best for dark spots for men?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Derma Co 1% Kojic Acid Wash uses Kojic Acid to aggressively fade dark post-acne marks (PIH) and sunspots. Nivea Men Dark Spot Reduction is a great budget alternative."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "url": "https://face3layerscanner.onrender.com/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
   <script defer src="/assets/site-analytics.js"></script>
   <link rel="preload" as="image" href="/assets/mens-charcoal-wash.png">

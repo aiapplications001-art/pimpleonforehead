@@ -215,70 +215,89 @@
 
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "name": "60s AI Face Scan: The Ultimate Guide to Salicylic Acid for Beginners: How Often Should You Use It?",
-      "description": "Nervous about BHAs? Discover our dermatologist-backed beginner's guide to using Salicylic Acid. Learn how often to use it, avoiding the purge, and building tolerance safely.",
-      "image": "https://mymirror.fit/assets/sa-beginners-hero.jpeg",
-      "about": [
-        {
-          "@type": "MedicalEntity",
-          "name": "Salicylic Acid"
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "60s AI Face Scan: The Ultimate Guide to Salicylic Acid for Beginners: How Often Should You Use It?",
+        "description": "Nervous about BHAs? Discover our dermatologist-backed beginner's guide to using Salicylic Acid. Learn how often to use it, avoiding the purge, and building tolerance safely.",
+        "image": "https://mymirror.fit/assets/sa-beginners-hero.jpeg",
+        "about": [
+          {
+            "@type": "MedicalEntity",
+            "name": "Salicylic Acid"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Exfoliation"
+          }
+        ],
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Dermatologist"
         },
-        {
-          "@type": "MedicalEntity",
-          "name": "Exfoliation"
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ],
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Dermatologist"
       },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How often should a beginner use Salicylic Acid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start low, and go slow. For weeks 1 & 2, use a leave-on BHA only 1 to 2 nights a week. Then move to alternate nights. Never start using it every day to protect your skin barrier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you use Salicylic Acid with Vitamin C or Retinol?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Do not mix with other strong actives when starting out. Keep your routine simple: gentle cleanser, BHA, and moisturizer. Alternate your nights if using Retinol."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How often should a beginner use Salicylic Acid?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Start low, and go slow. For weeks 1 & 2, use a leave-on BHA only 1 to 2 nights a week. Then move to alternate nights. Never start using it every day to protect your skin barrier."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you use Salicylic Acid with Vitamin C or Retinol?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Do not mix with other strong actives when starting out. Keep your routine simple: gentle cleanser, BHA, and moisturizer. Alternate your nights if using Retinol."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "url": "https://face3layerscanner.onrender.com/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
   <script defer src="/assets/site-analytics.js"></script>
   <link rel="preload" as="image" href="/assets/sa-beginners-hero.jpeg">

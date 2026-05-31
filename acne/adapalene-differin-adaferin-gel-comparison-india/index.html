@@ -214,70 +214,89 @@
 
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "name": "60s AI Face Scan: Adapalene Gel vs. Differin vs. Adaferin vs. Adalene Nano Gel: The Ultimate Indian Guide",
-      "description": "Discover the ultimate comparison covering prices in India, ingredients, uses, and exactly how to use Adapalene and combinations like Epiduo and Adalene Nano.",
-      "image": "https://mymirror.fit/assets/differin-gel.jpg",
-      "about": [
-        {
-          "@type": "MedicalEntity",
-          "name": "Adapalene"
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "60s AI Face Scan: Adapalene Gel vs. Differin vs. Adaferin vs. Adalene Nano Gel: The Ultimate Indian Guide",
+        "description": "Discover the ultimate comparison covering prices in India, ingredients, uses, and exactly how to use Adapalene and combinations like Epiduo and Adalene Nano.",
+        "image": "https://mymirror.fit/assets/differin-gel.jpg",
+        "about": [
+          {
+            "@type": "MedicalEntity",
+            "name": "Adapalene"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Retinoid"
+          }
+        ],
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Dermatologist"
         },
-        {
-          "@type": "MedicalEntity",
-          "name": "Retinoid"
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ],
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Dermatologist"
       },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the use of adapalene?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The primary use of adapalene is to speed up cell turnover, keep pores from clogging, and reduce skin inflammation. It clears whiteheads, blackheads, and inflamed pimples."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to use Adapalene gel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wash with a gentle cleanser. Pat your skin bone dry. Use a pea-sized amount for your entire face. Spread a thin layer evenly (avoid eyes, lips, corners of nose). Follow up with a barrier-repairing moisturizer."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the use of adapalene?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The primary use of adapalene is to speed up cell turnover, keep pores from clogging, and reduce skin inflammation. It clears whiteheads, blackheads, and inflamed pimples."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to use Adapalene gel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wash with a gentle cleanser. Pat your skin bone dry. Use a pea-sized amount for your entire face. Spread a thin layer evenly (avoid eyes, lips, corners of nose). Follow up with a barrier-repairing moisturizer."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "url": "https://face3layerscanner.onrender.com/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
   <script defer src="/assets/site-analytics.js"></script>
   <link rel="preload" as="image" href="/assets/differin-gel.jpg">

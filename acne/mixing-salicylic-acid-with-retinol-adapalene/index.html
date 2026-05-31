@@ -215,78 +215,97 @@
 
   <!-- AI & Search Engine Optimization (JSON-LD) -->
   <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalWebPage",
-      "name": "60s AI Face Scan: The Ultimate Guide: Can I Use Salicylic Acid with Retinol, Tretinoin, or Adapalene?",
-      "description": "Discover how to safely mix Salicylic Acid with Retinol, Adapalene, or Tretinoin. Learn the dermatologist-approved skin cycling routine to prevent barrier damage.",
-      "image": "https://mymirror.fit/assets/sa-retinol-dilemma-hero.jpeg",
-      "about": [
-        {
-          "@type": "MedicalEntity",
-          "name": "Salicylic Acid"
+    [
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "60s AI Face Scan: The Ultimate Guide: Can I Use Salicylic Acid with Retinol, Tretinoin, or Adapalene?",
+        "description": "Discover how to safely mix Salicylic Acid with Retinol, Adapalene, or Tretinoin. Learn the dermatologist-approved skin cycling routine to prevent barrier damage.",
+        "image": "https://mymirror.fit/assets/sa-retinol-dilemma-hero.jpeg",
+        "about": [
+          {
+            "@type": "MedicalEntity",
+            "name": "Salicylic Acid"
+          },
+          {
+            "@type": "MedicalEntity",
+            "name": "Retinoids"
+          }
+        ],
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Dr. Lipy Mehta",
+          "jobTitle": "Dermatologist"
         },
-        {
-          "@type": "MedicalEntity",
-          "name": "Retinoids"
+        "potentialAction": {
+          "@type": "Action",
+          "name": "Start Your Free Skin Analysis",
+          "target": "https://mymirror.fit/scan",
+          "description": "Identify acne types, oiliness, and skin signals in 60 seconds."
         }
-      ],
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Lipy Mehta",
-        "jobTitle": "Dermatologist"
       },
-      "potentialAction": {
-        "@type": "Action",
-        "name": "Free AI Skin Analysis",
-        "target": "https://face3layerscanner.onrender.com/"
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I use Salicylic Acid and Retinol together?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, but with strategy. Do not layer serums. The safe way is to use a wash-off Salicylic Acid cleanser, rinse, and then apply your Retinol."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use Adapalene and Salicylic Acid together?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Never layer them together on the same night. Use your Salicylic Acid in the morning and Adapalene strictly at night to prevent chemical burns."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use Tretinoin and Salicylic Acid together?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Generally, NO. Mixing Tretinoin and a leave-on BHA will almost guarantee a destroyed skin barrier. Avoid mixing them unless explicitly directed by your dermatologist."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MyMirror AI Skin Scanner",
+        "operatingSystem": "Web",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "url": "https://mymirror.fit/scan",
+        "@context": "https://schema.org",
+        "description": "AI-powered face analysis to identify acne and skin triggers."
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I use Salicylic Acid and Retinol together?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, but with strategy. Do not layer serums. The safe way is to use a wash-off Salicylic Acid cleanser, rinse, and then apply your Retinol."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use Adapalene and Salicylic Acid together?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Never layer them together on the same night. Use your Salicylic Acid in the morning and Adapalene strictly at night to prevent chemical burns."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use Tretinoin and Salicylic Acid together?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Generally, NO. Mixing Tretinoin and a leave-on BHA will almost guarantee a destroyed skin barrier. Avoid mixing them unless explicitly directed by your dermatologist."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MyMirror AI Skin Scanner",
-      "operatingSystem": "All",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "url": "https://face3layerscanner.onrender.com/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyMirror AI Skin Scanner",
+    "operatingSystem": "Web",
+    "applicationCategory": "HealthApplication",
+    "url": "https://mymirror.fit/scan",
+    "description": "AI-powered face analysis to identify acne and skin triggers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-  ]
-}
+  }
+]
     </script>
   <script defer src="/assets/site-analytics.js"></script>
   <link rel="preload" as="image" href="/assets/sa-retinol-dilemma-hero.jpeg">
